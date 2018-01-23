@@ -109,7 +109,7 @@ class Donnager_Pro {
 
 		// Include Pro Features.
 		#require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-author-bio.php';
-		#require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-custom-colors.php';
+		require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-custom-colors.php';
 		#require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-custom-fonts.php';
 		#require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-footer-content.php';
 		#require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/modules/class-footer-line.php';

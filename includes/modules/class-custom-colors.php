@@ -48,254 +48,76 @@ class Donnager_Pro_Custom_Colors {
 		// Get Default Fonts from settings.
 		$default_options = Donnager_Pro_Customizer::get_default_options();
 
+		// Color Variables.
+		$color_variables = '';
+
 		// Set Link Color.
 		if ( $theme_options['link_color'] !== $default_options['link_color'] ) {
+			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
+		}
 
-			$custom_css .= '
-				/* Link and Button Color Setting */
-				a:link,
-				a:visited,
-				.infinite-scroll #infinite-handle span,
-				.top-navigation-toggle:hover,
-				.top-navigation-toggle:active,
-				.top-navigation-menu a:hover,
-				.top-navigation-menu a:active,
-				.footer-navigation-menu a:hover,
-				.footer-navigation-menu a:active {
-					color: ' . $theme_options['link_color'] . ';
-				}
-
-				a:hover,
-				a:focus,
-				a:active,
-				.infinite-scroll #infinite-handle span:hover {
-					color: #353535;
-				}
-
-				.top-navigation-toggle:hover .icon,
-				.top-navigation-toggle:active .icon,
-				.top-navigation-menu > .menu-item-has-children a .sub-menu-icon:hover .icon,
-				.top-navigation-menu > .menu-item-has-children a .sub-menu-icon:active .icon {
-					fill: ' . $theme_options['link_color'] . ';
-				}
-
-				button,
-				input[type="button"],
-				input[type="reset"],
-				input[type="submit"],
-				.search-form .search-submit,
-				.tzwb-tabbed-content .tzwb-tabnavi li a:hover,
-				.tzwb-tabbed-content .tzwb-tabnavi li a:active,
-				.tzwb-tabbed-content .tzwb-tabnavi li a.current-tab,
-				.tzwb-social-icons .social-icons-menu li a,
-				.scroll-to-top-button,
-				.scroll-to-top-button:focus,
-				.scroll-to-top-button:active {
-					background: ' . $theme_options['link_color'] . ';
-				}
-
-				@media only screen and (min-width: 55em) {
-					.top-navigation-menu > .menu-item-has-children a:hover .sub-menu-icon .icon {
-						fill: ' . $theme_options['link_color'] . ';
-					}
-				}
-			';
+		// Set Button Color.
+		if ( $theme_options['button_color'] !== $default_options['button_color'] ) {
+			$color_variables .= '--button-color: ' . $theme_options['button_color'] . ';';
 
 			// Check if a light background color was chosen.
-			if ( self::is_color_light( $theme_options['link_color'] ) ) {
-				$custom_css .= '
-					button,
-					input[type="button"],
-					input[type="reset"],
-					input[type="submit"],
-					.tzwb-tabbed-content .tzwb-tabnavi li a:hover,
-					.tzwb-tabbed-content .tzwb-tabnavi li a:active,
-					.tzwb-tabbed-content .tzwb-tabnavi li a.current-tab {
-						color: #222;
-					}
+			if ( self::is_color_light( $theme_options['button_color'] ) ) {
+				$color_variables .= '--button-text-color: #202020;';
+			}
+		}
 
-					.search-form .search-submit .icon-search,
-					.scroll-to-top-button .icon,
-					.tzwb-social-icons .social-icons-menu li a .icon {
-						fill: #222;
-					}
+		// Set Button Hover Color.
+		if ( $theme_options['button_hover_color'] !== $default_options['button_hover_color'] ) {
+			$color_variables .= '--button-hover-color: ' . $theme_options['button_hover_color'] . ';';
 
-					button:hover,
-					input[type="button"]:hover,
-					input[type="reset"]:hover,
-					input[type="submit"]:hover,
-					button:focus,
-					input[type="button"]:focus,
-					input[type="reset"]:focus,
-					input[type="submit"]:focus,
-					button:active,
-					input[type="button"]:active,
-					input[type="reset"]:active,
-					input[type="submit"]:active {
-						color: #fff;
-					}
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['button_hover_color'] ) ) {
+				$color_variables .= '--button-hover-text-color: #202020;';
+			}
+		}
 
-					.search-form .search-submit:hover .icon-search,
-					.scroll-to-top-button:hover .icon,
-					.tzwb-social-icons .social-icons-menu li a:hover .icon {
-						fill: #fff;
-					}
-				';
-			} // End if().
-		} // End if().
-
-		// Set Navigation Color.
+		// Set Navi Color.
 		if ( $theme_options['navi_color'] !== $default_options['navi_color'] ) {
+			$color_variables .= '--navi-color: ' . $theme_options['navi_color'] . ';';
 
-			$custom_css .= '
-				/* Navigation Color Setting */
-				.main-navigation-toggle,
-				.main-navigation-toggle:focus,
-				.main-navigation-menu,
-				.main-navigation-menu a:link,
-				.main-navigation-menu a:visited {
-					color: ' . $theme_options['navi_color'] . ';
-				}
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['navi_color'] ) ) {
+				$color_variables .= '--navi-text-color: #202020;';
+				$color_variables .= '--navi-hover-text-color: rgba(0, 0, 0, 0.5);';
+			}
+		}
 
-				.primary-navigation-wrap,
-				.main-navigation-menu,
-				.main-navigation-menu ul,
-				.main-navigation-menu ul a,
-				.footer-content {
-					border-color: ' . $theme_options['navi_color'] . ';
-				}
+		// Set Submenu Color.
+		if ( $theme_options['navi_submenu_color'] !== $default_options['navi_submenu_color'] ) {
+			$color_variables .= '--submenu-color: ' . $theme_options['navi_submenu_color'] . ';';
 
-				.main-navigation-toggle .icon,
-				.main-navigation-menu > .menu-item-has-children a .sub-menu-icon .icon,
-				.header-search .header-search-icon .icon-search,
-				.header-search .header-search-form-wrap .header-search-form .header-search-close .icon-close {
-					fill: ' . $theme_options['navi_color'] . ';
-				}
-
-				.main-navigation-toggle:hover,
-				.main-navigation-toggle:active,
-				.main-navigation-menu a:hover,
-				.main-navigation-menu a:active {
-					color: #3377bb;
-				}
-
-				.main-navigation-toggle:hover .icon,
-				.main-navigation-toggle:active .icon,
-				.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:hover .icon,
-				.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:active .icon {
-					fill: #3377bb;
-				}
-			';
-		} // End if().
-
-		// Set Navigation Hover Color.
-		if ( $theme_options['navi_hover_color'] !== $default_options['navi_hover_color'] ) {
-
-			$custom_css .= '
-				/* Navigation Hover Color Setting */
-				.main-navigation-toggle:hover,
-				.main-navigation-toggle:active,
-				.main-navigation-menu a:hover,
-				.main-navigation-menu a:active {
-					color: ' . $theme_options['navi_hover_color'] . ';
-				}
-
-				.main-navigation-toggle:hover .icon,
-				.main-navigation-toggle:active .icon,
-				.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:hover .icon,
-				.main-navigation-menu > .menu-item-has-children a .sub-menu-icon:active .icon,
-				.header-search .header-search-icon:hover .icon-search,
-				.header-search .header-search-icon:active .icon-search,
-				.header-search .header-search-form-wrap .header-search-form .header-search-close:hover .icon-close,
-				.header-search .header-search-form-wrap .header-search-form .header-search-close:active .icon-close {
-					fill: ' . $theme_options['navi_hover_color'] . ';
-				}
-
-				@media only screen and (min-width: 55em) {
-					.main-navigation-menu > .menu-item-has-children a:hover .sub-menu-icon .icon {
-						fill: ' . $theme_options['navi_hover_color'] . ';
-					}
-				}
-			';
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['navi_submenu_color'] ) ) {
+				$color_variables .= '--submenu-text-color: #202020;';
+				$color_variables .= '--submenu-hover-text-color: rgba(0, 0, 0, 0.5);';
+			}
 		}
 
 		// Set Title Color.
 		if ( $theme_options['title_color'] !== $default_options['title_color'] ) {
-
-			$custom_css .= '
-				/* Post Titles Color Setting */
-				.site-title,
-				.site-title a:link,
-				.site-title a:visited,
-				.entry-title,
-				.entry-title a:link,
-				.entry-title a:visited {
-					color: ' . $theme_options['title_color'] . ';
-				}
-
-				.site-title a:hover,
-				.site-title a:active,
-				.entry-title a:hover,
-				.entry-title a:active {
-					color: #3377bb;
-				}
-
-				.donnager-social-menu .social-icons-menu li a .icon {
-					fill: ' . $theme_options['title_color'] . ';
-				}
-			';
+			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
 		}
 
-		// Set Title Hover Color.
-		if ( $theme_options['title_hover_color'] !== $default_options['title_hover_color'] ) {
+		// Set Footer Color.
+		if ( $theme_options['footer_color'] !== $default_options['footer_color'] ) {
+			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
 
-			$custom_css .= '
-				/* Post Titles Hover Color Setting */
-				.site-title a:hover,
-				.site-title a:active,
-				.entry-title a:hover,
-				.entry-title a:active {
-					color: ' . $theme_options['title_hover_color'] . ';
-				}
-
-				.donnager-social-menu .social-icons-menu li a:hover .icon {
-					fill: ' . $theme_options['title_hover_color'] . ';
-				}
-			';
+			// Check if a light background color was chosen.
+			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
+				$color_variables .= '--footer-text-color: #202020;';
+				$color_variables .= '--footer-hover-text-color: rgba(0, 0, 0, 0.5);';
+			}
 		}
 
-		// Set Widget Title Color.
-		if ( $theme_options['widget_title_color'] !== $default_options['widget_title_color'] ) {
-
-			$custom_css .= '
-				/* Widget Titles Color Setting */
-				.widget-title,
-				.widget-title a:link,
-				.widget-title a:visited,
-				.archive-title,
-				.comments-title,
-				.comment-reply-title,
-				.entry-author .author-heading .author-title {
-					color: ' . $theme_options['widget_title_color'] . ';
-				}
-
-				.widget-title a:hover,
-				.widget-title a:active {
-					color: #3377bb;
-				}
-			';
+		// Set Color Variables.
+		if( '' !== $color_variables ) {
+			$custom_css .= ':root {' . $color_variables . '}';
 		}
-
-		/* Set Link Color 2. */
-		if ( $theme_options['link_color'] !== $default_options['link_color'] ) {
-
-			$custom_css .= '
-				.widget-title a:hover,
-				.widget-title a:active {
-					color: ' . $theme_options['link_color'] . ';
-				}
-			';
-		} // End if().
 
 		return $custom_css;
 	}
@@ -317,7 +139,7 @@ class Donnager_Pro_Custom_Colors {
 		// Get Default Colors from settings.
 		$default_options = Donnager_Pro_Customizer::get_default_options();
 
-		// Add Link and Button Color setting.
+		// Add Link Color setting.
 		$wp_customize->add_setting( 'donnager_theme_options[link_color]', array(
 			'default'           => $default_options['link_color'],
 			'type'              => 'option',
@@ -326,10 +148,42 @@ class Donnager_Pro_Custom_Colors {
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
 			$wp_customize, 'donnager_theme_options[link_color]', array(
-				'label'    => esc_html_x( 'Links and Buttons', 'color setting', 'donnager-pro' ),
+				'label'    => esc_html_x( 'Links', 'color setting', 'donnager-pro' ),
 				'section'  => 'donnager_pro_section_colors',
 				'settings' => 'donnager_theme_options[link_color]',
 				'priority' => 10,
+			)
+		) );
+
+		// Add Button Color setting.
+		$wp_customize->add_setting( 'donnager_theme_options[button_color]', array(
+			'default'           => $default_options['button_color'],
+			'type'              => 'option',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control(
+			$wp_customize, 'donnager_theme_options[button_color]', array(
+				'label'    => esc_html_x( 'Buttons', 'color setting', 'donnager-pro' ),
+				'section'  => 'donnager_pro_section_colors',
+				'settings' => 'donnager_theme_options[button_color]',
+				'priority' => 20,
+			)
+		) );
+
+		// Add Button Hover Color setting.
+		$wp_customize->add_setting( 'donnager_theme_options[button_hover_color]', array(
+			'default'           => $default_options['button_hover_color'],
+			'type'              => 'option',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control(
+			$wp_customize, 'donnager_theme_options[button_hover_color]', array(
+				'label'    => esc_html_x( 'Buttons Hover', 'color setting', 'donnager-pro' ),
+				'section'  => 'donnager_pro_section_colors',
+				'settings' => 'donnager_theme_options[button_hover_color]',
+				'priority' => 30,
 			)
 		) );
 
@@ -342,26 +196,26 @@ class Donnager_Pro_Custom_Colors {
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
 			$wp_customize, 'donnager_theme_options[navi_color]', array(
-				'label'    => esc_html_x( 'Main Navigation (primary)', 'color setting', 'donnager-pro' ),
+				'label'    => esc_html_x( 'Main Navigation', 'color setting', 'donnager-pro' ),
 				'section'  => 'donnager_pro_section_colors',
 				'settings' => 'donnager_theme_options[navi_color]',
-				'priority' => 20,
+				'priority' => 40,
 			)
 		) );
 
 		// Add Navigation Secondary Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[navi_hover_color]', array(
-			'default'           => $default_options['navi_hover_color'],
+		$wp_customize->add_setting( 'donnager_theme_options[navi_submenu_color]', array(
+			'default'           => $default_options['navi_submenu_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[navi_hover_color]', array(
-				'label'    => esc_html_x( 'Main Navigation (secondary)', 'color setting', 'donnager-pro' ),
+			$wp_customize, 'donnager_theme_options[navi_submenu_color]', array(
+				'label'    => esc_html_x( 'Sub Menus', 'color setting', 'donnager-pro' ),
 				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[navi_hover_color]',
-				'priority' => 30,
+				'settings' => 'donnager_theme_options[navi_submenu_color]',
+				'priority' => 50,
 			)
 		) );
 
@@ -374,42 +228,26 @@ class Donnager_Pro_Custom_Colors {
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
 			$wp_customize, 'donnager_theme_options[title_color]', array(
-				'label'    => esc_html_x( 'Post Titles', 'color setting', 'donnager-pro' ),
+				'label'    => esc_html_x( 'Titles', 'color setting', 'donnager-pro' ),
 				'section'  => 'donnager_pro_section_colors',
 				'settings' => 'donnager_theme_options[title_color]',
-				'priority' => 40,
-			)
-		) );
-
-		// Add Title Hover Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[title_hover_color]', array(
-			'default'           => $default_options['title_hover_color'],
-			'type'              => 'option',
-			'transport'         => 'postMessage',
-			'sanitize_callback' => 'sanitize_hex_color',
-		) );
-		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[title_hover_color]', array(
-				'label'    => esc_html_x( 'Post Titles Hover', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[title_hover_color]',
-				'priority' => 50,
+				'priority' => 60,
 			)
 		) );
 
 		// Add Widget Title Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[widget_title_color]', array(
-			'default'           => $default_options['widget_title_color'],
+		$wp_customize->add_setting( 'donnager_theme_options[footer_color]', array(
+			'default'           => $default_options['footer_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[widget_title_color]', array(
-				'label'    => esc_html_x( 'Widget Titles', 'color setting', 'donnager-pro' ),
+			$wp_customize, 'donnager_theme_options[footer_color]', array(
+				'label'    => esc_html_x( 'Footer', 'color setting', 'donnager-pro' ),
 				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[widget_title_color]',
-				'priority' => 60,
+				'settings' => 'donnager_theme_options[footer_color]',
+				'priority' => 70,
 			)
 		) );
 	}
