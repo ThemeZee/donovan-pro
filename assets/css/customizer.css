@@ -1,0 +1,78 @@
+/*
+ * Customizer CSS
+ *
+ * Adjusts styling for theme option controls in the Customizer
+ *
+ * @package Donnager Pro
+ */
+
+#customize-control-donnager_theme_options-header_text,
+#customize-control-donnager_theme_options-header_search_title,
+#customize-control-donnager_theme_options-footer_text,
+#customize-control-donnager_theme_options-scroll_top_title {
+	margin-top: 16px;
+}
+
+#customize-control-donnager_theme_options-header_date_title,
+#customize-control-donnager_theme_options-header_search_title,
+#customize-control-donnager_theme_options-footer_content_title,
+#customize-control-donnager_theme_options-footer_text,
+#customize-control-donnager_theme_options-scroll_top_title {
+	margin-bottom: 0;
+}
+
+#customize-control-donnager_theme_options-header_text textarea,
+#customize-control-donnager_theme_options-footer_text textarea {
+	height: 4em;
+}
+
+/* Custom Font Control */
+.customize-control-donnager_pro_custom_font {
+	margin-bottom: 24px;
+}
+
+.customize-control-donnager_pro_custom_font .actions,
+.customize-control-donnager_pro_custom_font_list .actions {
+	margin-top: 8px;
+}
+
+.customize-control-donnager_pro_custom_font .actions .button.previous {
+	margin-right: 4px;
+}
+
+.customize-control-donnager_pro_custom_font .actions .button.standard {
+	float: right;
+}
+
+.customize-control-donnager_pro_custom_font select {
+	width: 100%;
+}
+
+.customize-control-donnager_pro_custom_font div:hover {
+	cursor: default;
+}
+
+.customize-control-donnager_pro_custom_font .actions .button:hover {
+	cursor: pointer;
+}
+
+/* Magazine Sections */
+.adding-magazine-widget #available-widgets #available-widgets-list [id*='widget-tpl-donnager-magazine-posts-sidebar'] {
+	display: none !important;
+}
+
+.adding-magazine-widget #available-widgets [id*='widget-tpl-donnager-magazine-posts-horizontal-box'] .widget-top::before {
+	background-image: url( '../images/magazine-horizontal-box.png' );
+}
+
+.adding-magazine-widget #available-widgets [id*='widget-tpl-donnager-magazine-posts-vertical-box'] .widget-top::before {
+	background-image: url( '../images/magazine-vertical-box.png' );
+}
+
+.adding-magazine-widget #available-widgets [id*='widget-tpl-donnager-magazine-posts-list'] .widget-top::before {
+	background-image: url( '../images/magazine-list.png' );
+}
+
+.adding-magazine-widget #available-widgets [id*='widget-tpl-donnager-magazine-posts-single'] .widget-top::before {
+	background-image: url( '../images/magazine-single.png' );
+}
