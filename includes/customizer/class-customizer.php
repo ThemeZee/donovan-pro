@@ -74,10 +74,10 @@ class Donnager_Pro_Customizer {
 			'navi_submenu_color' => '#ee1133',
 			'title_color'        => '#202020',
 			'footer_color'       => '#202020',
-			'text_font'          => 'Roboto',
-			'title_font'         => 'Open Sans',
-			'navi_font'          => 'Roboto',
-			'widget_title_font'  => 'Open Sans',
+			'text_font'          => 'Raleway',
+			'title_font'         => 'Quicksand',
+			'navi_font'          => 'Quicksand',
+			'widget_title_font'  => 'Quicksand',
 			'available_fonts'    => 'favorites',
 		);
 

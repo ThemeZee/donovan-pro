@@ -185,9 +185,7 @@
 			$( "head" ).append( googleFontSource );
 
 			// Set CSS.
-			$( 'body, button, input, select, textarea' )
-				.css( 'font-family', newval );
-
+			document.documentElement.style.setProperty( '--text-font', newval );
 		} );
 	} );
 
@@ -206,9 +204,7 @@
 			$( "head" ).append( googleFontSource );
 
 			// Set CSS.
-			$( '.site-title, .entry-title' )
-				.css( 'font-family', newval );
-
+			document.documentElement.style.setProperty( '--title-font', newval );
 		} );
 	} );
 
@@ -227,9 +223,7 @@
 			$( "head" ).append( googleFontSource );
 
 			// Set CSS.
-			$( '.main-navigation-menu, .main-navigation-toggle' )
-				.css( 'font-family', newval );
-
+			document.documentElement.style.setProperty( '--navi-font', newval );
 		} );
 	} );
 
@@ -248,9 +242,7 @@
 			$( "head" ).append( googleFontSource );
 
 			// Set CSS.
-			$( '.widget-title, .archive-title, .comments-title, .comment-reply-title, .entry-author .author-heading .author-title' )
-				.css( 'font-family', newval );
-
+			document.documentElement.style.setProperty( '--widget-title-font', newval );
 		} );
 	} );
 

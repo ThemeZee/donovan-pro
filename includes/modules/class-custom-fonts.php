@@ -56,59 +56,32 @@ class Donnager_Pro_Custom_Fonts {
 		// Get Default Fonts from settings.
 		$default_options = Donnager_Pro_Customizer::get_default_options();
 
-		// Set Default Text Font.
-		if ( $theme_options['text_font'] !== $default_options['text_font'] ) {
+		// Font Variables.
+		$font_variables = '';
 
-			$custom_css .= '
-				/* Base Font Setting */
-				body,
-				button,
-				input,
-				select,
-				textarea {
-					font-family: "' . esc_attr( $theme_options['text_font'] ) . '";
-				}
-			';
+		// Set Text Font.
+		if ( $theme_options['text_font'] !== $default_options['text_font'] ) {
+			$font_variables .= '--text-font: "' . $theme_options['text_font'] . '", Arial, Helvetica;';
 		}
 
 		// Set Title Font.
 		if ( $theme_options['title_font'] !== $default_options['title_font'] ) {
-
-			$custom_css .= '
-				/* Title Font Setting */
-				.site-title,
-				.entry-title {
-					font-family: "' . esc_attr( $theme_options['title_font'] ) . '";
-				}
-			';
+			$font_variables .= '--title-font: "' . $theme_options['title_font'] . '", Tahoma, Arial;';
 		}
 
-		// Set Navigation Font.
+		// Set Navi Font.
 		if ( $theme_options['navi_font'] !== $default_options['navi_font'] ) {
-
-			$custom_css .= '
-				/* Navigation Font Setting */
-				.main-navigation-toggle,
-				.main-navigation-menu {
-					font-family: "' . esc_attr( $theme_options['navi_font'] ) . '";
-				}
-				';
-
+			$font_variables .= '--navi-font: "' . $theme_options['navi_font'] . '", Tahoma, Arial;';
 		}
 
 		// Set Widget Title Font.
 		if ( $theme_options['widget_title_font'] !== $default_options['widget_title_font'] ) {
+			$font_variables .= '--widget-title_font: "' . $theme_options['widget_title_font'] . '", Tahoma, Arial;';
+		}
 
-			$custom_css .= '
-				/* Widget Titles Font Setting */
-				.widget-title,
-				.archive-title,
-				.comments-title,
-				.comment-reply-title,
-				.entry-author .author-heading .author-title {
-					font-family: "' . esc_attr( $theme_options['widget_title_font'] ) . '";
-				}
-			';
+		// Add Font Variables.
+		if( '' !== $font_variables ) {
+			$custom_css .= ':root {' . $font_variables . '}';
 		}
 
 		return $custom_css;
