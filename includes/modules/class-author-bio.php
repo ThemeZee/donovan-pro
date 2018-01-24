@@ -56,16 +56,20 @@ class Donnager_Pro_Author_Bio {
 					<?php echo get_avatar( get_the_author_meta( 'user_email' ), 128 ); ?>
 				</div>
 
-				<div class="author-heading">
-					<h4 class="author-title"><?php printf( esc_html__( 'About %s', 'donnager-pro' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h4>
-					<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-						<?php esc_html_e( 'View all posts', 'donnager-pro' ); ?>
-					</a>
-				</div>
+				<div class="author-info">
 
-				<p class="author-bio">
-					<?php the_author_meta( 'description' ); ?>
-				</p>
+					<div class="author-heading">
+						<h4 class="author-title"><?php printf( esc_html__( 'About %s', 'donnager-pro' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h4>
+						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
+							<?php esc_html_e( 'View all posts', 'donnager-pro' ); ?>
+						</a>
+					</div>
+
+					<p class="author-bio">
+						<?php the_author_meta( 'description' ); ?>
+					</p>
+
+				</div>
 			</div><!-- .author-box -->
 
 		<?php
@@ -109,7 +113,7 @@ class Donnager_Pro_Author_Bio {
 
 		// Hide Author Bio?
 		if ( false === $theme_options['author_bio'] ) {
-			$elements[] = '.type-post .entry-footer .entry-author';
+			$elements[] = '.type-post .post-content .entry-author';
 		}
 
 		return $elements;

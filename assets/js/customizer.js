@@ -41,9 +41,9 @@
 	wp.customize( 'donnager_theme_options[author_bio]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
-				hideElement( '.type-post .entry-footer .entry-author' );
+				hideElement( '.type-post .post-content .entry-author' );
 			} else {
-				showElement( '.type-post .entry-footer .entry-author' );
+				showElement( '.type-post .post-content .entry-author' );
 			}
 		} );
 	} );

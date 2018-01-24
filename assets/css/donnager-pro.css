@@ -264,16 +264,14 @@
 # Author Bio
 --------------------------------------------------------------*/
 .entry-author {
-	margin: 0 0 1.5em;
-	padding: 1.5em 0 1.35em;
-	border-top: 1px solid rgba(0,0,0,0.15);
-	border-bottom: 1px solid rgba(0,0,0,0.15);
+	margin: 1.5rem 0 0;
+	padding: 1.5rem 0 0;
+	border-top: 2px solid rgba(0,0,0,0.05);
+	text-align: center;
 }
 
 .entry-author .author-avatar {
-	float: left;
-	margin: 0 1.5em 0.25em 0;
-	max-width: 25%;
+	margin-bottom: 1rem;
 }
 
 .entry-author .author-avatar img {
@@ -281,14 +279,14 @@
 }
 
 .entry-author .author-heading .author-title {
-	display: inline-block;
-	margin: 0 1em 0.25em 0;
+	display: block;
+	margin: 0 0 0.25em;
 	padding: 0;
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 17px;
-	font-size: 1.0625rem;
-	font-family: 'Open Sans', Tahoma, Arial;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-family: Quicksand, Tahoma, Arial;
+	font-family: var(--widget-title-font);
+	font-weight: normal;
 	line-height: 1.4;
 }
 
@@ -301,8 +299,8 @@
 
 .entry-author .author-bio {
 	margin: 0;
-	font-size: 17px;
-	font-size: 1.0625rem;
+	font-size: 16px;
+	font-size: 1.0rem;
 }
 
 /*--------------------------------------------------------------
@@ -422,6 +420,28 @@
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+## Mobile Medium ( Larger than 400px )
+--------------------------------------------------------------*/
+@media only screen and (min-width: 30em) {
+	.entry-author {
+		display: flex;
+		text-align: left;
+	}
+
+	.entry-author .author-avatar {
+		margin-right: 1rem;
+		margin-bottom: 0;
+		width: 25%;
+		max-width: 128px;
+	}
+
+	.entry-author .author-heading .author-title {
+		display: inline-block;
+		margin: 0 1em 0.25em 0;
+	}
+}
+
+/*--------------------------------------------------------------
 ## Mobile Medium ( Larger than 560px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 35em) {
@@ -456,8 +476,14 @@
 ## Mobile Medium ( Larger than 640px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 40em) {
-	.entry-author {
-		margin-bottom: 2em;
+	/* Entry Author */
+	.entry-author .author-avatar {
+		margin-right: 1.5rem;
+	}
+
+	.entry-author .author-heading .author-title {
+		font-size: 20px;
+		font-size: 1.25rem;
 	}
 
 	/* Footer Widgets */
@@ -690,10 +716,6 @@
 ## Desktop Full ( Larger than 1200px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 75em) {
-	.entry-author {
-		margin-bottom: 2.5em;
-	}
-
 	/* Footer Widgets */
 	.footer-widgets-background {
 		padding: 2.5em 0 0;
