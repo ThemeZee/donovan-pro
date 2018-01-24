@@ -309,27 +309,76 @@
 .footer-widgets-background {
 	padding: 0;
 	background: #202020;
+	background: var(--footer-color);
 }
 
 /* Footer Widget Styling */
 .footer-widgets .widget {
 	color: rgba(255,255,255,0.5);
-	background: rgba(255,255,255,0.01);
+	color: var(--footer-hover-text-color);
+	background: rgba(255,255,255,0.025);
+	background: var(--footer-widget-color);
 	border-color: rgba(255, 255, 255, 0.05);
+	border-color: var(--footer-border-color);
 }
 
 .footer-widgets .widget-title {
 	color: #fff;
+	color: var(--footer-text-color);
 }
 
 .footer-widgets .widget a:link,
 .footer-widgets .widget a:visited  {
 	color: #fff;
+	color: var(--footer-text-color);
 }
 
 .footer-widgets .widget a:hover,
 .footer-widgets .widget a:active  {
 	color: rgba(255,255,255,0.5);
+	color: var(--footer-hover-text-color);
+}
+
+.footer-widgets .widget input[type="text"],
+.footer-widgets .widget input[type="email"],
+.footer-widgets .widget input[type="url"],
+.footer-widgets .widget input[type="password"],
+.footer-widgets .widget input[type="search"],
+.footer-widgets .widget textarea {
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid var(--footer-border-color);
+	color: rgba(255,255,255,0.5);
+	color: var(--footer-hover-text-color);
+}
+
+.footer-widgets .widget input[type="text"]:focus,
+.footer-widgets .widget input[type="email"]:focus,
+.footer-widgets .widget input[type="url"]:focus,
+.footer-widgets .widget input[type="password"]:focus,
+.footer-widgets .widget input[type="search"]:focus,
+.footer-widgets .widget textarea:focus {
+	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid var(--footer-border-color);
+	background: rgba(255,255,255,0.025);
+	background: var(--footer-widget-color);
+	color: #fff;
+	color: var(--footer-text-color);
+}
+
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta,
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:link,
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:visited,
+.footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
+	color: rgba(255,255,255,0.5);
+	color: var(--footer-hover-text-color);
+	border-color: rgba(255, 255, 255, 0.05);
+	border-color: var(--footer-border-color);
+}
+
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:hover,
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:active {
+	color: #fff;
+	color: var(--footer-text-color);
 }
 
 /*--------------------------------------------------------------

@@ -48,17 +48,6 @@
 		} );
 	} );
 
-	/* Footer Content checkbox */
-	wp.customize( 'donnager_theme_options[footer_content]', function( value ) {
-		value.bind( function( newval ) {
-			if ( false === newval ) {
-				hideElement( '.site > .footer-content' );
-			} else {
-				showElement( '.site > .footer-content' );
-			}
-		} );
-	} );
-
 	/* Footer textfield. */
 	wp.customize( 'donnager_theme_options[footer_text]', function( value ) {
 		value.bind( function( to ) {
@@ -108,38 +97,44 @@
 	/* Navi Color Option */
 	wp.customize( 'donnager_theme_options[navi_color]', function( value ) {
 		value.bind( function( newval ) {
-			var text_color, text_hover_color;
+			var text_color, text_hover_color, border_color;
 
 			if( isColorLight( newval ) ) {
 				text_color = '#202020';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
+				border_color = 'rgba(0, 0, 0, 0.075)';
 			} else {
 				text_color = '#ffffff';
 				text_hover_color = 'rgba(255, 255, 255, 0.5)';
+				border_color = 'rgba(255, 255, 255, 0.05)';
 			}
 
 			document.documentElement.style.setProperty( '--navi-color', newval );
 			document.documentElement.style.setProperty( '--navi-text-color', text_color );
 			document.documentElement.style.setProperty( '--navi-hover-text-color', text_hover_color );
+			document.documentElement.style.setProperty( '--navi-border-color', border_color );
 		} );
 	} );
 
 	/* Submenu Color Option */
 	wp.customize( 'donnager_theme_options[navi_submenu_color]', function( value ) {
 		value.bind( function( newval ) {
-			var text_color, text_hover_color;
+			var text_color, text_hover_color, border_color;
 
 			if( isColorLight( newval ) ) {
 				text_color = '#202020';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
+				border_color = 'rgba(0, 0, 0, 0.1)';
 			} else {
 				text_color = '#ffffff';
 				text_hover_color = 'rgba(255, 255, 255, 0.5)';
+				border_color = 'rgba(255, 255, 255, 0.075)';
 			}
 
 			document.documentElement.style.setProperty( '--submenu-color', newval );
 			document.documentElement.style.setProperty( '--submenu-text-color', text_color );
 			document.documentElement.style.setProperty( '--submenu-hover-text-color', text_hover_color );
+			document.documentElement.style.setProperty( '--submenu-border-color', border_color );
 		} );
 	} );
 
@@ -153,19 +148,25 @@
 	/* Footer Color Option */
 	wp.customize( 'donnager_theme_options[footer_color]', function( value ) {
 		value.bind( function( newval ) {
-			var text_color, text_hover_color;
+			var text_color, text_hover_color, border_color, widget_color;
 
 			if( isColorLight( newval ) ) {
 				text_color = '#202020';
 				text_hover_color = 'rgba(0, 0, 0, 0.5)';
+				border_color = 'rgba(0, 0, 0, 0.1)';
+				widget_color = 'rgba(0, 0, 0, 0.045)';
 			} else {
 				text_color = '#ffffff';
 				text_hover_color = 'rgba(255, 255, 255, 0.5)';
+				border_color = 'rgba(255, 255, 255, 0.05)';
+				widget_color = 'rgba(255, 255, 255, 0.025)';
 			}
 
 			document.documentElement.style.setProperty( '--footer-color', newval );
 			document.documentElement.style.setProperty( '--footer-text-color', text_color );
 			document.documentElement.style.setProperty( '--footer-hover-text-color', text_hover_color );
+			document.documentElement.style.setProperty( '--footer-border-color', border_color );
+			document.documentElement.style.setProperty( '--footer-widget-color', widget_color );
 		} );
 	} );
 

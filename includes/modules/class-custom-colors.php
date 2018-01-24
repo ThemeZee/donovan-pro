@@ -84,6 +84,7 @@ class Donnager_Pro_Custom_Colors {
 			if ( self::is_color_light( $theme_options['navi_color'] ) ) {
 				$color_variables .= '--navi-text-color: #202020;';
 				$color_variables .= '--navi-hover-text-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--navi-border-color: rgba(0, 0, 0, 0.075);';
 			}
 		}
 
@@ -95,6 +96,7 @@ class Donnager_Pro_Custom_Colors {
 			if ( self::is_color_light( $theme_options['navi_submenu_color'] ) ) {
 				$color_variables .= '--submenu-text-color: #202020;';
 				$color_variables .= '--submenu-hover-text-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--submenu-border-color: rgba(0, 0, 0, 0.1);';
 			}
 		}
 
@@ -111,6 +113,8 @@ class Donnager_Pro_Custom_Colors {
 			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
 				$color_variables .= '--footer-text-color: #202020;';
 				$color_variables .= '--footer-hover-text-color: rgba(0, 0, 0, 0.5);';
+				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.1);';
+				$color_variables .= '--footer-widget-color: rgba(0, 0, 0, 0.045);';
 			}
 		}
 
