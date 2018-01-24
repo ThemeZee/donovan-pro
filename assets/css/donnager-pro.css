@@ -304,28 +304,32 @@
 }
 
 /*--------------------------------------------------------------
-# Footer Content / Footer Widgets
+# Footer Widgets
 --------------------------------------------------------------*/
-.footer-content {
-	padding: 1.5em 0;
-	border-top: 6px solid #353535;
-	text-align: center;
-}
-
-.footer-social-menu {
-	margin-top: 0.5em;
-}
-
-.footer-social-menu .social-icons-menu {
-	justify-content: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-}
-
-/* Footer Widgets */
 .footer-widgets-background {
-	padding: 1.5em 0 0;
-	border-top: 1px solid rgba(0,0,0,0.15);
+	padding: 0;
+	background: #202020;
+}
+
+/* Footer Widget Styling */
+.footer-widgets .widget {
+	color: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.01);
+	border-color: rgba(255, 255, 255, 0.05);
+}
+
+.footer-widgets .widget-title {
+	color: #fff;
+}
+
+.footer-widgets .widget a:link,
+.footer-widgets .widget a:visited  {
+	color: #fff;
+}
+
+.footer-widgets .widget a:hover,
+.footer-widgets .widget a:active  {
+	color: rgba(255,255,255,0.5);
 }
 
 /*--------------------------------------------------------------
@@ -336,16 +340,13 @@
 }
 
 .footer-navigation {
-	margin: 1em 0 0;
+	margin: 1.5rem 0 0;
 }
 
 .footer-navigation-menu {
 	margin: 0;
 	padding: 0;
-	color: #353535;
 	list-style: none;
-	font-size: 15px;
-	font-size: 0.9375rem;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 }
@@ -357,24 +358,9 @@
 .footer-navigation-menu a {
 	display: block;
 	margin: 0;
-	padding: 0.5em;
+	padding: 0.5rem 1rem;
 	text-align: center;
 	text-decoration: none;
-}
-
-.footer-navigation-menu li:last-child a {
-	border-bottom: none;
-}
-
-.footer-navigation-menu a:link,
-.footer-navigation-menu a:visited {
-	color: #353535;
-	text-decoration: none;
-}
-
-.footer-navigation-menu a:hover,
-.footer-navigation-menu a:active {
-	color: #3377bb;
 }
 
 .footer-navigation-menu li.current-menu-item > a {
@@ -422,6 +408,18 @@
 /*--------------------------------------------------------------
 ## Mobile Medium ( Larger than 400px )
 --------------------------------------------------------------*/
+@media only screen and (min-width: 25em) {
+	/* Footer Widgets */
+	.footer-widgets-background {
+		padding: 1rem 0 0;
+		border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+		border-bottom: 2px solid var(--footer-border-color);
+	}
+}
+
+/*--------------------------------------------------------------
+## Mobile Medium ( Larger than 480px )
+--------------------------------------------------------------*/
 @media only screen and (min-width: 30em) {
 	.entry-author {
 		display: flex;
@@ -452,13 +450,13 @@
 		display: flex;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		margin-right: -1.5em;
+		margin-right: -1rem;
 	}
 
 	.footer-widget-column {
 		flex-grow: 1;
 		box-sizing: border-box;
-		padding-right: 1.5em;
+		padding-right: 1rem;
 		width: 50%;
 		-webkit-box-flex: 1;
 		-ms-flex-positive: 1;
@@ -486,17 +484,17 @@
 		font-size: 1.25rem;
 	}
 
-	/* Footer Widgets */
+	/* Footer Widget */
 	.footer-widgets-background {
-		padding: 2em 0 0;
+		padding: 1.5rem 0 0;
 	}
 
 	.footer-widgets {
-		margin-right: -2em;
+		margin-right: -1.5rem;
 	}
 
 	.footer-widget-column {
-		padding-right: 2em;
+		padding-right: 1.5rem;
 	}
 
 	/* Footer Navigation */
@@ -649,28 +647,7 @@
 /*--------------------------------------------------------------
 ## Desktop Large ( Larger than 1040px )
 --------------------------------------------------------------*/
-@media only screen and (min-width: 57.5em) {
-	/* Footer Content */
-	.footer-content {
-		position: relative;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		text-align: left;
-	}
-
-	.footer-social-menu {
-		display: block;
-		margin-top: 0.25em;
-		margin-left: auto;
-	}
-
-	.footer-social-menu .social-icons-menu {
-		justify-content: flex-start;
-		-webkit-box-pack: start;
-		-ms-flex-pack: start;
-	}
-
+@media only screen and (min-width: 55em) {
 	/* Footer Line */
 	.site-footer {
 		display: -webkit-box;
@@ -684,7 +661,7 @@
 
 	.site-footer .footer-navigation {
 		order: 2;
-		margin: 0.5em 0 0;
+		margin: 1rem 0 0;
 		-webkit-box-ordinal-group: 3;
 		-ms-flex-order: 2;
 	}
@@ -716,18 +693,7 @@
 ## Desktop Full ( Larger than 1200px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 75em) {
-	/* Footer Widgets */
-	.footer-widgets-background {
-		padding: 2.5em 0 0;
-	}
 
-	.footer-widgets {
-		margin-right: -2.5em;
-	}
-
-	.footer-widget-column {
-		padding-right: 2.5em;
-	}
 }
 
 /*--------------------------------------------------------------

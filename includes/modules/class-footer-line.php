@@ -110,6 +110,13 @@ class Donnager_Pro_Footer_Line {
 	 */
 	static function footer_settings( $wp_customize ) {
 
+		// Add Section for Footer Settings.
+		$wp_customize->add_section( 'donnager_pro_section_footer', array(
+			'title'    => esc_html__( 'Footer Settings', 'donnager-pro' ),
+			'priority' => 90,
+			'panel'    => 'donnager_options_panel',
+		) );
+
 		// Add Footer Text setting.
 		$wp_customize->add_setting( 'donnager_theme_options[footer_text]', array(
 			'default'           => '',
@@ -123,7 +130,7 @@ class Donnager_Pro_Footer_Line {
 			'section'  => 'donnager_pro_section_footer',
 			'settings' => 'donnager_theme_options[footer_text]',
 			'type'     => 'textarea',
-			'priority' => 30,
+			'priority' => 10,
 		) );
 
 		// Add selective refresh for footer text.
@@ -146,7 +153,7 @@ class Donnager_Pro_Footer_Line {
 			'section'  => 'donnager_pro_section_footer',
 			'settings' => 'donnager_theme_options[credit_link]',
 			'type'     => 'checkbox',
-			'priority' => 40,
+			'priority' => 20,
 		) );
 	}
 
