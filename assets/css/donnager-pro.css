@@ -1,7 +1,7 @@
 /*
  * Donnager Pro CSS
  *
- * Copyright(C) 2017, ThemeZee.com - support@themezee.com
+ * Copyright(C) 2018, ThemeZee.com - support@themezee.com
  * License: GPL v3
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
@@ -410,11 +410,13 @@
 }
 
 .scroll-to-top-button:focus {
-	background: #3377bb;
+	background: #ee1133;
+	background: var(--button-color);
 }
 
 .scroll-to-top-button:focus:hover {
-	background: #353535;
+	background: #D5001A;
+	background: var(--button-hover-color);
 }
 
 .scroll-to-top-button .icon {
@@ -423,6 +425,13 @@
 	height: 22px;
 	vertical-align: top;
 	fill: #fff;
+	fill: var(--button-text-color);
+}
+
+.scroll-to-top-button:hover .icon,
+.scroll-to-top-button:active .icon {
+	fill: #fff;
+	fill: var(--button-hover-text-color);
 }
 
 /*--------------------------------------------------------------
