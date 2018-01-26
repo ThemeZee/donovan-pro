@@ -78,15 +78,8 @@ class Donnager_Pro_Header_Search {
 					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'donnager-pro' ); ?></span>
 				</a>
 
-				<div class="header-search-form-wrap">
-
-					<div class="header-search-form">
-						<?php get_search_form(); ?>
-						<a class="header-search-close">
-							<?php echo donnager_get_svg( 'close' ); ?>
-						</a>
-					</div>
-
+				<div class="header-search-form">
+					<?php get_search_form(); ?>
 				</div>
 
 			</div>
