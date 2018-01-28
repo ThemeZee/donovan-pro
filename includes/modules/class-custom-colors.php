@@ -113,8 +113,7 @@ class Donnager_Pro_Custom_Colors {
 			if ( self::is_color_light( $theme_options['footer_color'] ) ) {
 				$color_variables .= '--footer-text-color: #202020;';
 				$color_variables .= '--footer-hover-text-color: rgba(0, 0, 0, 0.5);';
-				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.1);';
-				$color_variables .= '--footer-widget-color: rgba(0, 0, 0, 0.045);';
+				$color_variables .= '--footer-border-color: rgba(0, 0, 0, 0.05);';
 			}
 		}
 

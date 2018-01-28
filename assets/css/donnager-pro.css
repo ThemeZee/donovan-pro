@@ -292,8 +292,8 @@
 	color: rgba(255,255,255,0.5);
 	color: var(--footer-hover-text-color);
 	background: rgba(255,255,255,0.025);
-	background: var(--footer-widget-color);
-	border-color: rgba(255, 255, 255, 0.05);
+	background: var(--footer-border-color);
+	border-color: rgba(255,255,255,0.025);
 	border-color: var(--footer-border-color);
 }
 
@@ -320,7 +320,7 @@
 .footer-widgets .widget input[type="password"],
 .footer-widgets .widget input[type="search"],
 .footer-widgets .widget textarea {
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255,255,255,0.025);
 	border: 1px solid var(--footer-border-color);
 	color: rgba(255,255,255,0.5);
 	color: var(--footer-hover-text-color);
@@ -332,10 +332,10 @@
 .footer-widgets .widget input[type="password"]:focus,
 .footer-widgets .widget input[type="search"]:focus,
 .footer-widgets .widget textarea:focus {
-	border: 1px solid rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255,255,255,0.025);
 	border: 1px solid var(--footer-border-color);
 	background: rgba(255,255,255,0.025);
-	background: var(--footer-widget-color);
+	background: var(--footer-border-color);
 	color: #fff;
 	color: var(--footer-text-color);
 }
@@ -346,8 +346,8 @@
 .footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
 	color: rgba(255,255,255,0.5);
 	color: var(--footer-hover-text-color);
-	border-color: rgba(255, 255, 255, 0.05);
-	border-color: var(--footer-border-color);
+	border-color:  rgba(255,255,255,0.025);
+	border-color:  var(--footer-border-color);
 }
 
 .footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:hover,
@@ -442,6 +442,12 @@
 ## Mobile Medium ( Larger than 400px )
 --------------------------------------------------------------*/
 @media only screen and (min-width: 25em) {
+	/*Header Bar */
+	.boxed-theme-layout .header-bar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	/* Header Search */
 	.header-search .header-search-icon {
 		right: 0.5rem;
@@ -450,14 +456,16 @@
 	/* Footer Widgets */
 	.footer-widgets-background {
 		padding: 1rem 0 0;
-		border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+		border-bottom: 2px solid rgba(255,255,255,0.025);
 		border-bottom: 2px solid var(--footer-border-color);
 	}
 
 	.centered-theme-layout .footer-widgets-background {
 		padding-top: 0;
-		border-bottom: 2px solid rgba(255,255,255,0.025);
-		border-bottom: 2px solid var(--footer-widget-color);
+	}
+
+	.centered-theme-layout .footer-widgets .widget {
+		margin-bottom: 2px;
 	}
 }
 
@@ -635,11 +643,13 @@
 		min-width: 300px;
 	}
 
-	.centered-theme-layout .header-search .header-search-icon {
+	.centered-theme-layout .header-search .header-search-icon,
+	.boxed-theme-layout .header-search .header-search-icon {
 		margin-right: 0.5rem;
 	}
 
-	.centered-theme-layout .header-search .header-search-form {
+	.centered-theme-layout .header-search .header-search-form,
+	.boxed-theme-layout .header-search .header-search-form {
 		right: 0;
 	}
 
@@ -661,9 +671,10 @@
 		padding-left: 0;
 	}
 
-	.centered-theme-layout .header-bar {
-		padding-left: 1.5rem;
-		padding-right: 0.75rem;
+	.centered-theme-layout .header-bar,
+	.boxed-theme-layout .header-bar {
+		padding-left: 1rem;
+		padding-right: 0.25rem;
 	}
 
 	/* Top Navigation */
