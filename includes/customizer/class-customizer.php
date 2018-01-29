@@ -4,7 +4,7 @@
  *
  * Setup the Customizer and theme options for the Pro plugin
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Customizer Class
  */
-class Donnager_Pro_Customizer {
+class Donovan_Pro_Customizer {
 
 	/**
 	 * Customizer Setup
@@ -22,8 +22,8 @@ class Donnager_Pro_Customizer {
 	 */
 	static function setup() {
 
-		// Return early if Donnager Theme is not active.
-		if ( ! current_theme_supports( 'donnager-pro' ) ) {
+		// Return early if Donovan Theme is not active.
+		if ( ! current_theme_supports( 'donovan-pro' ) ) {
 			return;
 		}
 
@@ -32,7 +32,7 @@ class Donnager_Pro_Customizer {
 		add_action( 'customize_controls_print_styles', array( __CLASS__, 'customize_preview_css' ) );
 
 		// Remove Upgrade section.
-		remove_action( 'customize_register', 'donnager_customize_register_upgrade_settings' );
+		remove_action( 'customize_register', 'donovan_customize_register_upgrade_settings' );
 	}
 
 	/**
@@ -43,7 +43,7 @@ class Donnager_Pro_Customizer {
 	static function get_theme_options() {
 
 		// Merge Theme Options Array from Database with Default Options Array.
-		$theme_options = wp_parse_args( get_option( 'donnager_theme_options', array() ), self::get_default_options() );
+		$theme_options = wp_parse_args( get_option( 'donovan_theme_options', array() ), self::get_default_options() );
 
 		// Return theme options.
 		return $theme_options;
@@ -92,7 +92,7 @@ class Donnager_Pro_Customizer {
 	 */
 	static function customize_preview_js() {
 
-		wp_enqueue_script( 'donnager-pro-customizer-js', DONNAGER_PRO_PLUGIN_URL . 'assets/js/customizer.js', array( 'customize-preview' ), DONNAGER_PRO_VERSION, true );
+		wp_enqueue_script( 'donovan-pro-customizer-js', DONOVAN_PRO_PLUGIN_URL . 'assets/js/customizer.js', array( 'customize-preview' ), DONOVAN_PRO_VERSION, true );
 
 	}
 
@@ -103,10 +103,10 @@ class Donnager_Pro_Customizer {
 	 */
 	static function customize_preview_css() {
 
-		wp_enqueue_style( 'donnager-pro-customizer-css', DONNAGER_PRO_PLUGIN_URL . 'assets/css/customizer.css', array(), DONNAGER_PRO_VERSION );
+		wp_enqueue_style( 'donovan-pro-customizer-css', DONOVAN_PRO_PLUGIN_URL . 'assets/css/customizer.css', array(), DONOVAN_PRO_VERSION );
 
 	}
 }
 
 // Run Class.
-add_action( 'init', array( 'Donnager_Pro_Customizer', 'setup' ) );
+add_action( 'init', array( 'Donovan_Pro_Customizer', 'setup' ) );

@@ -5,7 +5,7 @@
  * Displays author bio below single posts
  * Registers and displays footer navigation
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Author Bio Class
  */
-class Donnager_Pro_Author_Bio {
+class Donovan_Pro_Author_Bio {
 
 	/**
 	 * Author Bio Setup
@@ -23,19 +23,19 @@ class Donnager_Pro_Author_Bio {
 	 */
 	static function setup() {
 
-		// Return early if Donnager Theme is not active.
-		if ( ! current_theme_supports( 'donnager-pro' ) ) {
+		// Return early if Donovan Theme is not active.
+		if ( ! current_theme_supports( 'donovan-pro' ) ) {
 			return;
 		}
 
 		// Remove default footer text function and replace it with new one.
-		add_action( 'donnager_author_bio', array( __CLASS__, 'author_bio' ) );
+		add_action( 'donovan_author_bio', array( __CLASS__, 'author_bio' ) );
 
 		// Add Author Bio checkbox in Customizer.
 		add_action( 'customize_register', array( __CLASS__, 'author_bio_settings' ) );
 
 		// Hide Author Bio if disabled.
-		add_filter( 'donnager_hide_elements', array( __CLASS__, 'hide_author_bio' ) );
+		add_filter( 'donovan_hide_elements', array( __CLASS__, 'hide_author_bio' ) );
 	}
 
 	/**
@@ -46,7 +46,7 @@ class Donnager_Pro_Author_Bio {
 	static function author_bio() {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Show author bio if activated.
 		if ( true === $theme_options['author_bio'] || is_customize_preview() ) : ?>
@@ -59,9 +59,9 @@ class Donnager_Pro_Author_Bio {
 				<div class="author-info">
 
 					<div class="author-heading">
-						<h4 class="author-title"><?php printf( esc_html__( 'About %s', 'donnager-pro' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h4>
+						<h4 class="author-title"><?php printf( esc_html__( 'About %s', 'donovan-pro' ), '<span class="author-name">' . get_the_author() . '</span>' ); ?></h4>
 						<a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author">
-							<?php esc_html_e( 'View all posts', 'donnager-pro' ); ?>
+							<?php esc_html_e( 'View all posts', 'donovan-pro' ); ?>
 						</a>
 					</div>
 
@@ -84,17 +84,17 @@ class Donnager_Pro_Author_Bio {
 	static function author_bio_settings( $wp_customize ) {
 
 		// Add Author Bio setting and control.
-		$wp_customize->add_setting( 'donnager_theme_options[author_bio]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[author_bio]', array(
 			'default'           => false,
 			'type'              => 'option',
 			'transport'         => 'postMessage',
-			'sanitize_callback' => 'donnager_sanitize_checkbox',
+			'sanitize_callback' => 'donovan_sanitize_checkbox',
 		) );
 
-		$wp_customize->add_control( 'donnager_theme_options[author_bio]', array(
-			'label'    => __( 'Display Author Bio', 'donnager-pro' ),
-			'section'  => 'donnager_section_post',
-			'settings' => 'donnager_theme_options[author_bio]',
+		$wp_customize->add_control( 'donovan_theme_options[author_bio]', array(
+			'label'    => __( 'Display Author Bio', 'donovan-pro' ),
+			'section'  => 'donovan_section_post',
+			'settings' => 'donovan_theme_options[author_bio]',
 			'type'     => 'checkbox',
 			'priority' => 65,
 		) );
@@ -109,7 +109,7 @@ class Donnager_Pro_Author_Bio {
 	static function hide_author_bio( $elements ) {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Hide Author Bio?
 		if ( false === $theme_options['author_bio'] ) {
@@ -121,4 +121,4 @@ class Donnager_Pro_Author_Bio {
 }
 
 // Run Class.
-add_action( 'init', array( 'Donnager_Pro_Author_Bio', 'setup' ) );
+add_action( 'init', array( 'Donovan_Pro_Author_Bio', 'setup' ) );

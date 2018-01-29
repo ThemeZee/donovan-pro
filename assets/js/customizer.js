@@ -3,20 +3,20 @@
  *
  * Reloads changes on Theme Customizer Preview asynchronously for better usability
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 ( function( $ ) {
 
 	/* Header textfield. */
-	wp.customize( 'donnager_theme_options[header_text]', function( value ) {
+	wp.customize( 'donovan_theme_options[header_text]', function( value ) {
 		value.bind( function( to ) {
 			$( '.header-bar .header-content .header-text' ).text( to );
 		} );
 	} );
 
 	/* Header Date checkbox */
-	wp.customize( 'donnager_theme_options[header_date]', function( value ) {
+	wp.customize( 'donovan_theme_options[header_date]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.header-bar .header-content .header-date' );
@@ -27,7 +27,7 @@
 	} );
 
 	/* Header Search checkbox */
-	wp.customize( 'donnager_theme_options[header_search]', function( value ) {
+	wp.customize( 'donovan_theme_options[header_search]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.primary-navigation-wrap .header-search' );
@@ -38,7 +38,7 @@
 	} );
 
 	/* Author Bio checkbox */
-	wp.customize( 'donnager_theme_options[author_bio]', function( value ) {
+	wp.customize( 'donovan_theme_options[author_bio]', function( value ) {
 		value.bind( function( newval ) {
 			if ( false === newval ) {
 				hideElement( '.type-post .post-content .entry-author' );
@@ -49,21 +49,21 @@
 	} );
 
 	/* Footer textfield. */
-	wp.customize( 'donnager_theme_options[footer_text]', function( value ) {
+	wp.customize( 'donovan_theme_options[footer_text]', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-info .footer-text' ).text( to );
 		} );
 	} );
 
 	/* Link Color Option */
-	wp.customize( 'donnager_theme_options[link_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[link_color]', function( value ) {
 		value.bind( function( newval ) {
 			document.documentElement.style.setProperty( '--link-color', newval );
 		} );
 	} );
 
 	/* Button Color Option */
-	wp.customize( 'donnager_theme_options[button_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[button_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
@@ -79,7 +79,7 @@
 	} );
 
 	/* Button Hover Color Option */
-	wp.customize( 'donnager_theme_options[button_hover_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[button_hover_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color;
 
@@ -95,7 +95,7 @@
 	} );
 
 	/* Navi Color Option */
-	wp.customize( 'donnager_theme_options[navi_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[navi_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -117,7 +117,7 @@
 	} );
 
 	/* Submenu Color Option */
-	wp.customize( 'donnager_theme_options[navi_submenu_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[navi_submenu_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -139,14 +139,14 @@
 	} );
 
 	/* Title Color Option */
-	wp.customize( 'donnager_theme_options[title_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[title_color]', function( value ) {
 		value.bind( function( newval ) {
 			document.documentElement.style.setProperty( '--title-color', newval );
 		} );
 	} );
 
 	/* Footer Color Option */
-	wp.customize( 'donnager_theme_options[footer_color]', function( value ) {
+	wp.customize( 'donovan_theme_options[footer_color]', function( value ) {
 		value.bind( function( newval ) {
 			var text_color, text_hover_color, border_color;
 
@@ -168,17 +168,17 @@
 	} );
 
 	/* Theme Fonts */
-	wp.customize( 'donnager_theme_options[text_font]', function( value ) {
+	wp.customize( 'donovan_theme_options[text_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donnager-pro-custom-text-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donnager-pro-custom-text-font" ).length;
+			var googleFontSource = "<link id='donovan-pro-custom-text-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#donovan-pro-custom-text-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#donnager-pro-custom-text-font" ).remove();
+				$( "head" ).find( "#donovan-pro-custom-text-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 
@@ -187,17 +187,17 @@
 		} );
 	} );
 
-	wp.customize( 'donnager_theme_options[title_font]', function( value ) {
+	wp.customize( 'donovan_theme_options[title_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donnager-pro-custom-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donnager-pro-custom-title-font" ).length;
+			var googleFontSource = "<link id='donovan-pro-custom-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#donovan-pro-custom-title-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#donnager-pro-custom-title-font" ).remove();
+				$( "head" ).find( "#donovan-pro-custom-title-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 
@@ -206,17 +206,17 @@
 		} );
 	} );
 
-	wp.customize( 'donnager_theme_options[navi_font]', function( value ) {
+	wp.customize( 'donovan_theme_options[navi_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donnager-pro-custom-navi-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donnager-pro-custom-navi-font" ).length;
+			var googleFontSource = "<link id='donovan-pro-custom-navi-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#donovan-pro-custom-navi-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#donnager-pro-custom-navi-font" ).remove();
+				$( "head" ).find( "#donovan-pro-custom-navi-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 
@@ -225,17 +225,17 @@
 		} );
 	} );
 
-	wp.customize( 'donnager_theme_options[widget_title_font]', function( value ) {
+	wp.customize( 'donovan_theme_options[widget_title_font]', function( value ) {
 		value.bind( function( newval ) {
 
 			// Embed Font.
 			var fontFamilyUrl = newval.split( " " ).join( "+" );
 			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donnager-pro-custom-widget-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donnager-pro-custom-widget-title-font" ).length;
+			var googleFontSource = "<link id='donovan-pro-custom-widget-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
+			var checkLink = $( "head" ).find( "#donovan-pro-custom-widget-title-font" ).length;
 
 			if (checkLink > 0) {
-				$( "head" ).find( "#donnager-pro-custom-widget-title-font" ).remove();
+				$( "head" ).find( "#donovan-pro-custom-widget-title-font" ).remove();
 			}
 			$( "head" ).append( googleFontSource );
 

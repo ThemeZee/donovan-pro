@@ -4,7 +4,7 @@
  *
  * Displays scroll to top button based on theme options
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Scroll to Top Class
  */
-class Donnager_Pro_Scroll_To_Top {
+class Donovan_Pro_Scroll_To_Top {
 
 	/**
 	 * Scroll to Top Setup
@@ -22,8 +22,8 @@ class Donnager_Pro_Scroll_To_Top {
 	 */
 	static function setup() {
 
-		// Return early if Donnager Theme is not active.
-		if ( ! current_theme_supports( 'donnager-pro' ) ) {
+		// Return early if Donovan Theme is not active.
+		if ( ! current_theme_supports( 'donovan-pro' ) ) {
 			return;
 		}
 
@@ -42,15 +42,15 @@ class Donnager_Pro_Scroll_To_Top {
 	static function enqueue_script() {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Call Credit Link function of theme if credit link is activated.
 		if ( true === $theme_options['scroll_to_top'] ) :
 
-			wp_enqueue_script( 'donnager-pro-scroll-to-top', DONNAGER_PRO_PLUGIN_URL . 'assets/js/scroll-to-top.js', array( 'jquery' ), DONNAGER_PRO_VERSION, true );
+			wp_enqueue_script( 'donovan-pro-scroll-to-top', DONOVAN_PRO_PLUGIN_URL . 'assets/js/scroll-to-top.js', array( 'jquery' ), DONOVAN_PRO_VERSION, true );
 
 			// Passing Parameters to navigation.js.
-			wp_localize_script( 'donnager-pro-scroll-to-top', 'donnager_pro_scroll_button', donnager_get_svg( 'collapse' ) );
+			wp_localize_script( 'donovan-pro-scroll-to-top', 'donovan_pro_scroll_button', donovan_get_svg( 'collapse' ) );
 
 		endif;
 	}
@@ -63,27 +63,27 @@ class Donnager_Pro_Scroll_To_Top {
 	static function scroll_to_top_settings( $wp_customize ) {
 
 		// Add Scroll to Top headline.
-		$wp_customize->add_control( new Donnager_Customize_Header_Control(
-			$wp_customize, 'donnager_theme_options[scroll_top_title]', array(
-				'label'    => esc_html__( 'Scroll to Top', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_footer',
+		$wp_customize->add_control( new Donovan_Customize_Header_Control(
+			$wp_customize, 'donovan_theme_options[scroll_top_title]', array(
+				'label'    => esc_html__( 'Scroll to Top', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_footer',
 				'settings' => array(),
 				'priority' => 40,
 			)
 		) );
 
 		// Add Scroll to Top setting.
-		$wp_customize->add_setting( 'donnager_theme_options[scroll_to_top]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[scroll_to_top]', array(
 			'default'           => false,
 			'type'              => 'option',
 			'transport'         => 'refresh',
-			'sanitize_callback' => 'donnager_sanitize_checkbox',
+			'sanitize_callback' => 'donovan_sanitize_checkbox',
 		) );
 
-		$wp_customize->add_control( 'donnager_theme_options[scroll_to_top]', array(
-			'label'    => esc_html__( 'Display Scroll to Top Button', 'donnager-pro' ),
-			'section'  => 'donnager_pro_section_footer',
-			'settings' => 'donnager_theme_options[scroll_to_top]',
+		$wp_customize->add_control( 'donovan_theme_options[scroll_to_top]', array(
+			'label'    => esc_html__( 'Display Scroll to Top Button', 'donovan-pro' ),
+			'section'  => 'donovan_pro_section_footer',
+			'settings' => 'donovan_theme_options[scroll_to_top]',
 			'type'     => 'checkbox',
 			'priority' => 50,
 		) );
@@ -91,4 +91,4 @@ class Donnager_Pro_Scroll_To_Top {
 }
 
 // Run Class.
-add_action( 'init', array( 'Donnager_Pro_Scroll_To_Top', 'setup' ) );
+add_action( 'init', array( 'Donovan_Pro_Scroll_To_Top', 'setup' ) );

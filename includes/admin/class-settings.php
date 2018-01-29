@@ -1,12 +1,12 @@
 <?php
 /**
- * Donnager Pro Settings Class
+ * Donovan Pro Settings Class
  *
  * Registers all plugin settings with the WordPress Settings API.
  * Handles license key activation with the ThemeZee Store API.
  *
  * @link https://codex.wordpress.org/Settings_API
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -16,13 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Settings Class
  */
-class Donnager_Pro_Settings {
+class Donovan_Pro_Settings {
 	/** Singleton *************************************************************/
 
 	/**
 	 * Class instance
 	 *
-	 * @var instance The one true Donnager_Pro_Settings instance
+	 * @var instance The one true Donovan_Pro_Settings instance
 	 */
 	private static $instance;
 
@@ -36,7 +36,7 @@ class Donnager_Pro_Settings {
 	/**
 	 * Creates or returns an instance of this class.
 	 *
-	 * @return Donnager_Pro_Settings A single instance of this class.
+	 * @return Donovan_Pro_Settings A single instance of this class.
 	 */
 	public static function instance() {
 
@@ -63,7 +63,7 @@ class Donnager_Pro_Settings {
 		add_action( 'admin_init', array( $this, 'check_license' ) );
 
 		// Merge Plugin Options Array from Database with Default Settings array.
-		$this->options = wp_parse_args( get_option( 'donnager_pro_settings' , array() ), $this->default_settings() );
+		$this->options = wp_parse_args( get_option( 'donovan_pro_settings' , array() ), $this->default_settings() );
 	}
 
 	/**
@@ -110,33 +110,33 @@ class Donnager_Pro_Settings {
 	function register_settings() {
 
 		// Make sure that options exist in database.
-		if ( false == get_option( 'donnager_pro_settings' ) ) {
-			add_option( 'donnager_pro_settings' );
+		if ( false == get_option( 'donovan_pro_settings' ) ) {
+			add_option( 'donovan_pro_settings' );
 		}
 
 		// Add License Section.
-		add_settings_section( 'donnager_pro_settings_license', esc_html__( 'Automatic Updates', 'donnager-pro' ), array( $this, 'license_section_intro' ), 'donnager_pro_settings' );
+		add_settings_section( 'donovan_pro_settings_license', esc_html__( 'Automatic Updates', 'donovan-pro' ), array( $this, 'license_section_intro' ), 'donovan_pro_settings' );
 
 		// Add License Status Setting.
 		add_settings_field(
-			'donnager_pro_settings[license_status]',
-			esc_html__( 'License Status', 'donnager-pro' ),
+			'donovan_pro_settings[license_status]',
+			esc_html__( 'License Status', 'donovan-pro' ),
 			array( $this, 'license_status' ),
-			'donnager_pro_settings',
-			'donnager_pro_settings_license'
+			'donovan_pro_settings',
+			'donovan_pro_settings_license'
 		);
 
 		// Add License Key Setting.
 		add_settings_field(
-			'donnager_pro_settings[license_key]',
-			esc_html__( 'License Key', 'donnager-pro' ),
+			'donovan_pro_settings[license_key]',
+			esc_html__( 'License Key', 'donovan-pro' ),
 			array( $this, 'license_key' ),
-			'donnager_pro_settings',
-			'donnager_pro_settings_license'
+			'donovan_pro_settings',
+			'donovan_pro_settings_license'
 		);
 
 		// Creates our settings in the options table.
-		register_setting( 'donnager_pro_settings', 'donnager_pro_settings', array( $this, 'sanitize_settings' ) );
+		register_setting( 'donovan_pro_settings', 'donovan_pro_settings', array( $this, 'sanitize_settings' ) );
 	}
 
 	/**
@@ -145,7 +145,7 @@ class Donnager_Pro_Settings {
 	 * @return void
 	 */
 	function license_section_intro() {
-		printf( __( 'Please enter your license key. An active license key is needed for automatic plugin updates and <a href="%s" target="_blank">support</a>.', 'donnager-pro' ), 'https://themezee.com/support/?utm_source=plugin-settings&utm_medium=textlink&utm_campaign=donnager-pro&utm_content=support' );
+		printf( __( 'Please enter your license key. An active license key is needed for automatic plugin updates and <a href="%s" target="_blank">support</a>.', 'donovan-pro' ), 'https://themezee.com/support/?utm_source=plugin-settings&utm_medium=textlink&utm_campaign=donovan-pro&utm_content=support' );
 
 	}
 
@@ -161,7 +161,7 @@ class Donnager_Pro_Settings {
 			return $input;
 		}
 
-		$saved    = get_option( 'donnager_pro_settings', array() );
+		$saved    = get_option( 'donovan_pro_settings', array() );
 		if ( ! is_array( $saved ) ) {
 			$saved = array();
 		}
@@ -184,7 +184,7 @@ class Donnager_Pro_Settings {
 	 *
 	 * Renders license status field.
 	 *
-	 * @global $this->options Array of all the Donnager Pro Options
+	 * @global $this->options Array of all the Donovan Pro Options
 	 * @return void
 	 */
 	function license_status() {
@@ -195,25 +195,25 @@ class Donnager_Pro_Settings {
 
 		if ( 'valid' === $license_status ) {
 
-			$html .= '<span class="license-status license-active">' . esc_html__( 'Active', 'donnager-pro' ) . '</span>';
-			$html .= '<span class="license-description">' . esc_html__( 'You are receiving updates.', 'donnager-pro' ) . '</span>';
+			$html .= '<span class="license-status license-active">' . esc_html__( 'Active', 'donovan-pro' ) . '</span>';
+			$html .= '<span class="license-description">' . esc_html__( 'You are receiving updates.', 'donovan-pro' ) . '</span>';
 
 		} elseif ( 'expired' === $license_status ) {
 
-			$renewal_url = esc_url( add_query_arg( array( 'edd_license_key' => $license_key, 'download_id' => DONNAGER_PRO_PRODUCT_ID ), 'https://themezee.com/checkout' ) );
+			$renewal_url = esc_url( add_query_arg( array( 'edd_license_key' => $license_key, 'download_id' => DONOVAN_PRO_PRODUCT_ID ), 'https://themezee.com/checkout' ) );
 
-			$html .= '<span class="license-status license-expired">' . esc_html__( 'Expired', 'donnager-pro' ) . '</span>';
-			$html .= '<p class="license-description">' . esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'donnager-pro' ) . '</p>';
-			$html .= '<a href="' . esc_url( $renewal_url ) . '" class="license-renewal button-primary">' . esc_html__( 'Renew Your License', 'donnager-pro' ) . '</a>';
+			$html .= '<span class="license-status license-expired">' . esc_html__( 'Expired', 'donovan-pro' ) . '</span>';
+			$html .= '<p class="license-description">' . esc_html__( 'Your license has expired, renew today to continue getting updates and support!', 'donovan-pro' ) . '</p>';
+			$html .= '<a href="' . esc_url( $renewal_url ) . '" class="license-renewal button-primary">' . esc_html__( 'Renew Your License', 'donovan-pro' ) . '</a>';
 
 		} elseif ( 'invalid' === $license_status ) {
 
-			$html .= '<span class="license-status license-invalid">' . esc_html__( 'Invalid', 'donnager-pro' ) . '</span>';
-			$html .= '<p class="license-description">' . esc_html__( 'Please make sure that you have not reached the site limit and expiration date.', 'donnager-pro' ) . '</p>';
+			$html .= '<span class="license-status license-invalid">' . esc_html__( 'Invalid', 'donovan-pro' ) . '</span>';
+			$html .= '<p class="license-description">' . esc_html__( 'Please make sure that you have not reached the site limit and expiration date.', 'donovan-pro' ) . '</p>';
 
 		} else {
 
-			$html .= '<span class="license-status license-inactive">' . esc_html__( 'Inactive', 'donnager-pro' ) . '</span>';
+			$html .= '<span class="license-status license-inactive">' . esc_html__( 'Inactive', 'donovan-pro' ) . '</span>';
 
 		}
 
@@ -225,7 +225,7 @@ class Donnager_Pro_Settings {
 	 *
 	 * Renders license key field.
 	 *
-	 * @global $this->options Array of all the Donnager Pro Options
+	 * @global $this->options Array of all the Donovan Pro Options
 	 * @return void
 	 */
 	function license_key() {
@@ -236,13 +236,13 @@ class Donnager_Pro_Settings {
 
 		if ( 'valid' === $license_status && ! empty( $license_key ) ) {
 
-			$html .= '<input type="text" class="regular-text" readonly="readonly" id="donnager_pro_settings[license_key]" name="donnager_pro_settings[license_key]" value="' . esc_attr( stripslashes( $license_key ) ) . '"/><br/><br/>';
-			$html .= '<input type="submit" class="button" name="donnager_pro_deactivate_license" value="' . esc_attr__( 'Deactivate License', 'donnager-pro' ) . '"/>';
+			$html .= '<input type="text" class="regular-text" readonly="readonly" id="donovan_pro_settings[license_key]" name="donovan_pro_settings[license_key]" value="' . esc_attr( stripslashes( $license_key ) ) . '"/><br/><br/>';
+			$html .= '<input type="submit" class="button" name="donovan_pro_deactivate_license" value="' . esc_attr__( 'Deactivate License', 'donovan-pro' ) . '"/>';
 
 		} else {
 
-			$html .= '<input type="text" class="regular-text" id="donnager_pro_settings[license_key]" name="donnager_pro_settings[license_key]" value="' . esc_attr( stripslashes( $license_key ) ) . '"/><br/><br/>';
-			$html .= '<input type="submit" class="button" name="donnager_pro_activate_license" value="' . esc_attr__( 'Activate License', 'donnager-pro' ) . '"/>';
+			$html .= '<input type="text" class="regular-text" id="donovan_pro_settings[license_key]" name="donovan_pro_settings[license_key]" value="' . esc_attr( stripslashes( $license_key ) ) . '"/><br/><br/>';
+			$html .= '<input type="submit" class="button" name="donovan_pro_activate_license" value="' . esc_attr__( 'Activate License', 'donovan-pro' ) . '"/>';
 
 		}
 
@@ -256,33 +256,33 @@ class Donnager_Pro_Settings {
 	 */
 	public function activate_license() {
 
-		if ( ! isset( $_POST['donnager_pro_settings'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_settings'] ) ) {
 			return;
 		}
 
-		if ( ! isset( $_POST['donnager_pro_activate_license'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_activate_license'] ) ) {
 			return;
 		}
 
-		if ( ! isset( $_POST['donnager_pro_settings']['license_key'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_settings']['license_key'] ) ) {
 			return;
 		}
 
 		// Retrieve the license from the database.
 		$status  = $this->get( 'license_status' );
-		$license = trim( $_POST['donnager_pro_settings']['license_key'] );
+		$license = trim( $_POST['donovan_pro_settings']['license_key'] );
 
 		// Data to send in our API request.
 		$api_params = array(
 			'edd_action' => 'activate_license',
 			'license' 	=> $license,
-			'item_name' => urlencode( DONNAGER_PRO_NAME ),
-			'item_id'   => DONNAGER_PRO_PRODUCT_ID,
+			'item_name' => urlencode( DONOVAN_PRO_NAME ),
+			'item_id'   => DONOVAN_PRO_PRODUCT_ID,
 			'url'       => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( DONNAGER_PRO_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( DONOVAN_PRO_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
@@ -296,9 +296,9 @@ class Donnager_Pro_Settings {
 
 		$options['license_status'] = $license_data->license;
 
-		update_option( 'donnager_pro_settings', $options );
+		update_option( 'donovan_pro_settings', $options );
 
-		delete_transient( 'donnager_pro_license_check' );
+		delete_transient( 'donovan_pro_license_check' );
 	}
 
 	/**
@@ -308,32 +308,32 @@ class Donnager_Pro_Settings {
 	 */
 	public function deactivate_license() {
 
-		if ( ! isset( $_POST['donnager_pro_settings'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_settings'] ) ) {
 			return;
 		}
 
-		if ( ! isset( $_POST['donnager_pro_deactivate_license'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_deactivate_license'] ) ) {
 			return;
 		}
 
-		if ( ! isset( $_POST['donnager_pro_settings']['license_key'] ) ) {
+		if ( ! isset( $_POST['donovan_pro_settings']['license_key'] ) ) {
 			return;
 		}
 
 		// Retrieve the license from the database.
-		$license = trim( $_POST['donnager_pro_settings']['license_key'] );
+		$license = trim( $_POST['donovan_pro_settings']['license_key'] );
 
 		// Data to send in our API request.
 		$api_params = array(
 			'edd_action' => 'deactivate_license',
 			'license' 	=> $license,
-			'item_name' => urlencode( DONNAGER_PRO_NAME ),
-			'item_id'   => DONNAGER_PRO_PRODUCT_ID,
+			'item_name' => urlencode( DONOVAN_PRO_NAME ),
+			'item_id'   => DONOVAN_PRO_PRODUCT_ID,
 			'url'       => home_url(),
 		);
 
 		// Call the custom API.
-		$response = wp_remote_post( DONNAGER_PRO_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
+		$response = wp_remote_post( DONOVAN_PRO_STORE_API_URL, array( 'timeout' => 35, 'sslverify' => true, 'body' => $api_params ) );
 
 		// Make sure the response came back okay.
 		if ( is_wp_error( $response ) ) {
@@ -344,9 +344,9 @@ class Donnager_Pro_Settings {
 
 		$options['license_status'] = 'inactive';
 
-		update_option( 'donnager_pro_settings', $options );
+		update_option( 'donovan_pro_settings', $options );
 
-		delete_transient( 'donnager_pro_license_check' );
+		delete_transient( 'donovan_pro_license_check' );
 	}
 
 	/**
@@ -356,11 +356,11 @@ class Donnager_Pro_Settings {
 	 */
 	public function check_license() {
 
-		if ( ! empty( $_POST['donnager_pro_settings'] ) ) {
+		if ( ! empty( $_POST['donovan_pro_settings'] ) ) {
 			return; // Don't fire when saving settings.
 		}
 
-		$status = get_transient( 'donnager_pro_license_check' );
+		$status = get_transient( 'donovan_pro_license_check' );
 
 		// Run the license check a maximum of once per day.
 		if ( false === $status ) {
@@ -374,13 +374,13 @@ class Donnager_Pro_Settings {
 				$api_params = array(
 					'edd_action' => 'check_license',
 					'license' 	=> $license_key,
-					'item_name' => urlencode( DONNAGER_PRO_NAME ),
-					'item_id'   => DONNAGER_PRO_PRODUCT_ID,
+					'item_name' => urlencode( DONOVAN_PRO_NAME ),
+					'item_id'   => DONOVAN_PRO_PRODUCT_ID,
 					'url'       => home_url(),
 				);
 
 				// Call the custom API.
-				$response = wp_remote_post( DONNAGER_PRO_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
+				$response = wp_remote_post( DONOVAN_PRO_STORE_API_URL, array( 'timeout' => 25, 'sslverify' => true, 'body' => $api_params ) );
 
 				// Make sure the response came back okay.
 				if ( is_wp_error( $response ) ) {
@@ -399,9 +399,9 @@ class Donnager_Pro_Settings {
 
 			$options['license_status'] = $status;
 
-			update_option( 'donnager_pro_settings', $options );
+			update_option( 'donovan_pro_settings', $options );
 
-			set_transient( 'donnager_pro_license_check', $status, DAY_IN_SECONDS );
+			set_transient( 'donovan_pro_license_check', $status, DAY_IN_SECONDS );
 
 		}
 
@@ -419,4 +419,4 @@ class Donnager_Pro_Settings {
 }
 
 // Run Setting Class.
-Donnager_Pro_Settings::instance();
+Donovan_Pro_Settings::instance();

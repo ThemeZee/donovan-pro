@@ -4,7 +4,7 @@
  *
  * Adds custom font settings to Customizer and generates font CSS code
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Custom Fonts Class
  */
-class Donnager_Pro_Custom_Fonts {
+class Donovan_Pro_Custom_Fonts {
 
 	/**
 	 * Custom Fonts Setup
@@ -22,21 +22,21 @@ class Donnager_Pro_Custom_Fonts {
 	 */
 	static function setup() {
 
-		// Return early if Donnager Theme is not active.
-		if ( ! current_theme_supports( 'donnager-pro' ) ) {
+		// Return early if Donovan Theme is not active.
+		if ( ! current_theme_supports( 'donovan-pro' ) ) {
 			return;
 		}
 
 		// Include Font List Control Files.
-		require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/customizer/class-font-list.php';
-		require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/customizer/class-customize-font-control.php';
-		require_once DONNAGER_PRO_PLUGIN_DIR . 'includes/customizer/class-customize-font-list-control.php';
+		require_once DONOVAN_PRO_PLUGIN_DIR . 'includes/customizer/class-font-list.php';
+		require_once DONOVAN_PRO_PLUGIN_DIR . 'includes/customizer/class-customize-font-control.php';
+		require_once DONOVAN_PRO_PLUGIN_DIR . 'includes/customizer/class-customize-font-list-control.php';
 
 		// Add Custom Color CSS code to custom stylesheet output.
-		add_filter( 'donnager_pro_custom_css_stylesheet', array( __CLASS__, 'custom_fonts_css' ) );
+		add_filter( 'donovan_pro_custom_css_stylesheet', array( __CLASS__, 'custom_fonts_css' ) );
 
 		// Load custom fonts from Google web font API.
-		add_filter( 'donnager_google_fonts_url', array( __CLASS__, 'google_fonts_url' ) );
+		add_filter( 'donovan_google_fonts_url', array( __CLASS__, 'google_fonts_url' ) );
 
 		// Add Font Settings in Customizer.
 		add_action( 'customize_register', array( __CLASS__, 'font_settings' ) );
@@ -51,10 +51,10 @@ class Donnager_Pro_Custom_Fonts {
 	static function custom_fonts_css( $custom_css ) {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Get Default Fonts from settings.
-		$default_options = Donnager_Pro_Customizer::get_default_options();
+		$default_options = Donovan_Pro_Customizer::get_default_options();
 
 		// Font Variables.
 		$font_variables = '';
@@ -90,17 +90,17 @@ class Donnager_Pro_Custom_Fonts {
 	/**
 	 * Replace default Google Fonts URL with custom Fonts from theme settings
 	 *
-	 * @uses donnager_google_fonts_url filter hook
+	 * @uses donovan_google_fonts_url filter hook
 	 * @param String $google_fonts_url Google Fonts URL.
 	 * @return string Google Font URL
 	 */
 	static function google_fonts_url( $google_fonts_url ) {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Default Fonts which haven't to be load from Google.
-		$default_fonts = Donnager_Pro_Custom_Font_Lists::default_browser_fonts();
+		$default_fonts = Donovan_Pro_Custom_Font_Lists::default_browser_fonts();
 
 		// Set Google Font Array.
 		$google_font_families = array();
@@ -163,101 +163,101 @@ class Donnager_Pro_Custom_Fonts {
 	static function font_settings( $wp_customize ) {
 
 		// Add Section for Theme Fonts.
-		$wp_customize->add_section( 'donnager_pro_section_fonts', array(
-			'title'    => __( 'Typography', 'donnager-pro' ),
+		$wp_customize->add_section( 'donovan_pro_section_fonts', array(
+			'title'    => __( 'Typography', 'donovan-pro' ),
 			'priority' => 70,
-			'panel'    => 'donnager_options_panel',
+			'panel'    => 'donovan_options_panel',
 		) );
 
 		// Get Default Fonts from settings.
-		$default_options = Donnager_Pro_Customizer::get_default_options();
+		$default_options = Donovan_Pro_Customizer::get_default_options();
 
 		// Add Text Font setting.
-		$wp_customize->add_setting( 'donnager_theme_options[text_font]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[text_font]', array(
 			'default'           => $default_options['text_font'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'esc_attr',
 		) );
 
-		$wp_customize->add_control( new Donnager_Pro_Customize_Font_Control(
+		$wp_customize->add_control( new Donovan_Pro_Customize_Font_Control(
 			$wp_customize, 'text_font', array(
-				'label'    => esc_html__( 'Base Font', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_fonts',
-				'settings' => 'donnager_theme_options[text_font]',
+				'label'    => esc_html__( 'Base Font', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_fonts',
+				'settings' => 'donovan_theme_options[text_font]',
 				'priority' => 10,
 			)
 		) );
 
 		// Add Title Font setting.
-		$wp_customize->add_setting( 'donnager_theme_options[title_font]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[title_font]', array(
 			'default'           => $default_options['title_font'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'esc_attr',
 		) );
 
-		$wp_customize->add_control( new Donnager_Pro_Customize_Font_Control(
+		$wp_customize->add_control( new Donovan_Pro_Customize_Font_Control(
 			$wp_customize, 'title_font', array(
-				'label'    => esc_html_x( 'Headings', 'Font Setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_fonts',
-				'settings' => 'donnager_theme_options[title_font]',
+				'label'    => esc_html_x( 'Headings', 'Font Setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_fonts',
+				'settings' => 'donovan_theme_options[title_font]',
 				'priority' => 20,
 			)
 		) );
 
 		// Add Navigation Font setting.
-		$wp_customize->add_setting( 'donnager_theme_options[navi_font]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[navi_font]', array(
 			'default'           => $default_options['navi_font'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'esc_attr',
 		) );
 
-		$wp_customize->add_control( new Donnager_Pro_Customize_Font_Control(
+		$wp_customize->add_control( new Donovan_Pro_Customize_Font_Control(
 			$wp_customize, 'navi_font', array(
-				'label'    => esc_html_x( 'Navigation', 'Font Setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_fonts',
-				'settings' => 'donnager_theme_options[navi_font]',
+				'label'    => esc_html_x( 'Navigation', 'Font Setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_fonts',
+				'settings' => 'donovan_theme_options[navi_font]',
 				'priority' => 30,
 			)
 		) );
 
 		// Add Widget Title Font setting.
-		$wp_customize->add_setting( 'donnager_theme_options[widget_title_font]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[widget_title_font]', array(
 			'default'           => $default_options['widget_title_font'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'esc_attr',
 		) );
 
-		$wp_customize->add_control( new Donnager_Pro_Customize_Font_Control(
+		$wp_customize->add_control( new Donovan_Pro_Customize_Font_Control(
 			$wp_customize, 'widget_title_font', array(
-				'label'    => esc_html_x( 'Widget Titles', 'Font Setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_fonts',
-				'settings' => 'donnager_theme_options[widget_title_font]',
+				'label'    => esc_html_x( 'Widget Titles', 'Font Setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_fonts',
+				'settings' => 'donovan_theme_options[widget_title_font]',
 				'priority' => 40,
 			)
 		) );
 
 		// Available Fonts Setting.
-		$wp_customize->add_setting( 'donnager_theme_options[available_fonts]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[available_fonts]', array(
 			'default'           => 'favorites',
 			'type'              => 'option',
 			'transport'         => 'postMessage',
-			'sanitize_callback' => array( 'Donnager_Pro_Custom_Fonts', 'sanitize_available_fonts' ),
+			'sanitize_callback' => array( 'Donovan_Pro_Custom_Fonts', 'sanitize_available_fonts' ),
 		) );
 
-		$wp_customize->add_control( new Donnager_Pro_Customize_Font_List_Control(
-			$wp_customize, 'donnager_control_available_fonts', array(
-				'label'    => esc_html__( 'Choose available Fonts', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_fonts',
-				'settings' => 'donnager_theme_options[available_fonts]',
+		$wp_customize->add_control( new Donovan_Pro_Customize_Font_List_Control(
+			$wp_customize, 'donovan_control_available_fonts', array(
+				'label'    => esc_html__( 'Choose available Fonts', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_fonts',
+				'settings' => 'donovan_theme_options[available_fonts]',
 				'choices'  => array(
-					'default'   => esc_html__( 'Default Browser Fonts (12)', 'donnager-pro' ),
-					'favorites' => esc_html__( 'ThemeZee Favorite Fonts (35)', 'donnager-pro' ),
-					'popular'   => esc_html__( 'Most Popular Google Fonts (100)', 'donnager-pro' ),
-					'all'       => esc_html__( 'All Google Fonts (650)', 'donnager-pro' ),
+					'default'   => esc_html__( 'Default Browser Fonts (12)', 'donovan-pro' ),
+					'favorites' => esc_html__( 'ThemeZee Favorite Fonts (35)', 'donovan-pro' ),
+					'popular'   => esc_html__( 'Most Popular Google Fonts (100)', 'donovan-pro' ),
+					'all'       => esc_html__( 'All Google Fonts (650)', 'donovan-pro' ),
 				),
 				'priority' => 50,
 			)
@@ -281,4 +281,4 @@ class Donnager_Pro_Custom_Fonts {
 }
 
 // Run Class.
-add_action( 'init', array( 'Donnager_Pro_Custom_Fonts', 'setup' ) );
+add_action( 'init', array( 'Donovan_Pro_Custom_Fonts', 'setup' ) );

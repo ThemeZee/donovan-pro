@@ -2,7 +2,7 @@
 /**
  * Custom Font List Control for the Customizer
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 /**
@@ -13,14 +13,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays the Font List Control. Allows user to select of how many fonts they want to choose from.
 	 */
-	class Donnager_Pro_Customize_Font_List_Control extends WP_Customize_Control {
+	class Donovan_Pro_Customize_Font_List_Control extends WP_Customize_Control {
 
 		/**
 		 * Declare the control type. Critical for JS constructor.
 		 *
 		 * @var string
 		 */
-		public $type = 'donnager_pro_custom_font_list';
+		public $type = 'donovan_pro_custom_font_list';
 
 		/**
 		 * Localization Strings.
@@ -41,7 +41,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// Make Buttons translateable.
 			$this->l10n = array(
-				'update' => __( 'Update Fonts', 'donnager-pro' ),
+				'update' => __( 'Update Fonts', 'donovan-pro' ),
 			);
 
 			parent::__construct( $manager, $id, $args );
@@ -56,7 +56,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 		public function enqueue() {
 
 			// Register and Enqueue Custom Font JS Constructor.
-			wp_enqueue_script( 'donnager-pro-custom-font-control', DONNAGER_PRO_PLUGIN_URL . 'assets/js/custom-font-control.js', array( 'customize-controls' ), DONNAGER_PRO_VERSION, true );
+			wp_enqueue_script( 'donovan-pro-custom-font-control', DONOVAN_PRO_PLUGIN_URL . 'assets/js/custom-font-control.js', array( 'customize-controls' ), DONOVAN_PRO_VERSION, true );
 
 		}
 
@@ -72,10 +72,10 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 			}
 
 			// Create Data Attributes with font lists.
-			$default = json_encode( Donnager_Pro_Custom_Font_Lists::get_fonts( 'default' ) );
-			$favorite = json_encode( Donnager_Pro_Custom_Font_Lists::get_fonts( 'favorite' ) );
-			$popular = json_encode( Donnager_Pro_Custom_Font_Lists::get_fonts( 'popular' ) );
-			$all = json_encode( Donnager_Pro_Custom_Font_Lists::get_fonts( 'all' ) );
+			$default = json_encode( Donovan_Pro_Custom_Font_Lists::get_fonts( 'default' ) );
+			$favorite = json_encode( Donovan_Pro_Custom_Font_Lists::get_fonts( 'favorite' ) );
+			$popular = json_encode( Donovan_Pro_Custom_Font_Lists::get_fonts( 'popular' ) );
+			$all = json_encode( Donovan_Pro_Custom_Font_Lists::get_fonts( 'all' ) );
 
 			$l10n = json_encode( $this->l10n );
 			?>

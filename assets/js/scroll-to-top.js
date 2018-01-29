@@ -3,7 +3,7 @@
  *
  * Shows Scroll to Top Button
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 ( function( $ ) {
@@ -46,7 +46,7 @@
 	$( document ).ready( function() {
 
 		/* Add Button to HTML DOM */
-		$( 'body' ).append( '<button id=\"scroll-to-top\" class=\"scroll-to-top-button\">' + donnager_pro_scroll_button + '</button>' );
+		$( 'body' ).append( '<button id=\"scroll-to-top\" class=\"scroll-to-top-button\">' + donovan_pro_scroll_button + '</button>' );
 
 		/* Add Scroll To Top Functionality */
 		$( '#scroll-to-top' ).scrollToTop();

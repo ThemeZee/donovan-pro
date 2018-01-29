@@ -2,7 +2,7 @@
 /**
  * Custom Font Control for the Customizer
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 /**
@@ -13,14 +13,14 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 	/**
 	 * Displays a custom Font control. Allows to switch fonts for particular elements on the theme.
 	 */
-	class Donnager_Pro_Customize_Font_Control extends WP_Customize_Control {
+	class Donovan_Pro_Customize_Font_Control extends WP_Customize_Control {
 
 		/**
 		 * Declare the control type. Critical for JS constructor.
 		 *
 		 * @var string
 		 */
-		public $type = 'donnager_pro_custom_font';
+		public $type = 'donovan_pro_custom_font';
 
 		/**
 		 * Localization Strings.
@@ -48,16 +48,16 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 
 			// Make Buttons translateable.
 			$this->l10n = array(
-				'previous' => __( 'Previous Font', 'donnager-pro' ),
-				'next' => __( 'Next Font', 'donnager-pro' ),
-				'standard' => _x( 'Default', 'default font button', 'donnager-pro' ),
+				'previous' => __( 'Previous Font', 'donovan-pro' ),
+				'next' => __( 'Next Font', 'donovan-pro' ),
+				'standard' => _x( 'Default', 'default font button', 'donovan-pro' ),
 			);
 
 			// Get Theme Options.
-			$theme_options = Donnager_Pro_Customizer::get_theme_options();
+			$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 			// Set Fonts.
-			$this->fonts = Donnager_Pro_Custom_Font_Lists::get_fonts( $theme_options['available_fonts'] );
+			$this->fonts = Donovan_Pro_Custom_Font_Lists::get_fonts( $theme_options['available_fonts'] );
 
 			parent::__construct( $manager, $id, $args );
 
@@ -71,7 +71,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 		public function enqueue() {
 
 			// Register and Enqueue Custom Font JS Constructor.
-			wp_enqueue_script( 'donnager-pro-custom-font-control', DONNAGER_PRO_PLUGIN_URL . 'assets/js/custom-font-control.js', array( 'customize-controls' ), DONNAGER_PRO_VERSION, true );
+			wp_enqueue_script( 'donovan-pro-custom-font-control', DONOVAN_PRO_PLUGIN_URL . 'assets/js/custom-font-control.js', array( 'customize-controls' ), DONOVAN_PRO_VERSION, true );
 
 		}
 

@@ -4,7 +4,7 @@
  *
  * Adds color settings to Customizer and generates color CSS code
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 // Exit if accessed directly.
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 /**
  * Custom Colors Class
  */
-class Donnager_Pro_Custom_Colors {
+class Donovan_Pro_Custom_Colors {
 
 	/**
 	 * Custom Colors Setup
@@ -22,13 +22,13 @@ class Donnager_Pro_Custom_Colors {
 	 */
 	static function setup() {
 
-		// Return early if Donnager Theme is not active.
-		if ( ! current_theme_supports( 'donnager-pro' ) ) {
+		// Return early if Donovan Theme is not active.
+		if ( ! current_theme_supports( 'donovan-pro' ) ) {
 			return;
 		}
 
 		// Add Custom Color CSS code to custom stylesheet output.
-		add_filter( 'donnager_pro_custom_css_stylesheet', array( __CLASS__, 'custom_colors_css' ) );
+		add_filter( 'donovan_pro_custom_css_stylesheet', array( __CLASS__, 'custom_colors_css' ) );
 
 		// Add Custom Color Settings.
 		add_action( 'customize_register', array( __CLASS__, 'color_settings' ) );
@@ -43,10 +43,10 @@ class Donnager_Pro_Custom_Colors {
 	static function custom_colors_css( $custom_css ) {
 
 		// Get Theme Options from Database.
-		$theme_options = Donnager_Pro_Customizer::get_theme_options();
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Get Default Fonts from settings.
-		$default_options = Donnager_Pro_Customizer::get_default_options();
+		$default_options = Donovan_Pro_Customizer::get_default_options();
 
 		// Color Variables.
 		$color_variables = '';
@@ -133,123 +133,123 @@ class Donnager_Pro_Custom_Colors {
 	static function color_settings( $wp_customize ) {
 
 		// Add Section for Theme Colors.
-		$wp_customize->add_section( 'donnager_pro_section_colors', array(
-			'title'    => esc_html__( 'Color Settings', 'donnager-pro' ),
+		$wp_customize->add_section( 'donovan_pro_section_colors', array(
+			'title'    => esc_html__( 'Color Settings', 'donovan-pro' ),
 			'priority' => 60,
-			'panel'    => 'donnager_options_panel',
+			'panel'    => 'donovan_options_panel',
 		) );
 
 		// Get Default Colors from settings.
-		$default_options = Donnager_Pro_Customizer::get_default_options();
+		$default_options = Donovan_Pro_Customizer::get_default_options();
 
 		// Add Link Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[link_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[link_color]', array(
 			'default'           => $default_options['link_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[link_color]', array(
-				'label'    => esc_html_x( 'Links', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[link_color]',
+			$wp_customize, 'donovan_theme_options[link_color]', array(
+				'label'    => esc_html_x( 'Links', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[link_color]',
 				'priority' => 10,
 			)
 		) );
 
 		// Add Button Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[button_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[button_color]', array(
 			'default'           => $default_options['button_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[button_color]', array(
-				'label'    => esc_html_x( 'Buttons', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[button_color]',
+			$wp_customize, 'donovan_theme_options[button_color]', array(
+				'label'    => esc_html_x( 'Buttons', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[button_color]',
 				'priority' => 20,
 			)
 		) );
 
 		// Add Button Hover Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[button_hover_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[button_hover_color]', array(
 			'default'           => $default_options['button_hover_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[button_hover_color]', array(
-				'label'    => esc_html_x( 'Buttons Hover', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[button_hover_color]',
+			$wp_customize, 'donovan_theme_options[button_hover_color]', array(
+				'label'    => esc_html_x( 'Buttons Hover', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[button_hover_color]',
 				'priority' => 30,
 			)
 		) );
 
 		// Add Navigation Primary Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[navi_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[navi_color]', array(
 			'default'           => $default_options['navi_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[navi_color]', array(
-				'label'    => esc_html_x( 'Main Navigation', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[navi_color]',
+			$wp_customize, 'donovan_theme_options[navi_color]', array(
+				'label'    => esc_html_x( 'Main Navigation', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[navi_color]',
 				'priority' => 40,
 			)
 		) );
 
 		// Add Navigation Secondary Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[navi_submenu_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[navi_submenu_color]', array(
 			'default'           => $default_options['navi_submenu_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[navi_submenu_color]', array(
-				'label'    => esc_html_x( 'Sub Menus', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[navi_submenu_color]',
+			$wp_customize, 'donovan_theme_options[navi_submenu_color]', array(
+				'label'    => esc_html_x( 'Sub Menus', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[navi_submenu_color]',
 				'priority' => 50,
 			)
 		) );
 
 		// Add Title Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[title_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[title_color]', array(
 			'default'           => $default_options['title_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[title_color]', array(
-				'label'    => esc_html_x( 'Titles', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[title_color]',
+			$wp_customize, 'donovan_theme_options[title_color]', array(
+				'label'    => esc_html_x( 'Titles', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[title_color]',
 				'priority' => 60,
 			)
 		) );
 
 		// Add Widget Title Color setting.
-		$wp_customize->add_setting( 'donnager_theme_options[footer_color]', array(
+		$wp_customize->add_setting( 'donovan_theme_options[footer_color]', array(
 			'default'           => $default_options['footer_color'],
 			'type'              => 'option',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 		$wp_customize->add_control( new WP_Customize_Color_Control(
-			$wp_customize, 'donnager_theme_options[footer_color]', array(
-				'label'    => esc_html_x( 'Footer', 'color setting', 'donnager-pro' ),
-				'section'  => 'donnager_pro_section_colors',
-				'settings' => 'donnager_theme_options[footer_color]',
+			$wp_customize, 'donovan_theme_options[footer_color]', array(
+				'label'    => esc_html_x( 'Footer', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[footer_color]',
 				'priority' => 70,
 			)
 		) );
@@ -293,4 +293,4 @@ class Donnager_Pro_Custom_Colors {
 }
 
 // Run Class.
-add_action( 'init', array( 'Donnager_Pro_Custom_Colors', 'setup' ) );
+add_action( 'init', array( 'Donovan_Pro_Custom_Colors', 'setup' ) );

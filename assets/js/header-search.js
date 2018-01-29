@@ -1,7 +1,7 @@
 /**
  * Header Search JS
  *
- * @package Donnager Pro
+ * @package Donovan Pro
  */
 
 ( function( $ ) {
