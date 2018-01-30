@@ -64,7 +64,7 @@ class Donovan_Pro {
 		define( 'DONOVAN_PRO_VERSION', '1.0' );
 
 		// Define Plugin Name.
-		define( 'DONOVAN_PRO_PRODUCT_ID', 149520 );
+		define( 'DONOVAN_PRO_PRODUCT_ID', 171494 );
 
 		// Define Update API URL.
 		define( 'DONOVAN_PRO_STORE_API_URL', 'https://themezee.com' );
