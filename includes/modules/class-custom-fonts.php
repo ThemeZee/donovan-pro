@@ -76,7 +76,7 @@ class Donovan_Pro_Custom_Fonts {
 
 		// Set Widget Title Font.
 		if ( $theme_options['widget_title_font'] !== $default_options['widget_title_font'] ) {
-			$font_variables .= '--widget-title_font: "' . $theme_options['widget_title_font'] . '", Tahoma, Arial;';
+			$font_variables .= '--widget-title-font: "' . $theme_options['widget_title_font'] . '", Tahoma, Arial;';
 		}
 
 		// Add Font Variables.
