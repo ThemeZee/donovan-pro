@@ -105,6 +105,11 @@ class Donovan_Pro_Custom_Colors {
 			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
 		}
 
+		// Set Widget Title Color.
+		if ( $theme_options['widget_title_color'] !== $default_options['widget_title_color'] ) {
+			$color_variables .= '--widget-title-color: ' . $theme_options['widget_title_color'] . ';';
+		}
+
 		// Set Footer Color.
 		if ( $theme_options['footer_color'] !== $default_options['footer_color'] ) {
 			$color_variables .= '--footer-color: ' . $theme_options['footer_color'] . ';';
@@ -239,6 +244,22 @@ class Donovan_Pro_Custom_Colors {
 		) );
 
 		// Add Widget Title Color setting.
+		$wp_customize->add_setting( 'donovan_theme_options[widget_title_color]', array(
+			'default'           => $default_options['widget_title_color'],
+			'type'              => 'option',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		) );
+		$wp_customize->add_control( new WP_Customize_Color_Control(
+			$wp_customize, 'donovan_theme_options[widget_title_color]', array(
+				'label'    => esc_html_x( 'Widget Titles', 'color setting', 'donovan-pro' ),
+				'section'  => 'donovan_pro_section_colors',
+				'settings' => 'donovan_theme_options[widget_title_color]',
+				'priority' => 70,
+			)
+		) );
+
+		// Add Footer Color setting.
 		$wp_customize->add_setting( 'donovan_theme_options[footer_color]', array(
 			'default'           => $default_options['footer_color'],
 			'type'              => 'option',
@@ -250,7 +271,7 @@ class Donovan_Pro_Custom_Colors {
 				'label'    => esc_html_x( 'Footer', 'color setting', 'donovan-pro' ),
 				'section'  => 'donovan_pro_section_colors',
 				'settings' => 'donovan_theme_options[footer_color]',
-				'priority' => 70,
+				'priority' => 80,
 			)
 		) );
 	}

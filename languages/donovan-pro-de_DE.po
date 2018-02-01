@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-01-30 11:03+0100\n"
-"PO-Revision-Date: 2018-01-30 11:06+0100\n"
+"POT-Creation-Date: 2018-02-01 10:51+0100\n"
+"PO-Revision-Date: 2018-02-01 10:51+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -192,41 +192,46 @@ msgstr "Alle Beiträge ansehen"
 msgid "Display Author Bio"
 msgstr "Autor Bio anzeigen"
 
-#: includes/modules/class-custom-colors.php:137
+#: includes/modules/class-custom-colors.php:142
 msgid "Color Settings"
 msgstr "Farboptionen"
 
-#: includes/modules/class-custom-colors.php:154
+#: includes/modules/class-custom-colors.php:159
 msgctxt "color setting"
 msgid "Links"
 msgstr "Links"
 
-#: includes/modules/class-custom-colors.php:170
+#: includes/modules/class-custom-colors.php:175
 msgctxt "color setting"
 msgid "Buttons"
 msgstr "Buttons"
 
-#: includes/modules/class-custom-colors.php:186
+#: includes/modules/class-custom-colors.php:191
 msgctxt "color setting"
 msgid "Buttons Hover"
 msgstr "Buttons Hover"
 
-#: includes/modules/class-custom-colors.php:202
+#: includes/modules/class-custom-colors.php:207
 msgctxt "color setting"
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: includes/modules/class-custom-colors.php:218
+#: includes/modules/class-custom-colors.php:223
 msgctxt "color setting"
 msgid "Sub Menus"
 msgstr "Submenüs"
 
-#: includes/modules/class-custom-colors.php:234
+#: includes/modules/class-custom-colors.php:239
 msgctxt "color setting"
 msgid "Titles"
 msgstr "Titel"
 
-#: includes/modules/class-custom-colors.php:250
+#: includes/modules/class-custom-colors.php:255
+msgctxt "color setting"
+msgid "Widget Titles"
+msgstr "Widget Titel"
+
+#: includes/modules/class-custom-colors.php:271
 msgctxt "color setting"
 msgid "Footer"
 msgstr "Footer"

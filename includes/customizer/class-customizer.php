@@ -73,6 +73,7 @@ class Donovan_Pro_Customizer {
 			'navi_color'         => '#202020',
 			'navi_submenu_color' => '#ee1133',
 			'title_color'        => '#202020',
+			'widget_title_color' => '#202020',
 			'footer_color'       => '#202020',
 			'text_font'          => 'Raleway',
 			'title_font'         => 'Quicksand',

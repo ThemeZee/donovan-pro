@@ -2,6 +2,11 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+* added color setting for Widgt Titles
+* fixed Widget Title font setting
+
 Version 1.0
 -----------------------------------
 Initial Version

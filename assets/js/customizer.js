@@ -145,6 +145,13 @@
 		} );
 	} );
 
+	/* Widget Title Color Option */
+	wp.customize( 'donovan_theme_options[widget_title_color]', function( value ) {
+		value.bind( function( newval ) {
+			document.documentElement.style.setProperty( '--widget-title-color', newval );
+		} );
+	} );
+
 	/* Footer Color Option */
 	wp.customize( 'donovan_theme_options[footer_color]', function( value ) {
 		value.bind( function( newval ) {
