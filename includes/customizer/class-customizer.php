@@ -79,7 +79,6 @@ class Donovan_Pro_Customizer {
 			'title_font'         => 'Quicksand',
 			'navi_font'          => 'Quicksand',
 			'widget_title_font'  => 'Quicksand',
-			'available_fonts'    => 'favorites',
 		);
 
 		return $default_options;
