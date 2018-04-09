@@ -41,6 +41,21 @@ class Donovan_Pro_Custom_Fonts {
 	}
 
 	/**
+	 * Get the font family string.
+	 *
+	 * @param String $font Name of selected font.
+	 * @return string Fonts string.
+	 */
+	static function get_font_family( $font ) {
+
+		// Set System Font Stack.
+		$system_fonts = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
+
+		// Return Font Family string.
+		return $font === 'SystemFontStack' ? $system_fonts : '"' . esc_attr( $font ) . '", Arial, Helvetica, sans-serif';
+	}
+
+	/**
 	 * Adds Font Family CSS styles in the head area to override default typography
 	 *
 	 * @param String $custom_css Custom Styling CSS.
@@ -59,22 +74,22 @@ class Donovan_Pro_Custom_Fonts {
 
 		// Set Text Font.
 		if ( $theme_options['text_font'] !== $default_options['text_font'] ) {
-			$font_variables .= '--text-font: "' . $theme_options['text_font'] . '", Arial, Helvetica;';
+			$font_variables .= '--text-font: ' . self::get_font_family( $theme_options['text_font'] );
 		}
 
 		// Set Title Font.
 		if ( $theme_options['title_font'] !== $default_options['title_font'] ) {
-			$font_variables .= '--title-font: "' . $theme_options['title_font'] . '", Tahoma, Arial;';
+			$font_variables .= '--title-font: ' . self::get_font_family( $theme_options['title_font'] );
 		}
 
 		// Set Navi Font.
 		if ( $theme_options['navi_font'] !== $default_options['navi_font'] ) {
-			$font_variables .= '--navi-font: "' . $theme_options['navi_font'] . '", Tahoma, Arial;';
+			$font_variables .= '--navi-font: ' . self::get_font_family( $theme_options['navi_font'] );
 		}
 
 		// Set Widget Title Font.
 		if ( $theme_options['widget_title_font'] !== $default_options['widget_title_font'] ) {
-			$font_variables .= '--widget-title-font: "' . $theme_options['widget_title_font'] . '", Tahoma, Arial;';
+			$font_variables .= '--widget-title-font: ' . self::get_font_family( $theme_options['widget_title_font'] );
 		}
 
 		// Add Font Variables.
