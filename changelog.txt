@@ -2,6 +2,13 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.1
+-----------------------------------
+* added Local Fonts to the Typography settings in the Customizer
+* added System Font Stack to the available Local Fonts
+
+In case you are required for GDPR compliance, you can now choose Local Fonts instead of external Google Fonts in the Typography Settings.
+
 Version 1.0.1
 -----------------------------------
 * added color setting for Widgt Titles
