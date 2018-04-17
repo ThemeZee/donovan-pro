@@ -52,7 +52,7 @@ class Donovan_Pro_Custom_Fonts {
 		$system_fonts = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
 
 		// Return Font Family string.
-		return $font === 'SystemFontStack' ? $system_fonts : '"' . esc_attr( $font ) . '", Arial, Helvetica, sans-serif';
+		return $font === 'SystemFontStack' ? $system_fonts : '"' . esc_attr( $font ) . '", Arial, Helvetica, sans-serif; ';
 	}
 
 	/**

@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.1.1
+-----------------------------------
+* fixed minor issue in custom font settings
+
 Version 1.1
 -----------------------------------
 * added Local Fonts to the Typography settings in the Customizer
