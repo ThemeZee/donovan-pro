@@ -107,9 +107,9 @@ class Donovan_Pro_Footer_Widgets {
 
 		// Register Footer Column 1 widget area.
 		register_sidebar( array(
-			'name' => __( 'Footer Column 1', 'donovan-pro' ),
+			'name' => esc_html__( 'Footer Column 1', 'donovan-pro' ),
 			'id' => 'footer-column-1',
-			'description' => __( 'Appears on the first footer column.', 'donovan-pro' ),
+			'description' => esc_html_x( 'Appears in the first column in footer.', 'widget area description', 'donovan-pro' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -118,9 +118,9 @@ class Donovan_Pro_Footer_Widgets {
 
 		// Register Footer Column 2 widget area.
 		register_sidebar( array(
-			'name' => __( 'Footer Column 2', 'donovan-pro' ),
+			'name' => esc_html__( 'Footer Column 2', 'donovan-pro' ),
 			'id' => 'footer-column-2',
-			'description' => __( 'Appears on the second footer column.', 'donovan-pro' ),
+			'description' => esc_html_x( 'Appears in the second column in footer.', 'widget area description', 'donovan-pro' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -129,9 +129,9 @@ class Donovan_Pro_Footer_Widgets {
 
 		// Register Footer Column 3 widget area.
 		register_sidebar( array(
-			'name' => __( 'Footer Column 3', 'donovan-pro' ),
+			'name' => esc_html__( 'Footer Column 3', 'donovan-pro' ),
 			'id' => 'footer-column-3',
-			'description' => __( 'Appears on the third footer column.', 'donovan-pro' ),
+			'description' => esc_html_x( 'Appears in the third column in footer.', 'widget area description', 'donovan-pro' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<div class="widget-header"><h3 class="widget-title">',
@@ -140,9 +140,9 @@ class Donovan_Pro_Footer_Widgets {
 
 		// Register Footer Column 4 widget area.
 		register_sidebar( array(
-			'name' => __( 'Footer Column 4', 'donovan-pro' ),
+			'name' => esc_html__( 'Footer Column 4', 'donovan-pro' ),
 			'id' => 'footer-column-4',
-			'description' => __( 'Appears on the fourth footer column.', 'donovan-pro' ),
+			'description' => esc_html_x( 'Appears in the fourth column in footer.', 'widget area description', 'donovan-pro' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<div class="widget-header"><h3 class="widget-title">',

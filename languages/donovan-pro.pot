@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Donovan Pro\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-04-13 09:57+0200\n"
+"POT-Creation-Date: 2018-04-27 10:17+0200\n"
 "PO-Revision-Date: 2016-05-31 09:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -101,8 +101,8 @@ msgstr ""
 #: includes/admin/class-settings.php:148
 #, php-format
 msgid ""
-"Please enter your license key. An active license key is needed for automatic "
-"plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
+"Please enter your license key. An active license key is necessary for "
+"automatic plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
 msgstr ""
 
 #: includes/admin/class-settings.php:198
@@ -133,8 +133,7 @@ msgstr ""
 
 #: includes/admin/class-settings.php:212
 msgid ""
-"Please make sure that you have not reached the site limit and expiration "
-"date."
+"Please make sure you have not reached site limits and/or expiration date."
 msgstr ""
 
 #: includes/admin/class-settings.php:216
@@ -232,7 +231,7 @@ msgid "Typography"
 msgstr ""
 
 #: includes/modules/class-custom-fonts.php:197
-msgid "Base Font"
+msgid "Basic Font"
 msgstr ""
 
 #: includes/modules/class-custom-fonts.php:214
@@ -271,7 +270,8 @@ msgid "Footer Column 1"
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:112
-msgid "Appears on the first footer column."
+msgctxt "widget area description"
+msgid "Appears in the first column in footer."
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:121
@@ -279,7 +279,8 @@ msgid "Footer Column 2"
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:123
-msgid "Appears on the second footer column."
+msgctxt "widget area description"
+msgid "Appears in the second column in footer."
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:132
@@ -287,7 +288,8 @@ msgid "Footer Column 3"
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:134
-msgid "Appears on the third footer column."
+msgctxt "widget area description"
+msgid "Appears in the third column in footer."
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:143
@@ -295,7 +297,8 @@ msgid "Footer Column 4"
 msgstr ""
 
 #: includes/modules/class-footer-widgets.php:145
-msgid "Appears on the fourth footer column."
+msgctxt "widget area description"
+msgid "Appears in the fourth column in footer."
 msgstr ""
 
 #: includes/modules/class-header-bar.php:115

@@ -145,7 +145,7 @@ class Donovan_Pro_Settings {
 	 * @return void
 	 */
 	function license_section_intro() {
-		printf( __( 'Please enter your license key. An active license key is needed for automatic plugin updates and <a href="%s" target="_blank">support</a>.', 'donovan-pro' ), 'https://themezee.com/support/?utm_source=plugin-settings&utm_medium=textlink&utm_campaign=donovan-pro&utm_content=support' );
+		printf( __( 'Please enter your license key. An active license key is necessary for automatic plugin updates and <a href="%s" target="_blank">support</a>.', 'donovan-pro' ), 'https://themezee.com/support/?utm_source=plugin-settings&utm_medium=textlink&utm_campaign=donovan-pro&utm_content=support' );
 
 	}
 
@@ -209,7 +209,7 @@ class Donovan_Pro_Settings {
 		} elseif ( 'invalid' === $license_status ) {
 
 			$html .= '<span class="license-status license-invalid">' . esc_html__( 'Invalid', 'donovan-pro' ) . '</span>';
-			$html .= '<p class="license-description">' . esc_html__( 'Please make sure that you have not reached the site limit and expiration date.', 'donovan-pro' ) . '</p>';
+			$html .= '<p class="license-description">' . esc_html__( 'Please make sure you have not reached site limits and/or expiration date.', 'donovan-pro' ) . '</p>';
 
 		} else {
 

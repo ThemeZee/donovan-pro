@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-04-13 09:57+0200\n"
-"PO-Revision-Date: 2018-04-13 09:58+0200\n"
+"POT-Creation-Date: 2018-04-27 10:17+0200\n"
+"PO-Revision-Date: 2018-04-27 10:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -107,10 +107,10 @@ msgstr "Lizenzschlüssel"
 #: includes/admin/class-settings.php:148
 #, php-format
 msgid ""
-"Please enter your license key. An active license key is needed for automatic "
-"plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
+"Please enter your license key. An active license key is necessary for "
+"automatic plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
 msgstr ""
-"Bitte trage deinen Lizenzschlüssel ein. Eine aktive Lizenz wird benötigt, um "
+"Bitte trage deinen Lizenzschlüssel ein. Eine aktive Lizenz ist notwendig, um "
 "automatische Updates und <a href=\"%s\" target=\"_blank\">Support</a> zu "
 "erhalten."
 
@@ -144,11 +144,10 @@ msgstr "Ungültig"
 
 #: includes/admin/class-settings.php:212
 msgid ""
-"Please make sure that you have not reached the site limit and expiration "
-"date."
+"Please make sure you have not reached site limits and/or expiration date."
 msgstr ""
-"Bitte stelle sicher, dass du nicht die max. Anzahl an Seiten oder "
-"Ablaufdatum erreicht hast."
+"Bitte stelle sicher, dass du nicht das Seiten-Limit und/oder Ablaufdatum "
+"erreicht hast."
 
 #: includes/admin/class-settings.php:216
 msgid "Inactive"
@@ -245,7 +244,7 @@ msgid "Typography"
 msgstr "Typografie"
 
 #: includes/modules/class-custom-fonts.php:197
-msgid "Base Font"
+msgid "Basic Font"
 msgstr "Basis Schriftart"
 
 #: includes/modules/class-custom-fonts.php:214
@@ -284,32 +283,36 @@ msgid "Footer Column 1"
 msgstr "Footer Spalte 1"
 
 #: includes/modules/class-footer-widgets.php:112
-msgid "Appears on the first footer column."
-msgstr "Erscheint in der ersten Footer Spalte."
+msgctxt "widget area description"
+msgid "Appears in the first column in footer."
+msgstr "Erscheint in der ersten Spalte im Footer."
 
 #: includes/modules/class-footer-widgets.php:121
 msgid "Footer Column 2"
 msgstr "Footer Spalte 2"
 
 #: includes/modules/class-footer-widgets.php:123
-msgid "Appears on the second footer column."
-msgstr "Erscheint in der zweiten Footer Spalte."
+msgctxt "widget area description"
+msgid "Appears in the second column in footer."
+msgstr "Erscheint in der zweiten Spalte im Footer."
 
 #: includes/modules/class-footer-widgets.php:132
 msgid "Footer Column 3"
 msgstr "Footer Spalte 3"
 
 #: includes/modules/class-footer-widgets.php:134
-msgid "Appears on the third footer column."
-msgstr "Erscheint in der dritten Footer Spalte."
+msgctxt "widget area description"
+msgid "Appears in the third column in footer."
+msgstr "Erscheint in der dritten Spalte im Footer."
 
 #: includes/modules/class-footer-widgets.php:143
 msgid "Footer Column 4"
 msgstr "Footer Spalte 4"
 
 #: includes/modules/class-footer-widgets.php:145
-msgid "Appears on the fourth footer column."
-msgstr "Erscheint in der vierten Footer Spalte."
+msgctxt "widget area description"
+msgid "Appears in the fourth column in footer."
+msgstr "Erscheint in der vierten Spalte im Footer."
 
 #: includes/modules/class-header-bar.php:115
 msgid "Header Settings"

@@ -194,7 +194,7 @@ class Donovan_Pro_Custom_Fonts {
 
 		$wp_customize->add_control( new Donovan_Pro_Customize_Font_Control(
 			$wp_customize, 'text_font', array(
-				'label'    => esc_html__( 'Base Font', 'donovan-pro' ),
+				'label'    => esc_html__( 'Basic Font', 'donovan-pro' ),
 				'section'  => 'donovan_pro_section_fonts',
 				'settings' => 'donovan_theme_options[text_font]',
 				'priority' => 10,
