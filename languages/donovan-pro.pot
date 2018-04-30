@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Donovan Pro\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-04-27 10:17+0200\n"
+"POT-Creation-Date: 2018-04-30 17:35+0200\n"
 "PO-Revision-Date: 2016-05-31 09:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
@@ -231,7 +231,7 @@ msgid "Typography"
 msgstr ""
 
 #: includes/modules/class-custom-fonts.php:197
-msgid "Basic Font"
+msgid "Body Font"
 msgstr ""
 
 #: includes/modules/class-custom-fonts.php:214
