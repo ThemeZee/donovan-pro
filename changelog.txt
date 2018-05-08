@@ -2,6 +2,12 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.1.2
+-----------------------------------
+* fixed missing localization of header date
+* updated original text strings for better localization
+* updated German language files
+
 Version 1.1.1
 -----------------------------------
 * fixed minor issue in custom font settings

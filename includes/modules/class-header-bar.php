@@ -60,7 +60,7 @@ class Donovan_Pro_Header_Bar {
 							<?php
 							if ( false !== $theme_options['header_date'] || is_customize_preview() ) : ?>
 
-								<span class="header-date"><?php echo current_time( get_option( 'date_format' ) ); ?></span>
+								<span class="header-date"><?php echo date_i18n( get_option( 'date_format' ) ); ?></span>
 
 							<?php endif;
 
