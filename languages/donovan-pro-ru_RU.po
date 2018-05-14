@@ -1,0 +1,360 @@
+# Copyright (C) 2018 Donovan Pro
+# This file is distributed under the same license as the Donovan Pro package.
+# Translators:
+# FX Bénard <fxb@wp-translations.org>, 2018
+# Devin Price <devin@wptheming.com>, 2018
+# Pavel Golub <pavlo.golub@gmail.com>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Donovan Pro 1.1.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/donovan-pro\n"
+"POT-Creation-Date: 2018-04-30T17:15:03+00:00\n"
+"PO-Revision-Date: 2018-05-14 09:43+0200\n"
+"Last-Translator: fxbenard pour WP-Translations <fx@wp-translations.pro>\n"
+"Language-Team: Russian (Russia) (https://www.transifex.com/wp-translations/"
+"teams/64435/ru_RU/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Domain: donovan-pro\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#: \donovan-pro.php:180
+msgid "Settings"
+msgstr "Settings"
+
+#: \includes\admin\class-admin-notices.php:52
+msgid ""
+"Please enter your license key for the %1$s add-on in order to receive "
+"updates and support. <a href=\"%2$s\">Enter License Key</a>"
+msgstr ""
+"Пожалуйста, введите ваш лицензионный ключ для дополнения %1$s, чтобы "
+"получать обновления и поддержку. <a href=\"%2$s\">Ввести лицензионный ключ</"
+"a>"
+
+#: \includes\admin\class-admin-notices.php:57
+#: \includes\admin\class-admin-notices.php:86
+msgid "Dismiss Notice"
+msgstr "Скрыть уведомления"
+
+#: \includes\admin\class-admin-notices.php:81
+msgid ""
+"Your license for %1$s has expired. Please <a href=\"%2$s\">renew</a> to "
+"continue getting updates and support!"
+msgstr ""
+"Ваша лицензия для %1$s истекла. Пожалуйста, <a href=\"%2$s\">обновите</"
+"a>для получения дальнейших обновлений и поддержки!"
+
+#: \includes\admin\class-admin-notices.php:108
+msgid "Security check failed"
+msgstr "Проверка безопасности провалилась"
+
+#: \includes\admin\class-admin-notices.php:108
+msgid "Error"
+msgstr "Ошибка"
+
+#: \includes\admin\class-settings-page.php:46
+#: \includes\admin\class-settings-page.php:47
+msgid "Pro Version"
+msgstr "Про версия"
+
+#: \includes\admin\class-settings-page.php:81
+msgid ""
+"You can find your license keys and manage your active sites on <a href=\"%s"
+"\" target=\"_blank\">themezee.com</a>."
+msgstr ""
+"Вы можете проверить ваши лицензионные ключи и управлять активными сайтами "
+"на  <a href=\"%s\" target=\"_blank\">themezee.com</a>."
+
+#: \includes\admin\class-settings-page.php:81
+msgid "https://themezee.com/license-keys/"
+msgstr "https://themezee.com/license-keys/"
+
+#: \includes\admin\class-settings.php:118
+msgid "Automatic Updates"
+msgstr "Автоматические обновления"
+
+#: \includes\admin\class-settings.php:123
+msgid "License Status"
+msgstr "Статус лицензии"
+
+#: \includes\admin\class-settings.php:132
+msgid "License Key"
+msgstr "Лицензионный ключ"
+
+#: \includes\admin\class-settings.php:148
+msgid ""
+"Please enter your license key. An active license key is necessary for "
+"automatic plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
+msgstr ""
+"Пожалуйста, ваш лицензионный ключ. Действующий лицензионный ключ необходим "
+"для автоматического обновления плагина и <a href=\"%s\" target=\"_blank"
+"\">поддержки</a>."
+
+#: \includes\admin\class-settings.php:198
+msgid "Active"
+msgstr "Активен"
+
+#: \includes\admin\class-settings.php:199
+msgid "You are receiving updates."
+msgstr "Вы получаете обновления."
+
+#: \includes\admin\class-settings.php:205
+msgid "Expired"
+msgstr "Срок действия истек"
+
+#: \includes\admin\class-settings.php:206
+msgid ""
+"Your license has expired, renew today to continue getting updates and "
+"support!"
+msgstr ""
+"Ваша лицензия истекла, обновитесь сегодня для получения дальнейших "
+"обновлений и поддержки!"
+
+#: \includes\admin\class-settings.php:207
+msgid "Renew Your License"
+msgstr "Обновить лицензию"
+
+#: \includes\admin\class-settings.php:211
+msgid "Invalid"
+msgstr "Ключ неверен"
+
+#: \includes\admin\class-settings.php:212
+msgid ""
+"Please make sure you have not reached site limits and/or expiration date."
+msgstr ""
+"Пожалуйста, убедитесь в том, что вы не превысили ограничений по количеству "
+"сайтов или дате истечения."
+
+#: \includes\admin\class-settings.php:216
+msgid "Inactive"
+msgstr "Неактивно"
+
+#: \includes\admin\class-settings.php:240
+msgid "Deactivate License"
+msgstr "Деактивировать лицензию"
+
+#: \includes\admin\class-settings.php:245
+msgid "Activate License"
+msgstr "Активировать лицензию"
+
+#: \includes\customizer\class-customize-font-control.php:58
+msgid "Previous Font"
+msgstr "Предыдущий шрифт"
+
+#: \includes\customizer\class-customize-font-control.php:59
+msgid "Next Font"
+msgstr "Следующий шрифт"
+
+#: \includes\customizer\class-customize-font-control.php:60
+msgctxt "default font button"
+msgid "Default"
+msgstr "По умолчанию"
+
+#: \includes\customizer\class-customize-font-control.php:100
+msgid "Local Fonts"
+msgstr "Локальные шрифты"
+
+#: \includes\customizer\class-customize-font-control.php:108
+msgid "Google Web Fonts"
+msgstr "Шрифты Google Web"
+
+#: \includes\modules\class-author-bio.php:62
+msgid "About %s"
+msgstr "Об авторе %s"
+
+#: \includes\modules\class-author-bio.php:64
+msgid "View all posts"
+msgstr "Просмотреть все записи"
+
+#: \includes\modules\class-author-bio.php:95
+msgid "Display Author Bio"
+msgstr "Отображать инфомацию об авторе"
+
+#: \includes\modules\class-custom-colors.php:142
+msgid "Color Settings"
+msgstr "Настройки цвета"
+
+#: \includes\modules\class-custom-colors.php:159
+msgctxt "color setting"
+msgid "Links"
+msgstr "Ссылки"
+
+#: \includes\modules\class-custom-colors.php:175
+msgctxt "color setting"
+msgid "Buttons"
+msgstr "Кнопки"
+
+#: \includes\modules\class-custom-colors.php:191
+msgctxt "color setting"
+msgid "Buttons Hover"
+msgstr "Наведение на кнопки"
+
+#: \includes\modules\class-custom-colors.php:207
+msgctxt "color setting"
+msgid "Main Navigation"
+msgstr "Основная навигация"
+
+#: \includes\modules\class-custom-colors.php:223
+msgctxt "color setting"
+msgid "Sub Menus"
+msgstr "Подменю"
+
+#: \includes\modules\class-custom-colors.php:239
+msgctxt "color setting"
+msgid "Titles"
+msgstr "Заголовки"
+
+#: \includes\modules\class-custom-colors.php:255
+msgctxt "color setting"
+msgid "Widget Titles"
+msgstr "Заголовки виджетов"
+
+#: \includes\modules\class-custom-colors.php:271
+msgctxt "color setting"
+msgid "Footer"
+msgstr "Нижняя часть"
+
+#: \includes\modules\class-custom-fonts.php:179
+msgid "Typography"
+msgstr "Типография"
+
+#: \includes\modules\class-custom-fonts.php:197
+msgid "Body Font"
+msgstr "Шрифт основной части"
+
+#: \includes\modules\class-custom-fonts.php:214
+msgctxt "Font Setting"
+msgid "Headings"
+msgstr "Заголовки"
+
+#: \includes\modules\class-custom-fonts.php:231
+msgctxt "Font Setting"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: \includes\modules\class-custom-fonts.php:248
+msgctxt "Font Setting"
+msgid "Widget Titles"
+msgstr "Заголовки виджетов"
+
+#: \includes\modules\class-footer-line.php:115
+msgid "Footer Settings"
+msgstr "Настройки подвала"
+
+#: \includes\modules\class-footer-line.php:129
+msgid "Footer Text"
+msgstr "Текст подвала"
+
+#: \includes\modules\class-footer-line.php:152
+msgid "Display Credit Link to ThemeZee on footer line"
+msgstr "Отображать благодарственную ссылку на ThemeZee в подвале"
+
+#: \includes\modules\class-footer-line.php:195
+msgid "Footer Navigation"
+msgstr "Навигация подвала"
+
+#: \includes\modules\class-footer-widgets.php:110
+msgid "Footer Column 1"
+msgstr "Столбец подвала 1"
+
+#: \includes\modules\class-footer-widgets.php:112
+msgctxt "widget area description"
+msgid "Appears in the first column in footer."
+msgstr "Отображается в первом столбце подвала."
+
+#: \includes\modules\class-footer-widgets.php:121
+msgid "Footer Column 2"
+msgstr "Столбец подвала 2"
+
+#: \includes\modules\class-footer-widgets.php:123
+msgctxt "widget area description"
+msgid "Appears in the second column in footer."
+msgstr "Отображается во втором столбце подвала."
+
+#: \includes\modules\class-footer-widgets.php:132
+msgid "Footer Column 3"
+msgstr "Столбец подвала 3"
+
+#: \includes\modules\class-footer-widgets.php:134
+msgctxt "widget area description"
+msgid "Appears in the third column in footer."
+msgstr "Отображается в третьем столбце подвала."
+
+#: \includes\modules\class-footer-widgets.php:143
+msgid "Footer Column 4"
+msgstr "Столбец подвала 4"
+
+#: \includes\modules\class-footer-widgets.php:145
+msgctxt "widget area description"
+msgid "Appears in the fourth column in footer."
+msgstr "Отображается в четвертом столбце подвала."
+
+#: \includes\modules\class-header-bar.php:115
+msgid "Header Settings"
+msgstr "Настройки шапки"
+
+#: \includes\modules\class-header-bar.php:123
+msgid "Header Date"
+msgstr "Дата шапки"
+
+#: \includes\modules\class-header-bar.php:139
+msgid "Display current date in header bar"
+msgstr "Отображать текущую дату в верхней панели"
+
+#: \includes\modules\class-header-bar.php:155
+msgid "Header Text"
+msgstr "Текст заголовка"
+
+#: \includes\modules\class-header-bar.php:225
+msgid "Top Navigation"
+msgstr "Верхняя навигация"
+
+#: \includes\modules\class-header-search.php:78
+msgid "Search"
+msgstr "Поиск"
+
+#: \includes\modules\class-header-search.php:101
+msgid "Header Search"
+msgstr "Поиск в шапке"
+
+#: \includes\modules\class-header-search.php:117
+msgid "Enable search field in header"
+msgstr "Включить строку поиска в шапке"
+
+#: \includes\modules\class-scroll-to-top.php:68
+msgid "Scroll to Top"
+msgstr "Прокрутить вверх"
+
+#: \includes\modules\class-scroll-to-top.php:84
+msgid "Display Scroll to Top Button"
+msgstr "Отображать кнопку прокрутки вверх"
+
+#. Plugin Name of the plugin
+msgid "Donovan Pro"
+msgstr "Donovan Pro"
+
+#. Plugin URI of the plugin
+msgid "http://themezee.com/addons/donovan-pro/"
+msgstr "http://themezee.com/addons/donovan-pro/"
+
+#. Description of the plugin
+msgid ""
+"Adds additional features like footer widgets, custom colors, custom fonts, "
+"custom menus, and Magazine Post widgets to the Donovan theme."
+msgstr ""
+"Предоставляет дополнительный функционал для темы Donovan, такой как "
+"виджеты, пользовательские цвета, пользовательские шрифты, пользовательские "
+"меню и виджеты Magazine Post."
+
+#. Author of the plugin
+msgid "ThemeZee"
+msgstr "ThemeZee"
+
+#. Author URI of the plugin
+msgid "https://themezee.com/"
+msgstr "https://themezee.com/"

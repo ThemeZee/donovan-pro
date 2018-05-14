@@ -1,320 +1,358 @@
 # Copyright (C) 2018 Donovan Pro
 # This file is distributed under the same license as the Donovan Pro package.
+# Translators:
+# FX Bénard <fxb@wp-translations.org>, 2018
+# Gregory Karpinsky <gregory@tiv.net>, 2018
+# Devin Price <devin@wptheming.com>, 2018
+# edson katayama <midiamentira@gmail.com>, 2018
+# Diana K. Cury <dianakac@gmail.com>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Donovan Pro 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/donovan-pro\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2018-04-30T17:15:03+00:00\n"
+"PO-Revision-Date: 2018-05-14 09:42+0200\n"
+"Last-Translator: fxbenard pour WP-Translations <fx@wp-translations.pro>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/wp-"
+"translations/teams/64435/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2018-04-30T17:15:03+00:00\n"
-"PO-Revision-Date: 2018-04-30T17:15:03+00:00\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Domain: donovan-pro\n"
+"X-Generator: Poedit 2.0.7\n"
 
 #: \donovan-pro.php:180
 msgid "Settings"
-msgstr ""
+msgstr "Configurações"
 
 #: \includes\admin\class-admin-notices.php:52
-msgid "Please enter your license key for the %1$s add-on in order to receive updates and support. <a href=\"%2$s\">Enter License Key</a>"
+msgid ""
+"Please enter your license key for the %1$s add-on in order to receive "
+"updates and support. <a href=\"%2$s\">Enter License Key</a>"
 msgstr ""
+"Digite sua chave de licença para o %1$s complemento para receber "
+"atualizações e suporte. <a href=\"%2$s\">Insira chave da licença</a>"
 
 #: \includes\admin\class-admin-notices.php:57
 #: \includes\admin\class-admin-notices.php:86
 msgid "Dismiss Notice"
-msgstr ""
+msgstr "Dispensar Notificação"
 
 #: \includes\admin\class-admin-notices.php:81
-msgid "Your license for %1$s has expired. Please <a href=\"%2$s\">renew</a> to continue getting updates and support!"
+msgid ""
+"Your license for %1$s has expired. Please <a href=\"%2$s\">renew</a> to "
+"continue getting updates and support!"
 msgstr ""
+"Sua licença para %1$s expirou. <a href=\"%2$s\">Renove</a> para continuar "
+"recebendo atualizações e suporte!"
 
 #: \includes\admin\class-admin-notices.php:108
 msgid "Security check failed"
-msgstr ""
+msgstr "A verificação de segurança falhou."
 
 #: \includes\admin\class-admin-notices.php:108
 msgid "Error"
-msgstr ""
+msgstr "Erro"
 
 #: \includes\admin\class-settings-page.php:46
 #: \includes\admin\class-settings-page.php:47
 msgid "Pro Version"
-msgstr ""
+msgstr "Versão Pro"
 
 #: \includes\admin\class-settings-page.php:81
-msgid "You can find your license keys and manage your active sites on <a href=\"%s\" target=\"_blank\">themezee.com</a>."
+msgid ""
+"You can find your license keys and manage your active sites on <a href=\"%s"
+"\" target=\"_blank\">themezee.com</a>."
 msgstr ""
+"Você pode encontrar suas chaves de licença e gerenciar seus sites ativos no "
+"<a href=\"%s\" target=\"_blank\">themezee.com</a>."
 
 #: \includes\admin\class-settings-page.php:81
 msgid "https://themezee.com/license-keys/"
-msgstr ""
+msgstr "https://themezee.com/license-keys/"
 
 #: \includes\admin\class-settings.php:118
 msgid "Automatic Updates"
-msgstr ""
+msgstr "Atualizações automáticas"
 
 #: \includes\admin\class-settings.php:123
 msgid "License Status"
-msgstr ""
+msgstr "Situação da licença"
 
 #: \includes\admin\class-settings.php:132
 msgid "License Key"
-msgstr ""
+msgstr "Chave de Licença"
 
 #: \includes\admin\class-settings.php:148
-msgid "Please enter your license key. An active license key is necessary for automatic plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
+msgid ""
+"Please enter your license key. An active license key is necessary for "
+"automatic plugin updates and <a href=\"%s\" target=\"_blank\">support</a>."
 msgstr ""
+"Digite sua chave de licença. Uma chave de licença ativa é necessária para "
+"atualizações automáticas de plugins e <a href=\"%s\" target=\"_blank"
+"\">suport</a>."
 
 #: \includes\admin\class-settings.php:198
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 #: \includes\admin\class-settings.php:199
 msgid "You are receiving updates."
-msgstr ""
+msgstr "Você está recebendo atualizações."
 
 #: \includes\admin\class-settings.php:205
 msgid "Expired"
-msgstr ""
+msgstr "Expirado"
 
 #: \includes\admin\class-settings.php:206
-msgid "Your license has expired, renew today to continue getting updates and support!"
+msgid ""
+"Your license has expired, renew today to continue getting updates and "
+"support!"
 msgstr ""
+"Sua licença expirou, renove hoje mesmo para continuar recebendo "
+"atualizações e suporte!"
 
 #: \includes\admin\class-settings.php:207
 msgid "Renew Your License"
-msgstr ""
+msgstr "Renove sua licença"
 
 #: \includes\admin\class-settings.php:211
 msgid "Invalid"
-msgstr ""
+msgstr "Inválida"
 
 #: \includes\admin\class-settings.php:212
-msgid "Please make sure you have not reached site limits and/or expiration date."
+msgid ""
+"Please make sure you have not reached site limits and/or expiration date."
 msgstr ""
+"Verifique se você não atingiu os limites do site e/ou data de validade."
 
 #: \includes\admin\class-settings.php:216
 msgid "Inactive"
-msgstr ""
+msgstr "Desativado"
 
 #: \includes\admin\class-settings.php:240
 msgid "Deactivate License"
-msgstr ""
+msgstr "Desativar Licença"
 
 #: \includes\admin\class-settings.php:245
 msgid "Activate License"
-msgstr ""
+msgstr "Ativar licença"
 
 #: \includes\customizer\class-customize-font-control.php:58
 msgid "Previous Font"
-msgstr ""
+msgstr "Fonte anterior"
 
 #: \includes\customizer\class-customize-font-control.php:59
 msgid "Next Font"
-msgstr ""
+msgstr "Próxima fonte"
 
 #: \includes\customizer\class-customize-font-control.php:60
 msgctxt "default font button"
 msgid "Default"
-msgstr ""
+msgstr "Padrão"
 
 #: \includes\customizer\class-customize-font-control.php:100
 msgid "Local Fonts"
-msgstr ""
+msgstr "Fontes locais"
 
 #: \includes\customizer\class-customize-font-control.php:108
 msgid "Google Web Fonts"
-msgstr ""
+msgstr "Google Web Fonts"
 
 #: \includes\modules\class-author-bio.php:62
 msgid "About %s"
-msgstr ""
+msgstr "Sobre %s"
 
 #: \includes\modules\class-author-bio.php:64
 msgid "View all posts"
-msgstr ""
+msgstr "Ver todos os posts"
 
 #: \includes\modules\class-author-bio.php:95
 msgid "Display Author Bio"
-msgstr ""
+msgstr "Exibir bio do autor"
 
 #: \includes\modules\class-custom-colors.php:142
 msgid "Color Settings"
-msgstr ""
+msgstr "Configurações de  cores"
 
 #: \includes\modules\class-custom-colors.php:159
 msgctxt "color setting"
 msgid "Links"
-msgstr ""
+msgstr "Links"
 
 #: \includes\modules\class-custom-colors.php:175
 msgctxt "color setting"
 msgid "Buttons"
-msgstr ""
+msgstr "Botões"
 
 #: \includes\modules\class-custom-colors.php:191
 msgctxt "color setting"
 msgid "Buttons Hover"
-msgstr ""
+msgstr "Hover do botões"
 
 #: \includes\modules\class-custom-colors.php:207
 msgctxt "color setting"
 msgid "Main Navigation"
-msgstr ""
+msgstr "Navegação principal"
 
 #: \includes\modules\class-custom-colors.php:223
 msgctxt "color setting"
 msgid "Sub Menus"
-msgstr ""
+msgstr "Submenus"
 
 #: \includes\modules\class-custom-colors.php:239
 msgctxt "color setting"
 msgid "Titles"
-msgstr ""
+msgstr "Títulos"
 
 #: \includes\modules\class-custom-colors.php:255
 msgctxt "color setting"
 msgid "Widget Titles"
-msgstr ""
+msgstr "Títulos de Widget"
 
 #: \includes\modules\class-custom-colors.php:271
 msgctxt "color setting"
 msgid "Footer"
-msgstr ""
+msgstr "Rodapé"
 
 #: \includes\modules\class-custom-fonts.php:179
 msgid "Typography"
-msgstr ""
+msgstr "Tipografia"
 
 #: \includes\modules\class-custom-fonts.php:197
 msgid "Body Font"
-msgstr ""
+msgstr "Fonte do corpo"
 
 #: \includes\modules\class-custom-fonts.php:214
 msgctxt "Font Setting"
 msgid "Headings"
-msgstr ""
+msgstr "Títulos"
 
 #: \includes\modules\class-custom-fonts.php:231
 msgctxt "Font Setting"
 msgid "Navigation"
-msgstr ""
+msgstr "Navegação"
 
 #: \includes\modules\class-custom-fonts.php:248
 msgctxt "Font Setting"
 msgid "Widget Titles"
-msgstr ""
+msgstr "Títulos de Widget"
 
 #: \includes\modules\class-footer-line.php:115
 msgid "Footer Settings"
-msgstr ""
+msgstr "Opções do rodapé"
 
 #: \includes\modules\class-footer-line.php:129
 msgid "Footer Text"
-msgstr ""
+msgstr "Texto do rodapé"
 
 #: \includes\modules\class-footer-line.php:152
 msgid "Display Credit Link to ThemeZee on footer line"
-msgstr ""
+msgstr "Exibir link de crédito para o ThemeZee na linha de rodapé"
 
 #: \includes\modules\class-footer-line.php:195
 msgid "Footer Navigation"
-msgstr ""
+msgstr "Rodapé de Navegação"
 
 #: \includes\modules\class-footer-widgets.php:110
 msgid "Footer Column 1"
-msgstr ""
+msgstr "Rodapé Coluna 1"
 
 #: \includes\modules\class-footer-widgets.php:112
 msgctxt "widget area description"
 msgid "Appears in the first column in footer."
-msgstr ""
+msgstr "Aparece na primeira coluna no rodapé."
 
 #: \includes\modules\class-footer-widgets.php:121
 msgid "Footer Column 2"
-msgstr ""
+msgstr "Rodapé Coluna 2"
 
 #: \includes\modules\class-footer-widgets.php:123
 msgctxt "widget area description"
 msgid "Appears in the second column in footer."
-msgstr ""
+msgstr "Aparece na segunda coluna no rodapé."
 
 #: \includes\modules\class-footer-widgets.php:132
 msgid "Footer Column 3"
-msgstr ""
+msgstr "Rodapé Coluna 3"
 
 #: \includes\modules\class-footer-widgets.php:134
 msgctxt "widget area description"
 msgid "Appears in the third column in footer."
-msgstr ""
+msgstr "Aparece na terceira coluna no rodapé."
 
 #: \includes\modules\class-footer-widgets.php:143
 msgid "Footer Column 4"
-msgstr ""
+msgstr "Rodapé Coluna 4"
 
 #: \includes\modules\class-footer-widgets.php:145
 msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
-msgstr ""
+msgstr "Aparece na quarta coluna no rodapé."
 
 #: \includes\modules\class-header-bar.php:115
 msgid "Header Settings"
-msgstr ""
+msgstr "Configurações do cabeçalho"
 
 #: \includes\modules\class-header-bar.php:123
 msgid "Header Date"
-msgstr ""
+msgstr "Data do cabeçalho"
 
 #: \includes\modules\class-header-bar.php:139
 msgid "Display current date in header bar"
-msgstr ""
+msgstr "Exibe a data atual na barra de cabeçalho"
 
 #: \includes\modules\class-header-bar.php:155
 msgid "Header Text"
-msgstr ""
+msgstr "Texto do cabeçalho"
 
 #: \includes\modules\class-header-bar.php:225
 msgid "Top Navigation"
-msgstr ""
+msgstr "Navegação do topo"
 
 #: \includes\modules\class-header-search.php:78
 msgid "Search"
-msgstr ""
+msgstr "Procurar"
 
 #: \includes\modules\class-header-search.php:101
 msgid "Header Search"
-msgstr ""
+msgstr "Pesquisa de cabeçalho"
 
 #: \includes\modules\class-header-search.php:117
 msgid "Enable search field in header"
-msgstr ""
+msgstr "Ativar campo de pesquisa no cabeçalho"
 
 #: \includes\modules\class-scroll-to-top.php:68
 msgid "Scroll to Top"
-msgstr ""
+msgstr "Role para cima"
 
 #: \includes\modules\class-scroll-to-top.php:84
 msgid "Display Scroll to Top Button"
-msgstr ""
+msgstr "Exibir botão Rolar para cima"
 
 #. Plugin Name of the plugin
 msgid "Donovan Pro"
-msgstr ""
+msgstr "Donovan Pro"
 
 #. Plugin URI of the plugin
 msgid "http://themezee.com/addons/donovan-pro/"
-msgstr ""
+msgstr "http://themezee.com/addons/donovan-pro/"
 
 #. Description of the plugin
-msgid "Adds additional features like footer widgets, custom colors, custom fonts, custom menus, and Magazine Post widgets to the Donovan theme."
+msgid ""
+"Adds additional features like footer widgets, custom colors, custom fonts, "
+"custom menus, and Magazine Post widgets to the Donovan theme."
 msgstr ""
+"Adiciona recursos adicionais, como widgets de rodapé, cores personalizadas, "
+"fontes personalizadas, menus personalizados e widgets de postagem de "
+"revista ao tema Donovan."
 
 #. Author of the plugin
 msgid "ThemeZee"
-msgstr ""
+msgstr "ThemeZee"
 
 #. Author URI of the plugin
 msgid "https://themezee.com/"
-msgstr ""
+msgstr "https://themezee.com/"
