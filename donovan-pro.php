@@ -5,18 +5,20 @@ Plugin URI: http://themezee.com/addons/donovan-pro/
 Description: Adds additional features like footer widgets, custom colors, custom fonts, custom menus, and Magazine Post widgets to the Donovan theme.
 Author: ThemeZee
 Author URI: https://themezee.com/
-Version: 1.1.3
+Version: 1.2
 Text Domain: donovan-pro
 Domain Path: /languages/
-License: GPL v3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Donovan Pro
 Copyright(C) 2018, ThemeZee.com - support@themezee.com
 */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 
 /**
@@ -25,7 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
  * @package Donovan Pro
  */
 class Donovan_Pro {
-
 	/**
 	 * Call all Functions to setup the Plugin
 	 *
@@ -47,7 +48,6 @@ class Donovan_Pro {
 
 		// Setup Action Hooks.
 		self::setup_actions();
-
 	}
 
 	/**
@@ -61,7 +61,7 @@ class Donovan_Pro {
 		define( 'DONOVAN_PRO_NAME', 'Donovan Pro' );
 
 		// Define Version Number.
-		define( 'DONOVAN_PRO_VERSION', '1.1.3' );
+		define( 'DONOVAN_PRO_VERSION', '1.2' );
 
 		// Define Plugin Name.
 		define( 'DONOVAN_PRO_PRODUCT_ID', 171494 );
@@ -77,7 +77,6 @@ class Donovan_Pro {
 
 		// Plugin Root File.
 		define( 'DONOVAN_PRO_PLUGIN_FILE', __FILE__ );
-
 	}
 
 	/**
@@ -86,9 +85,7 @@ class Donovan_Pro {
 	 * @return void
 	 */
 	static function translation() {
-
 		load_plugin_textdomain( 'donovan-pro', false, dirname( plugin_basename( DONOVAN_PRO_PLUGIN_FILE ) ) . '/languages/' );
-
 	}
 
 	/**
@@ -175,7 +172,6 @@ class Donovan_Pro {
 	 * @return array $actions Plugin action links
 	 */
 	static function plugin_action_links( $actions ) {
-
 		$settings_link = array(
 			'settings' => sprintf( '<a href="%s">%s</a>', admin_url( 'themes.php?page=donovan-pro' ), __( 'Settings', 'donovan-pro' ) ),
 		);
@@ -189,7 +185,6 @@ class Donovan_Pro {
 	 * @return void
 	 */
 	static function plugin_updater() {
-
 		$options = Donovan_Pro_Settings::instance();
 
 		if ( $options->get( 'license_key' ) <> '' ) :
@@ -198,13 +193,12 @@ class Donovan_Pro {
 
 			// Setup the updater.
 			$donovan_pro_updater = new Donovan_Pro_Plugin_Updater( DONOVAN_PRO_STORE_API_URL, __FILE__, array(
-					'version' 	=> DONOVAN_PRO_VERSION,
-					'license' 	=> $license_key,
-					'item_name' => DONOVAN_PRO_NAME,
-					'item_id'   => DONOVAN_PRO_PRODUCT_ID,
-					'author' 	=> 'ThemeZee',
-				)
-			);
+				'version'   => DONOVAN_PRO_VERSION,
+				'license'   => $license_key,
+				'item_name' => DONOVAN_PRO_NAME,
+				'item_id'   => DONOVAN_PRO_PRODUCT_ID,
+				'author'    => 'ThemeZee',
+			) );
 
 		endif;
 	}
