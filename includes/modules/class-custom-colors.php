@@ -8,7 +8,9 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Custom Colors Class
@@ -29,6 +31,9 @@ class Donovan_Pro_Custom_Colors {
 
 		// Add Custom Color CSS code to custom stylesheet output.
 		add_filter( 'donovan_pro_custom_css_stylesheet', array( __CLASS__, 'custom_colors_css' ) );
+
+		// Add Custom Color CSS code to the Gutenberg editor.
+		add_action( 'enqueue_block_editor_assets', array( __CLASS__, 'custom_editor_colors_css' ) );
 
 		// Add Custom Color Settings.
 		add_action( 'customize_register', array( __CLASS__, 'color_settings' ) );
@@ -123,11 +128,65 @@ class Donovan_Pro_Custom_Colors {
 		}
 
 		// Set Color Variables.
-		if( '' !== $color_variables ) {
+		if ( '' !== $color_variables ) {
 			$custom_css .= ':root {' . $color_variables . '}';
 		}
 
 		return $custom_css;
+	}
+
+	/**
+	 * Adds Color CSS styles in the Gutenberg Editor to override default colors
+	 *
+	 * @return void
+	 */
+	static function custom_editor_colors_css() {
+
+		// Get Theme Options from Database.
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
+
+		// Get Default Fonts from settings.
+		$default_options = Donovan_Pro_Customizer::get_default_options();
+
+		// Color Variables.
+		$color_variables = '';
+
+		// Set Link Color.
+		if ( $theme_options['link_color'] !== $default_options['link_color'] ) {
+			$color_variables .= '--link-color: ' . $theme_options['link_color'] . ';';
+		}
+
+		// Set Title Color.
+		if ( $theme_options['title_color'] !== $default_options['title_color'] ) {
+			$color_variables .= '--title-color: ' . $theme_options['title_color'] . ';';
+		}
+
+		// Set Color Variables.
+		if ( '' !== $color_variables ) {
+			$custom_css = ':root {' . $color_variables . '}';
+			wp_add_inline_style( 'donovan-editor-styles', $custom_css );
+		}
+	}
+
+	/**
+	 * Change primary color in Gutenberg Editor.
+	 *
+	 * @return array $editor_settings
+	 */
+	static function change_primary_color( $color ) {
+
+		// Get Theme Options from Database.
+		$theme_options = Donovan_Pro_Customizer::get_theme_options();
+
+		// Get Default Fonts from settings.
+		$default_options = Donovan_Pro_Customizer::get_default_options();
+
+		// Set Primary Color.
+		if ( $theme_options['link_color'] !== $default_options['link_color'] ) {
+			$color = $theme_options['link_color'];
+		}
+
+		return $color;
 	}
 
 	/**
@@ -315,3 +374,4 @@ class Donovan_Pro_Custom_Colors {
 
 // Run Class.
 add_action( 'init', array( 'Donovan_Pro_Custom_Colors', 'setup' ) );
+add_filter( 'donovan_primary_color', array( 'Donovan_Pro_Custom_Colors', 'change_primary_color' ) );
