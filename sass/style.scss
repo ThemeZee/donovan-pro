@@ -1,0 +1,58 @@
+/*
+ * Donovan Pro CSS
+ *
+ * Copyright(C) 2020, ThemeZee.com - support@themezee.com
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @package Donovan Pro
+ */
+
+/*--------------------------------------------------------------
+# - CSS Variables
+--------------------------------------------------------------*/
+@import "../../../themes/donovan/sass/_variables";
+@import "../../../themes/donovan/sass/_mixins";
+/*--------------------------------------------------------------
+# Header Bar
+--------------------------------------------------------------*/
+@import "modules/header-bar";
+
+/*--------------------------------------------------------------
+# Header Search
+--------------------------------------------------------------*/
+@import "modules/header-search";
+
+/*--------------------------------------------------------------
+# Author Bio
+--------------------------------------------------------------*/
+@import "modules/author-bio";
+
+/*--------------------------------------------------------------
+# Footer Widgets
+--------------------------------------------------------------*/
+@import "modules/footer-widgets";
+
+/*--------------------------------------------------------------
+# Footer Menu
+--------------------------------------------------------------*/
+@import "modules/footer-menu";
+
+/*--------------------------------------------------------------
+# Scroll to Top Button
+--------------------------------------------------------------*/
+@import "modules/scroll-to-top";
+
+/*--------------------------------------------------------------
+# Customizer Preview
+--------------------------------------------------------------*/
+
+/* Add some styling for visual edit shortcut buttons. */
+.customize-partial-edit-shortcuts-shown .header-bar .header-content .header-text {
+	margin-left: 2em;
+}
+
+.customize-partial-edit-shortcut-donovan_theme_options-header_text button {
+	top: -5px;
+	left: -35px;
+}

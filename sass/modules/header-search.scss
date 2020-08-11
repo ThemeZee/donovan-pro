@@ -1,0 +1,111 @@
+.primary-navigation-container {
+	position: relative;
+}
+
+.header-search {
+	font-size: 17px;
+	font-size: 1.0625rem;
+}
+
+.header-search .header-search-icon {
+	position: absolute;
+	right: 0;
+	display: inline-block;
+	padding: 1em;
+	z-index: 99;
+}
+
+.header-search .header-search-icon:hover,
+.header-search .header-search-icon:active {
+	cursor: pointer;
+}
+
+.header-search .header-search-icon:focus {
+	outline: none;
+}
+
+.header-search .header-search-icon .icon-search {
+	margin: 0;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	fill: #fff;
+	fill: var(--navi-text-color);
+}
+
+.header-search .header-search-icon:hover .icon-search,
+.header-search .header-search-icon:active .icon-search {
+	fill: rgba(255, 255, 255, 0.5);
+	fill: var(--navi-hover-text-color);
+}
+
+/* Header Search Form */
+.header-search .header-search-form {
+	position: absolute;
+	top: 3.75em;
+	right: 0;
+	display: none;
+	margin: 0;
+	padding: 1.5rem;
+	background: #202020;
+	background: var(--navi-color);
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+	border-top: 1px solid var(--navi-border-color);
+	width: 100%;
+	z-index: 999;
+}
+
+.header-search .header-search-form .search-form {
+	background: #fff;
+}
+
+@media only screen and (min-width: 25em) {
+	.header-search .header-search-icon {
+		right: 0.5rem;
+	}
+}
+
+@media only screen and (min-width: 55em) {
+	.primary-navigation-container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.primary-navigation-container .primary-navigation {
+		flex-grow: 1;
+		order: 1;
+	}
+
+	.primary-navigation-container .header-search {
+		order: 2;
+	}
+
+	.header-search .header-search-icon {
+		position: static;
+		margin-right: 1.5rem;
+	}
+
+	.header-search .header-search-form {
+		right: 1.5rem;
+		width: auto;
+		border: 1px solid rgba(255, 255, 255, 0.075);
+		border: 1px solid var(--submenu-border-color);
+		background: #ee1133;
+		background: var(--submenu-color);
+	}
+
+	.header-search .header-search-form .search-form {
+		min-width: 300px;
+	}
+
+	.centered-theme-layout .header-search .header-search-icon,
+	.boxed-theme-layout .header-search .header-search-icon {
+		margin-right: 0.5rem;
+	}
+
+	.centered-theme-layout .header-search .header-search-form,
+	.boxed-theme-layout .header-search .header-search-form {
+		right: 0;
+	}
+}
