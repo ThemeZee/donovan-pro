@@ -72,34 +72,47 @@ class Donovan_Pro_Header_Bar {
 
 						</div>
 
-					<?php
+						<?php
 					endif;
 
 					// Check if there is a top navigation menu.
 					if ( has_nav_menu( 'secondary' ) ) : ?>
 
-						<nav id="top-navigation" class="secondary-navigation navigation clearfix" role="navigation">
-
+						<button class="secondary-menu-toggle menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
 							<?php
-							// Display Top Navigation.
-							wp_nav_menu( array(
-								'theme_location' => 'secondary',
-								'container'      => false,
-								'menu_class'     => 'top-navigation-menu',
-								'echo'           => true,
-								'fallback_cb'    => '',
-							) );
+							echo donovan_get_svg( 'menu' );
+							echo donovan_get_svg( 'close' );
 							?>
+							<span class="menu-toggle-text"><?php esc_html_e( 'Menu', 'donovan-pro' ); ?></span>
+						</button>
 
-						</nav>
+						<div class="secondary-navigation">
 
-					<?php endif; ?>
+							<nav class="top-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Secondary Menu', 'donovan-pro' ); ?>">
+
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'secondary',
+										'menu_id'        => 'secondary-menu',
+										'container'      => false,
+									)
+								);
+								?>
+
+							</nav>
+
+						</div><!-- .secondary-navigation -->
+
+						<?php
+					endif;
+					?>
 
 				</div>
 
 			</div>
 
-		<?php
+			<?php
 		endif;
 	}
 
