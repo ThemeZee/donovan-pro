@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2018-04-30 17:35+0200\n"
-"PO-Revision-Date: 2018-04-30 17:36+0200\n"
+"POT-Creation-Date: 2020-08-18 14:16+0200\n"
+"PO-Revision-Date: 2020-08-18 14:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -13,10 +13,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: donovan-pro.php:180
+#: donovan-pro.php:176
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -195,69 +195,69 @@ msgstr "Alle Beiträge ansehen"
 msgid "Display Author Bio"
 msgstr "Autor Bio anzeigen"
 
-#: includes/modules/class-custom-colors.php:142
+#: includes/modules/class-custom-colors.php:201
 msgid "Color Settings"
 msgstr "Farboptionen"
 
-#: includes/modules/class-custom-colors.php:159
+#: includes/modules/class-custom-colors.php:218
 msgctxt "color setting"
 msgid "Links"
 msgstr "Links"
 
-#: includes/modules/class-custom-colors.php:175
+#: includes/modules/class-custom-colors.php:234
 msgctxt "color setting"
 msgid "Buttons"
 msgstr "Buttons"
 
-#: includes/modules/class-custom-colors.php:191
+#: includes/modules/class-custom-colors.php:250
 msgctxt "color setting"
 msgid "Buttons Hover"
 msgstr "Buttons Hover"
 
-#: includes/modules/class-custom-colors.php:207
+#: includes/modules/class-custom-colors.php:266
 msgctxt "color setting"
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: includes/modules/class-custom-colors.php:223
+#: includes/modules/class-custom-colors.php:282
 msgctxt "color setting"
 msgid "Sub Menus"
 msgstr "Submenüs"
 
-#: includes/modules/class-custom-colors.php:239
+#: includes/modules/class-custom-colors.php:298
 msgctxt "color setting"
 msgid "Titles"
 msgstr "Titel"
 
-#: includes/modules/class-custom-colors.php:255
+#: includes/modules/class-custom-colors.php:314
 msgctxt "color setting"
 msgid "Widget Titles"
 msgstr "Widget Titel"
 
-#: includes/modules/class-custom-colors.php:271
+#: includes/modules/class-custom-colors.php:330
 msgctxt "color setting"
 msgid "Footer"
 msgstr "Footer"
 
-#: includes/modules/class-custom-fonts.php:179
+#: includes/modules/class-custom-fonts.php:220
 msgid "Typography"
 msgstr "Typografie"
 
-#: includes/modules/class-custom-fonts.php:197
+#: includes/modules/class-custom-fonts.php:238
 msgid "Body Font"
 msgstr "Basis Schriftart"
 
-#: includes/modules/class-custom-fonts.php:214
+#: includes/modules/class-custom-fonts.php:255
 msgctxt "Font Setting"
 msgid "Headings"
 msgstr "Überschriften"
 
-#: includes/modules/class-custom-fonts.php:231
+#: includes/modules/class-custom-fonts.php:272
 msgctxt "Font Setting"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: includes/modules/class-custom-fonts.php:248
+#: includes/modules/class-custom-fonts.php:289
 msgctxt "Font Setting"
 msgid "Widget Titles"
 msgstr "Widget Titel"
@@ -314,23 +314,31 @@ msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
 msgstr "Erscheint in der vierten Spalte im Footer."
 
-#: includes/modules/class-header-bar.php:115
+#: includes/modules/class-header-bar.php:86
+msgid "Menu"
+msgstr "Menü"
+
+#: includes/modules/class-header-bar.php:91
+msgid "Secondary Menu"
+msgstr "Sekundäres Menü"
+
+#: includes/modules/class-header-bar.php:128
 msgid "Header Settings"
 msgstr "Header Einstellungen"
 
-#: includes/modules/class-header-bar.php:123
+#: includes/modules/class-header-bar.php:136
 msgid "Header Date"
 msgstr "Header Datum"
 
-#: includes/modules/class-header-bar.php:139
+#: includes/modules/class-header-bar.php:152
 msgid "Display current date in header bar"
 msgstr "Datum im Header anzeigen"
 
-#: includes/modules/class-header-bar.php:155
+#: includes/modules/class-header-bar.php:168
 msgid "Header Text"
 msgstr "Header Text"
 
-#: includes/modules/class-header-bar.php:225
+#: includes/modules/class-header-bar.php:238
 msgid "Top Navigation"
 msgstr "Obere Navigation"
 
