@@ -2,6 +2,12 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.3
+-----------------------------------
+* updated styles and scripts of top navigation menu
+* updated header search functionality
+* updated color settings for new navigation menus
+
 Version 1.2
 -----------------------------------
 * updated color settings to set primary color for the Gutenberg Editor

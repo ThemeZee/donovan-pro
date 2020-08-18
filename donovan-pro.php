@@ -5,14 +5,14 @@ Plugin URI: http://themezee.com/addons/donovan-pro/
 Description: Adds additional features like footer widgets, custom colors, custom fonts, custom menus, and Magazine Post widgets to the Donovan theme.
 Author: ThemeZee
 Author URI: https://themezee.com/
-Version: 1.2
+Version: 1.3
 Text Domain: donovan-pro
 Domain Path: /languages/
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Donovan Pro
-Copyright(C) 2018, ThemeZee.com - support@themezee.com
+Copyright(C) 2020, ThemeZee.com - support@themezee.com
 */
 
 // Exit if accessed directly.
@@ -61,7 +61,7 @@ class Donovan_Pro {
 		define( 'DONOVAN_PRO_NAME', 'Donovan Pro' );
 
 		// Define Version Number.
-		define( 'DONOVAN_PRO_VERSION', '1.2' );
+		define( 'DONOVAN_PRO_VERSION', '1.3' );
 
 		// Define Plugin Name.
 		define( 'DONOVAN_PRO_PRODUCT_ID', 171494 );
