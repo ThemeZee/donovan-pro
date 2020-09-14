@@ -78,7 +78,7 @@ class Donovan_Pro_Header_Bar {
 					// Check if there is a top navigation menu.
 					if ( has_nav_menu( 'secondary' ) ) : ?>
 
-						<button class="secondary-menu-toggle menu-toggle" aria-controls="secondary-menu" aria-expanded="false">
+						<button class="secondary-menu-toggle menu-toggle" aria-controls="secondary-menu" aria-expanded="false" <?php self::amp_menu_toggle(); ?>>
 							<?php
 							echo donovan_get_svg( 'menu' );
 							echo donovan_get_svg( 'close' );
@@ -88,7 +88,7 @@ class Donovan_Pro_Header_Bar {
 
 						<div class="secondary-navigation">
 
-							<nav class="top-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Secondary Menu', 'donovan-pro' ); ?>">
+							<nav class="top-navigation" role="navigation" <?php self::amp_menu_is_toggled(); ?> aria-label="<?php esc_attr_e( 'Secondary Menu', 'donovan-pro' ); ?>">
 
 								<?php
 								wp_nav_menu(
@@ -238,6 +238,25 @@ class Donovan_Pro_Header_Bar {
 			'secondary' => esc_html__( 'Top Navigation', 'donovan-pro' ),
 		) );
 
+	}
+
+	/**
+	 * Adds amp support for menu toggle.
+	 */
+	static function amp_menu_toggle() {
+		if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) {
+			echo "[aria-expanded]=\"secondaryMenuExpanded? 'true' : 'false'\" ";
+			echo 'on="tap:AMP.setState({secondaryMenuExpanded: !secondaryMenuExpanded})"';
+		}
+	}
+
+	/**
+	 * Adds amp support for mobile dropdown navigation menu.
+	 */
+	static function amp_menu_is_toggled() {
+		if ( function_exists( 'is_amp_endpoint' ) && is_amp_endpoint() ) {
+			echo "[class]=\"'top-navigation' + ( secondaryMenuExpanded ? ' toggled-on' : '' )\"";
+		}
 	}
 }
 
