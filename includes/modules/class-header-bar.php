@@ -6,7 +6,9 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Header Bar Class
@@ -46,25 +48,23 @@ class Donovan_Pro_Header_Bar {
 		$theme_options = Donovan_Pro_Customizer::get_theme_options();
 
 		// Check if there is content for the header bar.
-		if ( false !== $theme_options['header_date'] || '' !== $theme_options['header_text'] ||  has_nav_menu( 'secondary' ) || is_customize_preview() ) : ?>
+		if ( false !== $theme_options['header_date'] || '' !== $theme_options['header_text'] || has_nav_menu( 'secondary' ) || is_customize_preview() ) : ?>
 
 			<div id="header-top" class="header-bar-wrap">
 
 				<div id="header-bar" class="header-bar container clearfix">
 
-					<?php
-					if ( false !== $theme_options['header_date'] || '' !== $theme_options['header_text'] || is_customize_preview() ) : ?>
+					<?php if ( false !== $theme_options['header_date'] || '' !== $theme_options['header_text'] || is_customize_preview() ) : ?>
 
 						<div class="header-content">
 
-							<?php
-							if ( false !== $theme_options['header_date'] || is_customize_preview() ) : ?>
+							<?php if ( false !== $theme_options['header_date'] || is_customize_preview() ) : ?>
 
 								<span class="header-date"><?php echo date_i18n( get_option( 'date_format' ) ); ?></span>
 
-							<?php endif;
+							<?php endif; ?>
 
-							if ( '' !== $theme_options['header_text'] || is_customize_preview() ) : ?>
+							<?php if ( '' !== $theme_options['header_text'] || is_customize_preview() ) : ?>
 
 								<span class="header-text"><?php echo do_shortcode( wp_kses_post( $theme_options['header_text'] ) ); ?></span>
 
@@ -72,11 +72,9 @@ class Donovan_Pro_Header_Bar {
 
 						</div>
 
-						<?php
-					endif;
+					<?php endif; ?>
 
-					// Check if there is a top navigation menu.
-					if ( has_nav_menu( 'secondary' ) ) : ?>
+					<?php if ( has_nav_menu( 'secondary' ) ) : ?>
 
 						<button class="secondary-menu-toggle menu-toggle" aria-controls="secondary-menu" aria-expanded="false" <?php self::amp_menu_toggle(); ?>>
 							<?php
@@ -104,9 +102,7 @@ class Donovan_Pro_Header_Bar {
 
 						</div><!-- .secondary-navigation -->
 
-						<?php
-					endif;
-					?>
+					<?php endif; ?>
 
 				</div>
 
