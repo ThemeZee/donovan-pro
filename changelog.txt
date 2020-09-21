@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.4
+-----------------------------------
+* added support for the official AMP plugin
+
 Version 1.3
 -----------------------------------
 * updated styles and scripts of top navigation menu
