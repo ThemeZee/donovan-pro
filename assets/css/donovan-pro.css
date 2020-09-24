@@ -164,7 +164,7 @@
 	font-size: 0.875rem;
 }
 
-.is-amp-page .top-navigation ul ul,
+.is-amp-page .top-navigation ul button.toggled-on + ul,
 .top-navigation ul ul.toggled-on {
 	display: block;
 }
