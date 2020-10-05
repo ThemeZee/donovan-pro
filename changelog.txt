@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.4.1
+-----------------------------------
+* added AMP dropdown toggles for sub menus
+
 Version 1.4
 -----------------------------------
 * added support for the official AMP plugin
