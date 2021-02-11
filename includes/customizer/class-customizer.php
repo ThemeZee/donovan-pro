@@ -8,7 +8,9 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 /**
  * Customizer Class
@@ -43,11 +45,7 @@ class Donovan_Pro_Customizer {
 	static function get_theme_options() {
 
 		// Merge Theme Options Array from Database with Default Options Array.
-		$theme_options = wp_parse_args( get_option( 'donovan_theme_options', array() ), self::get_default_options() );
-
-		// Return theme options.
-		return $theme_options;
-
+		return wp_parse_args( get_option( 'donovan_theme_options', array() ), self::get_default_options() );
 	}
 
 
@@ -59,30 +57,35 @@ class Donovan_Pro_Customizer {
 	static function get_default_options() {
 
 		$default_options = array(
-			'header_text'        => '',
-			'header_date'        => false,
-			'header_search'      => false,
-			'author_bio'         => false,
-			'footer_content'     => false,
-			'footer_text'        => '',
-			'credit_link'        => true,
-			'scroll_to_top'      => false,
-			'link_color'         => '#ee1133',
-			'button_color'       => '#ee1133',
-			'button_hover_color' => '#D5001A',
-			'navi_color'         => '#202020',
-			'navi_submenu_color' => '#ee1133',
-			'title_color'        => '#202020',
-			'widget_title_color' => '#202020',
-			'footer_color'       => '#202020',
-			'text_font'          => 'Raleway',
-			'title_font'         => 'Quicksand',
-			'navi_font'          => 'Quicksand',
-			'widget_title_font'  => 'Quicksand',
+			'header_text'               => '',
+			'header_date'               => false,
+			'header_search'             => false,
+			'author_bio'                => false,
+			'footer_content'            => false,
+			'footer_text'               => '',
+			'credit_link'               => true,
+			'scroll_to_top'             => false,
+			'link_color'                => '#ee1133',
+			'button_color'              => '#ee1133',
+			'button_hover_color'        => '#D5001A',
+			'navi_color'                => '#202020',
+			'navi_submenu_color'        => '#ee1133',
+			'title_color'               => '#202020',
+			'widget_title_color'        => '#202020',
+			'footer_color'              => '#202020',
+			'text_font'                 => 'Raleway',
+			'title_font'                => 'Quicksand',
+			'title_is_bold'             => false,
+			'title_is_uppercase'        => false,
+			'navi_font'                 => 'Quicksand',
+			'navi_is_bold'              => false,
+			'navi_is_uppercase'         => false,
+			'widget_title_font'         => 'Quicksand',
+			'widget_title_is_bold'      => false,
+			'widget_title_is_uppercase' => false,
 		);
 
 		return $default_options;
-
 	}
 
 	/**
@@ -91,9 +94,7 @@ class Donovan_Pro_Customizer {
 	 * @return void
 	 */
 	static function customize_preview_js() {
-
-		wp_enqueue_script( 'donovan-pro-customizer-js', DONOVAN_PRO_PLUGIN_URL . 'assets/js/customizer.js', array( 'customize-preview' ), DONOVAN_PRO_VERSION, true );
-
+		wp_enqueue_script( 'donovan-pro-customizer-js', DONOVAN_PRO_PLUGIN_URL . 'assets/js/customizer.js', array( 'customize-preview' ), '20201119', true );
 	}
 
 	/**
@@ -102,9 +103,7 @@ class Donovan_Pro_Customizer {
 	 * @return void
 	 */
 	static function customize_preview_css() {
-
-		wp_enqueue_style( 'donovan-pro-customizer-css', DONOVAN_PRO_PLUGIN_URL . 'assets/css/customizer.css', array(), DONOVAN_PRO_VERSION );
-
+		wp_enqueue_style( 'donovan-pro-customizer-css', DONOVAN_PRO_PLUGIN_URL . 'assets/css/customizer.css', array(), '20201119' );
 	}
 }
 

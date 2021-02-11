@@ -174,20 +174,12 @@
 		} );
 	} );
 
-	/* Theme Fonts */
+	/* Text Font */
 	wp.customize( 'donovan_theme_options[text_font]', function( value ) {
 		value.bind( function( newval ) {
 
-			// Embed Font.
-			var fontFamilyUrl = newval.split( " " ).join( "+" );
-			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donovan-pro-custom-text-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donovan-pro-custom-text-font" ).length;
-
-			if (checkLink > 0) {
-				$( "head" ).find( "#donovan-pro-custom-text-font" ).remove();
-			}
-			$( "head" ).append( googleFontSource );
+			// Load Font in Customizer.
+			loadCustomFont( newval, 'text-font' );
 
 			// Set Font.
 			var systemFont = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
@@ -198,19 +190,12 @@
 		} );
 	} );
 
+	/* Title Font */
 	wp.customize( 'donovan_theme_options[title_font]', function( value ) {
 		value.bind( function( newval ) {
 
-			// Embed Font.
-			var fontFamilyUrl = newval.split( " " ).join( "+" );
-			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donovan-pro-custom-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donovan-pro-custom-title-font" ).length;
-
-			if (checkLink > 0) {
-				$( "head" ).find( "#donovan-pro-custom-title-font" ).remove();
-			}
-			$( "head" ).append( googleFontSource );
+			// Load Font in Customizer.
+			loadCustomFont( newval, 'title-font' );
 
 			// Set Font.
 			var systemFont = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
@@ -221,19 +206,28 @@
 		} );
 	} );
 
+	/* Title Font Weight */
+	wp.customize( 'donovan_theme_options[title_is_bold]', function( value ) {
+		value.bind( function( newval ) {
+			var fontWeight = newval ? 'bold' : 'normal';
+			document.documentElement.style.setProperty( '--title-font-weight', fontWeight );
+		} );
+	} );
+
+	/* Title Text Transform */
+	wp.customize( 'donovan_theme_options[title_is_uppercase]', function( value ) {
+		value.bind( function( newval ) {
+			var textTransform = newval ? 'uppercase' : 'none';
+			document.documentElement.style.setProperty( '--title-text-transform', textTransform );
+		} );
+	} );
+
+	/* Navi Font */
 	wp.customize( 'donovan_theme_options[navi_font]', function( value ) {
 		value.bind( function( newval ) {
 
-			// Embed Font.
-			var fontFamilyUrl = newval.split( " " ).join( "+" );
-			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donovan-pro-custom-navi-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donovan-pro-custom-navi-font" ).length;
-
-			if (checkLink > 0) {
-				$( "head" ).find( "#donovan-pro-custom-navi-font" ).remove();
-			}
-			$( "head" ).append( googleFontSource );
+			// Load Font in Customizer.
+			loadCustomFont( newval, 'navi-font' );
 
 			// Set Font.
 			var systemFont = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
@@ -244,19 +238,28 @@
 		} );
 	} );
 
+	/* Navi Font Weight */
+	wp.customize( 'donovan_theme_options[navi_is_bold]', function( value ) {
+		value.bind( function( newval ) {
+			var fontWeight = newval ? 'bold' : 'normal';
+			document.documentElement.style.setProperty( '--navi-font-weight', fontWeight );
+		} );
+	} );
+
+	/* Navi Text Transform */
+	wp.customize( 'donovan_theme_options[navi_is_uppercase]', function( value ) {
+		value.bind( function( newval ) {
+			var textTransform = newval ? 'uppercase' : 'none';
+			document.documentElement.style.setProperty( '--navi-text-transform', textTransform );
+		} );
+	} );
+
+	/* Widget Title Font */
 	wp.customize( 'donovan_theme_options[widget_title_font]', function( value ) {
 		value.bind( function( newval ) {
 
-			// Embed Font.
-			var fontFamilyUrl = newval.split( " " ).join( "+" );
-			var googleFontPath = "https://fonts.googleapis.com/css?family=" + fontFamilyUrl + ":400,700";
-			var googleFontSource = "<link id='donovan-pro-custom-widget-title-font' href='" + googleFontPath + "' rel='stylesheet' type='text/css'>";
-			var checkLink = $( "head" ).find( "#donovan-pro-custom-widget-title-font" ).length;
-
-			if (checkLink > 0) {
-				$( "head" ).find( "#donovan-pro-custom-widget-title-font" ).remove();
-			}
-			$( "head" ).append( googleFontSource );
+			// Load Font in Customizer.
+			loadCustomFont( newval, 'widget-title-font' );
 
 			// Set Font.
 			var systemFont = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif';
@@ -264,6 +267,22 @@
 
 			// Set CSS.
 			document.documentElement.style.setProperty( '--widget-title-font', newFont );
+		} );
+	} );
+
+	/* Widget Title Font Weight */
+	wp.customize( 'donovan_theme_options[widget_title_is_bold]', function( value ) {
+		value.bind( function( newval ) {
+			var fontWeight = newval ? 'bold' : 'normal';
+			document.documentElement.style.setProperty( '--widget-title-font-weight', fontWeight );
+		} );
+	} );
+
+	/* Widget Title Text Transform */
+	wp.customize( 'donovan_theme_options[widget_title_is_uppercase]', function( value ) {
+		value.bind( function( newval ) {
+			var textTransform = newval ? 'uppercase' : 'none';
+			document.documentElement.style.setProperty( '--widget-title-text-transform', textTransform );
 		} );
 	} );
 
@@ -311,6 +330,19 @@
 
 	function isColorDark( hexColor ) {
 		return ( getColorBrightness( hexColor ) <= 130 );
+	}
+
+	function loadCustomFont( font, type ) {
+		var fontFile = font.split( " " ).join( "+" );
+		var fontFileURL = "https://fonts.googleapis.com/css?family=" + fontFile + ":400,700";
+
+		var fontStylesheet = "<link id='donovan-pro-custom-" + type + "' href='" + fontFileURL + "' rel='stylesheet' type='text/css'>";
+		var checkLink = $( "head" ).find( "#donovan-pro-custom-" + type ).length;
+
+		if (checkLink > 0) {
+			$( "head" ).find( "#donovan-pro-custom-" + type ).remove();
+		}
+		$( "head" ).append( fontStylesheet );
 	}
 
 } )( jQuery );
