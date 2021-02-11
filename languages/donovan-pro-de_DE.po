@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2020-08-18 14:16+0200\n"
-"PO-Revision-Date: 2020-08-18 14:16+0200\n"
+"POT-Creation-Date: 2021-02-11 16:16+0100\n"
+"PO-Revision-Date: 2021-02-11 16:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: donovan-pro.php:176
@@ -161,26 +161,18 @@ msgstr "Lizenz deaktivieren"
 msgid "Activate License"
 msgstr "Lizenz aktivieren"
 
-#: includes/customizer/class-customize-font-control.php:58
+#: includes/customizer/class-customize-font-control.php:51
 msgid "Previous Font"
 msgstr "Vorherige Schriftart"
 
-#: includes/customizer/class-customize-font-control.php:59
+#: includes/customizer/class-customize-font-control.php:52
 msgid "Next Font"
 msgstr "Nächste Schriftart"
 
-#: includes/customizer/class-customize-font-control.php:60
+#: includes/customizer/class-customize-font-control.php:53
 msgctxt "default font button"
 msgid "Default"
 msgstr "Standard"
-
-#: includes/customizer/class-customize-font-control.php:100
-msgid "Local Fonts"
-msgstr "Lokale Schriftarten"
-
-#: includes/customizer/class-customize-font-control.php:108
-msgid "Google Web Fonts"
-msgstr "Google Schriftarten"
 
 #: includes/modules/class-author-bio.php:62
 #, php-format
@@ -239,25 +231,39 @@ msgctxt "color setting"
 msgid "Footer"
 msgstr "Footer"
 
-#: includes/modules/class-custom-fonts.php:220
+#: includes/modules/class-custom-fonts.php:214
 msgid "Typography"
 msgstr "Typografie"
 
-#: includes/modules/class-custom-fonts.php:238
+#: includes/modules/class-custom-fonts.php:232
 msgid "Body Font"
 msgstr "Basis Schriftart"
 
-#: includes/modules/class-custom-fonts.php:255
+#: includes/modules/class-custom-fonts.php:249
 msgctxt "Font Setting"
 msgid "Headings"
 msgstr "Überschriften"
 
-#: includes/modules/class-custom-fonts.php:272
+#: includes/modules/class-custom-fonts.php:265
+#: includes/modules/class-custom-fonts.php:314
+#: includes/modules/class-custom-fonts.php:363
+msgctxt "Font Setting"
+msgid "Bold"
+msgstr "Fett"
+
+#: includes/modules/class-custom-fonts.php:281
+#: includes/modules/class-custom-fonts.php:330
+#: includes/modules/class-custom-fonts.php:379
+msgctxt "Font Setting"
+msgid "Uppercase"
+msgstr "Großbuchstaben"
+
+#: includes/modules/class-custom-fonts.php:298
 msgctxt "Font Setting"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: includes/modules/class-custom-fonts.php:289
+#: includes/modules/class-custom-fonts.php:347
 msgctxt "Font Setting"
 msgid "Widget Titles"
 msgstr "Widget Titel"
@@ -314,53 +320,59 @@ msgctxt "widget area description"
 msgid "Appears in the fourth column in footer."
 msgstr "Erscheint in der vierten Spalte im Footer."
 
-#: includes/modules/class-header-bar.php:86
+#: includes/modules/class-header-bar.php:84
 msgid "Menu"
 msgstr "Menü"
 
-#: includes/modules/class-header-bar.php:91
+#: includes/modules/class-header-bar.php:89
 msgid "Secondary Menu"
 msgstr "Sekundäres Menü"
 
-#: includes/modules/class-header-bar.php:128
+#: includes/modules/class-header-bar.php:124
 msgid "Header Settings"
 msgstr "Header Einstellungen"
 
-#: includes/modules/class-header-bar.php:136
+#: includes/modules/class-header-bar.php:132
 msgid "Header Date"
 msgstr "Header Datum"
 
-#: includes/modules/class-header-bar.php:152
+#: includes/modules/class-header-bar.php:148
 msgid "Display current date in header bar"
 msgstr "Datum im Header anzeigen"
 
-#: includes/modules/class-header-bar.php:168
+#: includes/modules/class-header-bar.php:164
 msgid "Header Text"
 msgstr "Header Text"
 
-#: includes/modules/class-header-bar.php:238
+#: includes/modules/class-header-bar.php:234
 msgid "Top Navigation"
 msgstr "Obere Navigation"
 
-#: includes/modules/class-header-search.php:78
+#: includes/modules/class-header-search.php:80
 msgid "Search"
 msgstr "Suche"
 
-#: includes/modules/class-header-search.php:101
+#: includes/modules/class-header-search.php:103
 msgid "Header Search"
 msgstr "Header Suche"
 
-#: includes/modules/class-header-search.php:117
+#: includes/modules/class-header-search.php:119
 msgid "Enable search field in header"
 msgstr "Suchfeld im Header aktivieren"
 
-#: includes/modules/class-scroll-to-top.php:68
+#: includes/modules/class-scroll-to-top.php:70
 msgid "Scroll to Top"
 msgstr "Nach oben scrollen"
 
-#: includes/modules/class-scroll-to-top.php:84
+#: includes/modules/class-scroll-to-top.php:86
 msgid "Display Scroll to Top Button"
 msgstr "Button zum Nach oben Scrollen anzeigen"
+
+#~ msgid "Local Fonts"
+#~ msgstr "Lokale Schriftarten"
+
+#~ msgid "Google Web Fonts"
+#~ msgstr "Google Schriftarten"
 
 #~ msgid "Choose available Fonts"
 #~ msgstr "Verfügbare Schriftarten wählen"
