@@ -2,6 +2,12 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.5
+-----------------------------------
+* added CSS variables for font styles
+* updated Typography options
+* added minified JavaScript files
+
 Version 1.4.1
 -----------------------------------
 * added AMP dropdown toggles for sub menus
