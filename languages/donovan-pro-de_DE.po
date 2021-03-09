@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-02-11 16:16+0100\n"
-"PO-Revision-Date: 2021-02-11 16:16+0100\n"
+"POT-Creation-Date: 2021-03-09 17:01+0100\n"
+"PO-Revision-Date: 2021-03-09 17:02+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: donovan-pro.php:176
+#: donovan-pro.php:177
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -186,6 +186,50 @@ msgstr "Alle Beiträge ansehen"
 #: includes/modules/class-author-bio.php:95
 msgid "Display Author Bio"
 msgstr "Autor Bio anzeigen"
+
+#: includes/modules/class-block-colors.php:136
+msgid "Block Colors"
+msgstr "Block Farben"
+
+#: includes/modules/class-block-colors.php:153
+msgctxt "Color Option"
+msgid "Primary"
+msgstr "Primär"
+
+#: includes/modules/class-block-colors.php:169
+msgctxt "Color Option"
+msgid "Secondary"
+msgstr "Sekundär"
+
+#: includes/modules/class-block-colors.php:185
+msgctxt "Color Option"
+msgid "Tertiary"
+msgstr "Tertiär"
+
+#: includes/modules/class-block-colors.php:201
+msgctxt "Color Option"
+msgid "Accent"
+msgstr "Akzent"
+
+#: includes/modules/class-block-colors.php:217
+msgctxt "Color Option"
+msgid "Highlight"
+msgstr "Highlight"
+
+#: includes/modules/class-block-colors.php:233
+msgctxt "Color Option"
+msgid "Light Gray"
+msgstr "Hellgrau"
+
+#: includes/modules/class-block-colors.php:249
+msgctxt "Color Option"
+msgid "Gray"
+msgstr "Grau"
+
+#: includes/modules/class-block-colors.php:265
+msgctxt "Color Option"
+msgid "Dark Gray"
+msgstr "Dunkelgrau"
 
 #: includes/modules/class-custom-colors.php:201
 msgid "Color Settings"
