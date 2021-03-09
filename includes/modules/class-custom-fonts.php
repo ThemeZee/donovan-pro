@@ -212,7 +212,7 @@ class Donovan_Pro_Custom_Fonts {
 		// Add Section for Theme Fonts.
 		$wp_customize->add_section( 'donovan_pro_section_typography', array(
 			'title'    => __( 'Typography', 'donovan-pro' ),
-			'priority' => 70,
+			'priority' => 80,
 			'panel'    => 'donovan_options_panel',
 		) );
 

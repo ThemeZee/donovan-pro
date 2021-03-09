@@ -199,7 +199,7 @@ class Donovan_Pro_Custom_Colors {
 		// Add Section for Theme Colors.
 		$wp_customize->add_section( 'donovan_pro_section_colors', array(
 			'title'    => esc_html__( 'Color Settings', 'donovan-pro' ),
-			'priority' => 60,
+			'priority' => 70,
 			'panel'    => 'donovan_options_panel',
 		) );
 

@@ -65,6 +65,14 @@ class Donovan_Pro_Customizer {
 			'footer_text'               => '',
 			'credit_link'               => true,
 			'scroll_to_top'             => false,
+			'primary_color'             => '#ee1133',
+			'secondary_color'           => '#d5001a',
+			'tertiary_color'            => '#bb0000',
+			'accent_color'              => '#1153ee',
+			'highlight_color'           => '#eedc11',
+			'light_gray_color'          => '#f2f2f2',
+			'gray_color'                => '#666666',
+			'dark_gray_color'           => '#202020',
 			'link_color'                => '#ee1133',
 			'button_color'              => '#ee1133',
 			'button_hover_color'        => '#D5001A',
@@ -94,7 +102,7 @@ class Donovan_Pro_Customizer {
 	 * @return void
 	 */
 	static function customize_preview_js() {
-		wp_enqueue_script( 'donovan-pro-customizer-js', DONOVAN_PRO_PLUGIN_URL . 'assets/js/customize-preview.min.js', array( 'customize-preview' ), '20210212', true );
+		wp_enqueue_script( 'donovan-pro-customizer-js', DONOVAN_PRO_PLUGIN_URL . 'assets/js/customize-preview.js', array( 'customize-preview' ), '20210306', true );
 	}
 
 	/**
