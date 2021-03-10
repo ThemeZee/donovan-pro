@@ -2,6 +2,11 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.6
+-----------------------------------
+* added block color palette options
+* fixed debug warning in Scroll to Top script
+
 Version 1.5
 -----------------------------------
 * added CSS variables for font styles
