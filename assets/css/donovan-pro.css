@@ -468,6 +468,46 @@
 }
 
 /*--------------------------------------------------------------
+# Widget Areas
+--------------------------------------------------------------*/
+.before-header-widget-area {
+	padding: 1px;
+	background-color: #fff;
+	background-color: var(--page-background-color);
+}
+
+.before-header-widget-area .widget {
+	margin: 0 auto;
+	max-width: 1440px;
+	padding: 0;
+	background: none;
+}
+
+.after-header-widget-area,
+.before-footer-widget-area {
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+@media only screen and (min-width: 25em) {
+	.before-header-widget-area .widget,
+	.after-header-widget-area,
+	.before-footer-widget-area {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+}
+
+@media only screen and (min-width: 40em) {
+	.before-header-widget-area .widget,
+	.after-header-widget-area,
+	.before-footer-widget-area {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+/*--------------------------------------------------------------
 # Author Bio
 --------------------------------------------------------------*/
 .entry-author {
