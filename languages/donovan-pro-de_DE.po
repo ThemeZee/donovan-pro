@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-03-09 17:01+0100\n"
-"PO-Revision-Date: 2021-03-09 17:02+0100\n"
+"POT-Creation-Date: 2021-08-24 11:36+0200\n"
+"PO-Revision-Date: 2021-08-24 11:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: donovan-pro.php:177
+#: donovan-pro.php:178
 msgid "Settings"
 msgstr "Einstellungen"
 
@@ -411,6 +411,60 @@ msgstr "Nach oben scrollen"
 #: includes/modules/class-scroll-to-top.php:86
 msgid "Display Scroll to Top Button"
 msgstr "Button zum Nach oben Scrollen anzeigen"
+
+#: includes/modules/class-widget-areas.php:112
+msgid "Before Header"
+msgstr "Vor dem Header"
+
+#: includes/modules/class-widget-areas.php:114
+msgctxt "widget area description"
+msgid "Appears above the header area."
+msgstr "Erscheint über dem Header-Bereich."
+
+#: includes/modules/class-widget-areas.php:123
+msgid "After Header"
+msgstr "Nach dem Header"
+
+#: includes/modules/class-widget-areas.php:125
+msgctxt "widget area description"
+msgid "Appears below the header area."
+msgstr "Erscheint unter dem Header-Bereich."
+
+#: includes/modules/class-widget-areas.php:134
+msgid "Before Latest Blog Posts"
+msgstr "Vor den letzten Blog-Beiträgen"
+
+#: includes/modules/class-widget-areas.php:136
+msgctxt "widget area description"
+msgid "Appears on the blog page above the latest posts."
+msgstr "Erscheint auf der Blog-Seite über den neuesten Beiträgen."
+
+#: includes/modules/class-widget-areas.php:145
+msgid "After Single Posts"
+msgstr "Nach einzelnen Beiträgen"
+
+#: includes/modules/class-widget-areas.php:147
+msgctxt "widget area description"
+msgid "Appears below single posts."
+msgstr "Erscheint unter einzelnen Beiträgen."
+
+#: includes/modules/class-widget-areas.php:156
+msgid "After Static Pages"
+msgstr "Nach statischen Seiten"
+
+#: includes/modules/class-widget-areas.php:158
+msgctxt "widget area description"
+msgid "Appears below static pages."
+msgstr "Erscheint unter statischen Seiten."
+
+#: includes/modules/class-widget-areas.php:167
+msgid "Before Footer"
+msgstr "Vor dem Footer"
+
+#: includes/modules/class-widget-areas.php:169
+msgctxt "widget area description"
+msgid "Appears above the footer area."
+msgstr "Erscheint über dem Footer-Bereich."
 
 #~ msgid "Local Fonts"
 #~ msgstr "Lokale Schriftarten"
