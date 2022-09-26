@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: New Themes and Addons\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2021-08-24 11:36+0200\n"
-"PO-Revision-Date: 2021-08-24 11:37+0200\n"
+"POT-Creation-Date: 2022-09-26 13:57+0200\n"
+"PO-Revision-Date: 2022-09-26 13:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: donovan-pro.php:178
@@ -392,25 +392,26 @@ msgstr "Header Text"
 msgid "Top Navigation"
 msgstr "Obere Navigation"
 
-#: includes/modules/class-header-search.php:80
-msgid "Search"
-msgstr "Suche"
+#: includes/modules/class-header-search.php:78
+msgid "Open search form"
+msgstr "Suchformular öffnen"
 
-#: includes/modules/class-header-search.php:103
+#: includes/modules/class-header-search.php:102
 msgid "Header Search"
 msgstr "Header Suche"
 
-#: includes/modules/class-header-search.php:119
+#: includes/modules/class-header-search.php:118
 msgid "Enable search field in header"
 msgstr "Suchfeld im Header aktivieren"
 
-#: includes/modules/class-scroll-to-top.php:70
-msgid "Scroll to Top"
+#: includes/modules/class-scroll-to-top.php:57
+#: includes/modules/class-scroll-to-top.php:73
+msgid "Scroll to top"
 msgstr "Nach oben scrollen"
 
-#: includes/modules/class-scroll-to-top.php:86
-msgid "Display Scroll to Top Button"
-msgstr "Button zum Nach oben Scrollen anzeigen"
+#: includes/modules/class-scroll-to-top.php:89
+msgid "Display Scroll to top button"
+msgstr "Button zum Nach oben scrollen anzeigen"
 
 #: includes/modules/class-widget-areas.php:112
 msgid "Before Header"
@@ -465,21 +466,3 @@ msgstr "Vor dem Footer"
 msgctxt "widget area description"
 msgid "Appears above the footer area."
 msgstr "Erscheint über dem Footer-Bereich."
-
-#~ msgid "Local Fonts"
-#~ msgstr "Lokale Schriftarten"
-
-#~ msgid "Google Web Fonts"
-#~ msgstr "Google Schriftarten"
-
-#~ msgid "Choose available Fonts"
-#~ msgstr "Verfügbare Schriftarten wählen"
-
-#~ msgid "Default Browser Fonts (12)"
-#~ msgstr "Standard Browser Schriftarten (12)"
-
-#~ msgid "ThemeZee Favorite Fonts (35)"
-#~ msgstr "Favoriten von ThemeZee (35)"
-
-#~ msgid "Most Popular Google Fonts (100)"
-#~ msgstr "Beliebteste Google Schriftarten (100)"

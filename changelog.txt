@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.7.2
+-----------------------------------
+* updated aria labels to improve accessibility
+
 Version 1.7.1
 -----------------------------------
 * updated Header Search script to use vanilla js
