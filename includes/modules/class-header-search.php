@@ -75,10 +75,9 @@ class Donovan_Pro_Header_Search {
 
 			<div class="header-search">
 
-				<a class="header-search-icon" aria-expanded="false" aria-controls="header-search-dropdown" <?php self::amp_search_toggle(); ?>>
+				<button class="header-search-icon" aria-label="<?php esc_attr_e( 'Open search form', 'donovan-pro' ); ?>" aria-expanded="false" aria-controls="header-search-dropdown" <?php self::amp_search_toggle(); ?>>
 					<?php echo donovan_get_svg( 'search' ); ?>
-					<span class="screen-reader-text"><?php esc_html_e( 'Search', 'donovan-pro' ); ?></span>
-				</a>
+				</button>
 
 				<div id="header-search-dropdown" class="header-search-form" <?php self::amp_search_is_toggled(); ?>>
 					<?php get_search_form(); ?>
