@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.7.3
+-----------------------------------
+* updated plugin updater
+
 Version 1.7.2
 -----------------------------------
 * updated aria labels to improve accessibility
