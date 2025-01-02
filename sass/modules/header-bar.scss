@@ -1,3 +1,5 @@
+@use "../_mixins";
+
 .header-bar-wrap {
 	border-bottom: 2px solid rgba(0, 0, 0, 0.05);
 	background: #fff;
@@ -50,7 +52,7 @@
 	background: none;
 	color: #202020;
 	text-decoration: none;
-	@include font-size(14);
+	@include mixins.font-size(14);
 	text-align: left;
 	align-items: center;
 }
@@ -100,7 +102,7 @@
 	padding: 0;
 	color: #202020;
 	list-style: none;
-	@include font-size(14);
+	@include mixins.font-size(14);
 }
 
 .top-navigation > ul {
@@ -139,7 +141,7 @@
 
 /* Submenus */
 .top-navigation ul ul {
-	@include font-size(14);
+	@include mixins.font-size(14);
 }
 
 .is-amp-page .top-navigation ul button.toggled-on + ul,

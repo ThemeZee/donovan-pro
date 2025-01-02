@@ -1,6 +1,8 @@
+@use "../_mixins";
+
 .before-header-widget-area {
 	padding: 1px;
-	@include background(--page-background-color);
+	@include mixins.background(--page-background-color);
 
 	.widget {
 		margin: 0 auto;

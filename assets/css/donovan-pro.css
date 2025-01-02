@@ -103,12 +103,12 @@
 	fill: rgba(0, 0, 0, 0.5);
 }
 
-.secondary-menu-toggle[aria-expanded="true"] .icon-menu,
-.secondary-menu-toggle[aria-expanded="false"] .icon-close {
+.secondary-menu-toggle[aria-expanded=true] .icon-menu,
+.secondary-menu-toggle[aria-expanded=false] .icon-close {
 	display: none;
 }
 
-.secondary-menu-toggle[aria-expanded="true"] .icon-close {
+.secondary-menu-toggle[aria-expanded=true] .icon-close {
 	display: inline-block;
 }
 
@@ -226,7 +226,6 @@
 		padding-right: 0;
 	}
 }
-
 @media only screen and (min-width: 55em) {
 	.header-bar {
 		padding-left: 1.5rem;
@@ -347,7 +346,6 @@
 		fill: rgba(0, 0, 0, 0.5);
 	}
 }
-
 /*--------------------------------------------------------------
 # Header Search
 --------------------------------------------------------------*/
@@ -423,7 +421,6 @@
 		right: 0.5rem;
 	}
 }
-
 @media only screen and (min-width: 55em) {
 	.primary-navigation-container {
 		display: flex;
@@ -467,7 +464,6 @@
 		right: 0;
 	}
 }
-
 /*--------------------------------------------------------------
 # Widget Areas
 --------------------------------------------------------------*/
@@ -476,7 +472,6 @@
 	background-color: #fff;
 	background-color: var(--page-background-color);
 }
-
 .before-header-widget-area .widget {
 	margin: 0 auto;
 	max-width: 1440px;
@@ -498,7 +493,6 @@
 		padding-right: 1rem;
 	}
 }
-
 @media only screen and (min-width: 40em) {
 	.before-header-widget-area .widget,
 	.after-header-widget-area,
@@ -507,7 +501,6 @@
 		padding-right: 1.5rem;
 	}
 }
-
 /*--------------------------------------------------------------
 # Author Bio
 --------------------------------------------------------------*/
@@ -548,7 +541,7 @@
 .entry-author .author-bio {
 	margin: 0;
 	font-size: 16px;
-	font-size: 1.0rem;
+	font-size: 1rem;
 }
 
 @media only screen and (min-width: 30em) {
@@ -569,7 +562,6 @@
 		margin: 0 1em 0.25em 0;
 	}
 }
-
 @media only screen and (min-width: 40em) {
 	.entry-author .author-avatar {
 		margin-right: 1.5rem;
@@ -580,7 +572,6 @@
 		font-size: 1.25rem;
 	}
 }
-
 /*--------------------------------------------------------------
 # Footer Widgets
 --------------------------------------------------------------*/
@@ -617,11 +608,11 @@
 	color: var(--footer-hover-text-color);
 }
 
-.footer-widgets .widget input[type="text"],
-.footer-widgets .widget input[type="email"],
-.footer-widgets .widget input[type="url"],
-.footer-widgets .widget input[type="password"],
-.footer-widgets .widget input[type="search"],
+.footer-widgets .widget input[type=text],
+.footer-widgets .widget input[type=email],
+.footer-widgets .widget input[type=url],
+.footer-widgets .widget input[type=password],
+.footer-widgets .widget input[type=search],
 .footer-widgets .widget textarea {
 	border: 1px solid rgba(255, 255, 255, 0.025);
 	border: 1px solid var(--footer-border-color);
@@ -629,11 +620,11 @@
 	color: var(--footer-hover-text-color);
 }
 
-.footer-widgets .widget input[type="text"]:focus,
-.footer-widgets .widget input[type="email"]:focus,
-.footer-widgets .widget input[type="url"]:focus,
-.footer-widgets .widget input[type="password"]:focus,
-.footer-widgets .widget input[type="search"]:focus,
+.footer-widgets .widget input[type=text]:focus,
+.footer-widgets .widget input[type=email]:focus,
+.footer-widgets .widget input[type=url]:focus,
+.footer-widgets .widget input[type=password]:focus,
+.footer-widgets .widget input[type=search]:focus,
 .footer-widgets .widget textarea:focus {
 	border: 1px solid rgba(255, 255, 255, 0.025);
 	border: 1px solid var(--footer-border-color);
@@ -674,7 +665,6 @@
 		margin-bottom: 2px;
 	}
 }
-
 @media only screen and (min-width: 35em) {
 	.footer-widgets {
 		display: -webkit-box;
@@ -722,7 +712,6 @@
 		width: 100%;
 	}
 }
-
 @media only screen and (min-width: 40em) {
 	.footer-widgets-background {
 		padding: 1.5rem 0 0;
@@ -741,15 +730,13 @@
 		padding-right: 2px;
 	}
 }
-
 @media only screen and (min-width: 50em) {
 	.footer-widget-column:nth-child(1):nth-last-child(3),
 	.footer-widget-column:nth-child(2):nth-last-child(2),
 	.footer-widget-column:nth-child(3):nth-last-child(1) {
-		width: 33.3333333333333%;
+		width: 33.3333333333%;
 	}
 }
-
 @media only screen and (min-width: 65em) {
 	.footer-widget-column:nth-child(1):nth-last-child(4),
 	.footer-widget-column:nth-child(2):nth-last-child(3),
@@ -758,7 +745,6 @@
 		width: 25%;
 	}
 }
-
 /*--------------------------------------------------------------
 # Footer Menu
 --------------------------------------------------------------*/
@@ -812,7 +798,6 @@
 		text-align: left;
 	}
 }
-
 @media only screen and (min-width: 55em) {
 	.site-footer {
 		display: -webkit-box;
@@ -840,7 +825,6 @@
 		-ms-flex-order: 1;
 	}
 }
-
 /*--------------------------------------------------------------
 # Scroll to Top Button
 --------------------------------------------------------------*/
