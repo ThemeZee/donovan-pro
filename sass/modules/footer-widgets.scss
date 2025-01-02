@@ -5,72 +5,79 @@
 }
 
 /* Footer Widget Styling */
-.footer-widgets .widget {
-	color: rgba(255,255,255,0.5);
-	color: var(--footer-hover-text-color);
-	background: rgba(255,255,255,0.025);
-	background: var(--footer-border-color);
-	border-color: rgba(255,255,255,0.025);
-	border-color: var(--footer-border-color);
+.footer-widgets {
+	.widget {
+		color: rgba(255, 255, 255, 0.5);
+		color: var(--footer-hover-text-color);
+		background: rgba(255, 255, 255, 0.025);
+		background: var(--footer-border-color);
+		border-color: rgba(255, 255, 255, 0.025);
+		border-color: var(--footer-border-color);
+	}
 }
 
-.footer-widgets .widget-title {
-	color: #fff;
-	color: var(--footer-text-color);
-}
+.footer-widgets,
+.before-footer-widget-area {
+	.widget {
+		.widget-title {
+			color: #fff;
+			color: var(--footer-text-color);
+		}
 
-.footer-widgets .widget a:link,
-.footer-widgets .widget a:visited  {
-	color: #fff;
-	color: var(--footer-text-color);
-}
+		a:link,
+		a:visited  {
+			color: #fff;
+			color: var(--footer-text-color);
+		}
 
-.footer-widgets .widget a:hover,
-.footer-widgets .widget a:active  {
-	color: rgba(255,255,255,0.5);
-	color: var(--footer-hover-text-color);
-}
+		a:hover,
+		a:active  {
+			color: rgba(255,255,255,0.5);
+			color: var(--footer-hover-text-color);
+		}
 
-.footer-widgets .widget input[type="text"],
-.footer-widgets .widget input[type="email"],
-.footer-widgets .widget input[type="url"],
-.footer-widgets .widget input[type="password"],
-.footer-widgets .widget input[type="search"],
-.footer-widgets .widget textarea {
-	border: 1px solid rgba(255,255,255,0.025);
-	border: 1px solid var(--footer-border-color);
-	color: rgba(255,255,255,0.5);
-	color: var(--footer-hover-text-color);
-}
+		input[type="text"],
+		input[type="email"],
+		input[type="url"],
+		input[type="password"],
+		input[type="search"],
+		textarea {
+			border: 1px solid rgba(255,255,255,0.025);
+			border: 1px solid var(--footer-border-color);
+			color: rgba(255,255,255,0.5);
+			color: var(--footer-hover-text-color);
+		}
 
-.footer-widgets .widget input[type="text"]:focus,
-.footer-widgets .widget input[type="email"]:focus,
-.footer-widgets .widget input[type="url"]:focus,
-.footer-widgets .widget input[type="password"]:focus,
-.footer-widgets .widget input[type="search"]:focus,
-.footer-widgets .widget textarea:focus {
-	border: 1px solid rgba(255,255,255,0.025);
-	border: 1px solid var(--footer-border-color);
-	background: rgba(255,255,255,0.025);
-	background: var(--footer-border-color);
-	color: #fff;
-	color: var(--footer-text-color);
-}
+		input[type="text"]:focus,
+		input[type="email"]:focus,
+		input[type="url"]:focus,
+		input[type="password"]:focus,
+		input[type="search"]:focus,
+		textarea:focus {
+			border: 1px solid rgba(255,255,255,0.025);
+			border: 1px solid var(--footer-border-color);
+			background: rgba(255,255,255,0.025);
+			background: var(--footer-border-color);
+			color: #fff;
+			color: var(--footer-text-color);
+		}
 
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta,
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:link,
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:visited,
-.footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
-	color: rgba(255,255,255,0.5);
-	color: var(--footer-hover-text-color);
-	border-color:  rgba(255,255,255,0.025);
-	border-color:  var(--footer-border-color);
-}
+		.tzwb-posts-list .tzwb-entry-meta,
+		.tzwb-posts-list .tzwb-entry-meta a:link,
+		.tzwb-posts-list .tzwb-entry-meta a:visited,
+		.tzwb-comments-list .tzwb-comment-date {
+			color: rgba(255,255,255,0.5);
+			color: var(--footer-hover-text-color);
+			border-color:  rgba(255,255,255,0.025);
+			border-color:  var(--footer-border-color);
+		}
 
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:hover,
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:active {
-	color: #fff;
-	color: var(--footer-text-color);
+		.tzwb-posts-list .tzwb-entry-meta a:hover,
+		.tzwb-posts-list .tzwb-entry-meta a:active {
+			color: #fff;
+			color: var(--footer-text-color);
+		}
+	}
 }
 
 @media only screen and (min-width: 25em) {

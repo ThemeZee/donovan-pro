@@ -480,15 +480,27 @@
 }
 
 .after-header-widget-area,
-.before-footer-widget-area {
+.before-footer-columns-widget-area {
 	margin: 0 auto;
 	max-width: 1440px;
+}
+
+.before-footer-widget-area {
+	padding: 1px;
+	background-color: #202020;
+	background-color: var(--footer-color);
+}
+.before-footer-widget-area .widget {
+	margin: 0 auto;
+	max-width: 1440px;
+	background: none;
+	padding-bottom: 0;
 }
 
 @media only screen and (min-width: 25em) {
 	.before-header-widget-area .widget,
 	.after-header-widget-area,
-	.before-footer-widget-area {
+	.before-footer-columns-widget-area {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -496,7 +508,7 @@
 @media only screen and (min-width: 40em) {
 	.before-header-widget-area .widget,
 	.after-header-widget-area,
-	.before-footer-widget-area {
+	.before-footer-columns-widget-area {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}
@@ -591,41 +603,54 @@
 	border-color: var(--footer-border-color);
 }
 
-.footer-widgets .widget-title {
+.footer-widgets .widget .widget-title,
+.before-footer-widget-area .widget .widget-title {
 	color: #fff;
 	color: var(--footer-text-color);
 }
-
 .footer-widgets .widget a:link,
-.footer-widgets .widget a:visited {
+.footer-widgets .widget a:visited,
+.before-footer-widget-area .widget a:link,
+.before-footer-widget-area .widget a:visited {
 	color: #fff;
 	color: var(--footer-text-color);
 }
-
 .footer-widgets .widget a:hover,
-.footer-widgets .widget a:active {
+.footer-widgets .widget a:active,
+.before-footer-widget-area .widget a:hover,
+.before-footer-widget-area .widget a:active {
 	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-hover-text-color);
 }
-
 .footer-widgets .widget input[type=text],
 .footer-widgets .widget input[type=email],
 .footer-widgets .widget input[type=url],
 .footer-widgets .widget input[type=password],
 .footer-widgets .widget input[type=search],
-.footer-widgets .widget textarea {
+.footer-widgets .widget textarea,
+.before-footer-widget-area .widget input[type=text],
+.before-footer-widget-area .widget input[type=email],
+.before-footer-widget-area .widget input[type=url],
+.before-footer-widget-area .widget input[type=password],
+.before-footer-widget-area .widget input[type=search],
+.before-footer-widget-area .widget textarea {
 	border: 1px solid rgba(255, 255, 255, 0.025);
 	border: 1px solid var(--footer-border-color);
 	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-hover-text-color);
 }
-
 .footer-widgets .widget input[type=text]:focus,
 .footer-widgets .widget input[type=email]:focus,
 .footer-widgets .widget input[type=url]:focus,
 .footer-widgets .widget input[type=password]:focus,
 .footer-widgets .widget input[type=search]:focus,
-.footer-widgets .widget textarea:focus {
+.footer-widgets .widget textarea:focus,
+.before-footer-widget-area .widget input[type=text]:focus,
+.before-footer-widget-area .widget input[type=email]:focus,
+.before-footer-widget-area .widget input[type=url]:focus,
+.before-footer-widget-area .widget input[type=password]:focus,
+.before-footer-widget-area .widget input[type=search]:focus,
+.before-footer-widget-area .widget textarea:focus {
 	border: 1px solid rgba(255, 255, 255, 0.025);
 	border: 1px solid var(--footer-border-color);
 	background: rgba(255, 255, 255, 0.025);
@@ -633,19 +658,23 @@
 	color: #fff;
 	color: var(--footer-text-color);
 }
-
 .footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta,
 .footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:link,
 .footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:visited,
-.footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
+.footer-widgets .widget .tzwb-comments-list .tzwb-comment-date,
+.before-footer-widget-area .widget .tzwb-posts-list .tzwb-entry-meta,
+.before-footer-widget-area .widget .tzwb-posts-list .tzwb-entry-meta a:link,
+.before-footer-widget-area .widget .tzwb-posts-list .tzwb-entry-meta a:visited,
+.before-footer-widget-area .widget .tzwb-comments-list .tzwb-comment-date {
 	color: rgba(255, 255, 255, 0.5);
 	color: var(--footer-hover-text-color);
 	border-color: rgba(255, 255, 255, 0.025);
 	border-color: var(--footer-border-color);
 }
-
 .footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:hover,
-.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:active {
+.footer-widgets .widget .tzwb-posts-list .tzwb-entry-meta a:active,
+.before-footer-widget-area .widget .tzwb-posts-list .tzwb-entry-meta a:hover,
+.before-footer-widget-area .widget .tzwb-posts-list .tzwb-entry-meta a:active {
 	color: #fff;
 	color: var(--footer-text-color);
 }

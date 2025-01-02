@@ -35,7 +35,8 @@ class Donovan_Pro_Widget_Areas {
 		add_action( 'donovan_before_blog', array( __CLASS__, 'display_before_blog_widgets' ), 20 );
 		add_action( 'donovan_after_posts', array( __CLASS__, 'display_after_posts_widgets' ), 20 );
 		add_action( 'donovan_after_pages', array( __CLASS__, 'display_after_pages_widgets' ), 20 );
-		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_widgets' ), 20 );
+		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_columns' ), 5 );
+		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_copyright' ), 20 );
 	}
 
 	/**
@@ -74,9 +75,16 @@ class Donovan_Pro_Widget_Areas {
 	}
 
 	/**
-	 * Displays Before Footer Widgets
+	 * Displays Before Footer Columns
 	 */
-	static function display_before_footer_widgets() {
+	static function display_before_footer_columns() {
+		self::display_widget_area( 'before-footer-columns' );
+	}
+
+	/**
+	 * Displays Before Footer Copyright
+	 */
+	static function display_before_footer_copyright() {
 		self::display_widget_area( 'before-footer' );
 	}
 
@@ -162,11 +170,22 @@ class Donovan_Pro_Widget_Areas {
 			'after_title'   => '</h3>',
 		) );
 
-		// Register Before Footer widget area.
+		// Register Before Footer Columns widget area.
 		register_sidebar( array(
-			'name'          => esc_html__( 'Before Footer', 'donovan-pro' ),
+			'name'          => esc_html__( 'Before Footer Columns', 'donovan-pro' ),
+			'id'            => 'before-footer-columns',
+			'description'   => esc_html_x( 'Appears above the footer columns area.', 'widget area description', 'donovan-pro' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
+
+		// Register Before Footer Copyright widget area.
+		register_sidebar( array(
+			'name'          => esc_html__( 'Before Footer Copyright', 'donovan-pro' ),
 			'id'            => 'before-footer',
-			'description'   => esc_html_x( 'Appears above the footer area.', 'widget area description', 'donovan-pro' ),
+			'description'   => esc_html_x( 'Appears above the footer copyright area.', 'widget area description', 'donovan-pro' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h3 class="widget-title">',

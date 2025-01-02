@@ -13,15 +13,27 @@
 }
 
 .after-header-widget-area,
-.before-footer-widget-area {
+.before-footer-columns-widget-area {
 	margin: 0 auto;
 	max-width: 1440px;
+}
+
+.before-footer-widget-area {
+	padding: 1px;
+	@include mixins.background(--footer-color);
+
+	.widget {
+		margin: 0 auto;
+		max-width: 1440px;
+		background: none;
+		padding-bottom: 0;
+	}
 }
 
 @media only screen and (min-width: 25em) {
 	.before-header-widget-area .widget,
 	.after-header-widget-area,
-	.before-footer-widget-area {
+	.before-footer-columns-widget-area {
 		padding-left: 1rem;
 		padding-right: 1rem;
 	}
@@ -30,7 +42,7 @@
 @media only screen and (min-width: 40em) {
 	.before-header-widget-area .widget,
 	.after-header-widget-area,
-	.before-footer-widget-area {
+	.before-footer-columns-widget-area {
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 	}

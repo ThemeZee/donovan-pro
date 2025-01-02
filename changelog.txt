@@ -2,6 +2,10 @@
 Donovan Pro Changelog
 ===================================
 
+Version 1.7.4
+-----------------------------------
+* added Before Footer Columns widget area
+
 Version 1.7.3
 -----------------------------------
 * updated plugin updater
