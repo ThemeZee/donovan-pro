@@ -35,8 +35,8 @@ class Donovan_Pro_Widget_Areas {
 		add_action( 'donovan_before_blog', array( __CLASS__, 'display_before_blog_widgets' ), 20 );
 		add_action( 'donovan_after_posts', array( __CLASS__, 'display_after_posts_widgets' ), 20 );
 		add_action( 'donovan_after_pages', array( __CLASS__, 'display_after_pages_widgets' ), 20 );
-		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_columns' ), 5 );
-		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_copyright' ), 20 );
+		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_columns' ), 10 );
+		add_action( 'donovan_before_footer', array( __CLASS__, 'display_before_footer_copyright' ), 30 );
 	}
 
 	/**
